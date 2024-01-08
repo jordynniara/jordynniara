@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Nia - Color Palette</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/gradient/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/gradient/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/gradient/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/gradient/site.webmanifest">
+    <!-- Custom styles for this template -->
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="css/color.css" rel="stylesheet">
+    <!--Adobe font-->
+    <link rel="stylesheet" href="https://use.typekit.net/hyl0lwn.css">
+  </head>
+  <body>
+    <!--Vertical Navbar-->
+    <nav id="trueNav">
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header align-items-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <a href="../home.html" class="d-flex flex-column text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+              <img src="../assets/logos/favicon.png" style="width: 20rem;" alt="JNS Logo"></img>
+              <h1 class="logo-name">
+                <span class="strawberry">Jordyn</span><span class="sky">Niara</span><span class="inchworm">Smith</span>
+              </h1>
+            </a>
+            <ul class="list-unstyled ps-0 r">
+              <li class="mb-1 red-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                Foundations
+                </button>
+                <div class="collapse" id="foundations-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="./type.html" class="d-inline-flex rounded ">Typography</a></li>
+                    <li><a href="#" class="d-inline-flex rounded active">Color Palette</a></li>
+                    <li><a href="./logo.html" class="d-inline-flex rounded">Logo Variations</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1 blue-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                  Components
+                </button>
+                <div class="collapse" id="components-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../components/buttons.html" class="d-inline-flex rounded">Buttons</a></li>
+                    <li><a href="../components/cards.html" class="d-inline-flex rounded">Cards</a></li>
+                    <li><a href="../components/navigation.html" class="d-inline-flex rounded ">Navigation</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1 green-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                  Page Patterns
+                </button>
+                <div class="collapse" id="patterns-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../patterns/home.html" class="d-inline-flex rounded">Homepage</a></li>
+                    <li><a href="../patterns/projects.html" class="d-inline-flex rounded">Projects Page</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Header-->
+    <nav id="page-header" class="navbar bg-body-tertiary header d-flex p-1" style="background-color: #C4BAB9!important;">
+      <a id="nia-link" class="navbar-brand" href="../home.html" style="text-decoration: none; display: inline;">
+        <div class="p-1 m-3 nia sticker"><h1>Nia</h1></div>
+      </a>
+      <h1 class="align-self-center flex-lg-shrink-1">Design System: Foundation - Color Palette</h1>
+      <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!-- Page Content  -->
+    <div class="grid-paper p-5">
+      <div class = "container-fluid" id="content">
+        <!--Sticker-->
+        <div class="row drop-shadow sticker mb-5 p-5">
+          <div class="col-12">
+            <h2>Strawberry Garden</h2> <!--Definition-->
+            <large>
+              The color palette is a static one inspired by the contrasting tones of a garden. The dark moodiness of the earth
+              is balanced of the bright livliness of the plants and sky.
+            </large>
+          </div>
+        </div>
+
+        <!--Main Content-->
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Row 1-->
+            <div class="col-12 pb-3">
+              <h3>Primary Colors</h3>
+              <large> Used for background and foreground (font).</large>
+            </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Row 2-->
+            <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-sm-12 inset-border swatch"
+                style="background-color: #22211F; color:#FFFFFF; border-top-right-radius:0; border-bottom-right-radius:0;">
+                <large>Wet Soil</large>
+                <p>#22211F</p>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-sm-12 inset-border swatch"
+                style="background-color: #C4BAB9; color: #22211F; border-radius: 0px;">
+              <large>Pebble</large>
+              <p>#C4BAB9</p>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-sm-12 inset-border swatch" 
+              style="background-color: #FFFFFF; border-top-left-radius:0; border-bottom-left-radius:0;">
+              <large>White</large>
+              <p>#FFFFFF</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row px-5 mt-5 mx-5"> <!--Row 3-->
+          <div class="col-12 pb-3">
+            <h3>Secondary Colors</h3>
+            <large>Used for accents, logos, buttons, and emphasis.</large>
+          </div>
+        </div>
+        <div class="row ms-0 px-5 pb-5 mx-5"> <!--Row 4-->
+          <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-sm-12 inset-border swatch"
+              style="background-color: #E87B6F; color:#22211F; border-top-right-radius:0; border-bottom-right-radius:0;">
+              <large>Strawberry</large>
+              <p>#E87B6F</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-sm-12 inset-border swatch"
+              style="background-color: #6FA4DC; color: #22211F; border-radius: 0px;">
+            <large>Sky</large>
+            <p>#6FA4DC</p>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center col-lg-4 col-sm-12 inset-border swatch" 
+            style="background-color: #B2C480; color:#22211F; border-top-left-radius:0; border-bottom-left-radius:0;">
+            <large>Inchworm</large>
+            <p>#B2C480</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row px-5 mx-5 mb-3">
+          <div class="col-4">
+            <img src="../assets/logos/mascot_strawberry.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_sky.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_inchworm.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+      <!--Footer-->
+    <div class="text-center small" style="background-color: #C4BAB9;" > 
+      <small>JNS © 2023</small>
+    </div>
+    <!-- </container> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/sidebars.js"></script>
+  </body>
+</html>

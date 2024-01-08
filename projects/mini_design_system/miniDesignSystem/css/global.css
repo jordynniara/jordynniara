@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair:400|Playfair+Display:700');
+
+body {
+  min-height: 100vh;
+  font-family: 'Playfair', serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #22211F;
+  background-color: transparent;
+}
+
+.row-dark {
+  background-color: #C4BAB9;
+}
+
+html {
+  font-size: 100%; /*16 px*/
+}
+
+.grid-paper{
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgb(122, 157, 217) .5px, transparent .5px),
+    linear-gradient(to bottom, rgb(122, 157, 217) .5px, transparent .5px);
+}
+
+.navbar.header{
+  background-color: #C4BAB9 !important;
+  padding: 3rem;
+  margin-top: 1rem;
+}
+
+/* Typography */
+
+p {margin-bottom: 1rem;}
+
+h1, h2, h3, h4{
+  /*margin: 3rem 0 1.38rem;*/
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.488rem;
+}
+
+h2 {font-size: 2.074rem;}
+
+h3 {font-size: 1.728rem;}
+
+h4 {font-size: 1.44rem;}
+
+large, h5 {font-size: 1.2rem; font-weight: 400; line-height: 1.3;}
+
+small, .text_small {font-size: 0.833rem;}
+
+.logo-name{
+  font-family: "selfie-neue-round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* a:not(#nia-link.navbar-brand), */
+a:not(.nav-link.dropdown-toggle),
+a:not(.navbar-brand){
+  padding: .05rem !important;
+  margin: .05rem !important;
+  border-radius: 3px;
+  border: 2px dashed #22211F;
+  display: inline;
+}
+a.dark:not(.nav-link.dropdown-toggle),
+a.dark:not(.navbar-brand){
+  padding: .05rem !important;
+  margin: .05rem !important;
+  border-radius: 3px;
+  border: 2px dashed white;
+  display: inline;
+}
+
+.emphasized-text,
+emph
+{
+  color: #6FA4DC; 
+  background-color: #22211F;
+  padding: .25rem !important;
+  margin: .25rem !important;
+  border-radius: 10px;
+  display: inline;
+
+}
+.emphasized-text-dark,
+emph-dark
+{
+  border: 1px white solid;
+  border-radius: 3px;
+  padding: .05rem !important;
+  margin: .05rem !important;
+  display: inline;
+  color: #6FA4DC;
+}
+
+/* Accents */
+.strawberry{
+  color:#E87B6F
+}
+.sky{
+  color:#6FA4DC
+}
+.inchworm{
+  color:#B2C480
+}
+.pebble{
+  color:#C4BAB9
+}
+.dirt{
+  color: #22211F;
+}
+.nia{
+  color: #6FA4DC !important; 
+  background-color: #22211F;
+  width: fit-content;
+  padding: 1rem !important; 
+}
+
+.drop-shadow{
+  -moz-box-shadow: 0 0 10px #22211F;
+  -webkit-box-shadow: 0 0 10px #22211F;
+  box-shadow: 0 0 10px #22211F;
+}
+
+.sticker
+{
+    background-color: #22211F;
+    color: #ffff;
+    text-align: center;
+    border-radius: 75px;
+    border: 25px solid white;
+
+  -moz-box-shadow: 0 0 10px #22211F;
+  -webkit-box-shadow: 0 0 10px #22211F;
+  box-shadow: 0 0 10px #22211F;
+}
+
+.sticker.emphasized-text{
+  color: #6FA4DC !important;
+}
+
+.inset-border {
+  background-color: #ffffff;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.dashed-border{
+  border: 3px #22211F dashed;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.divider-hr {
+  flex-shrink: 0;
+  height: 1rem;
+}
+
+
+.divider-hr.inset-border{
+  border-left: none;
+}
+
+hr {
+  border-top: 3px dashed #22211F;
+}
+
+#page-header{
+  background-color: #C4BAB9!important;
+  border-radius: 5px;
+  margin: 0px !important;
+}
+
+.code{
+  font-family: 'Courier Prime', monospace;
+  line-height: 1.5rem;
+  border-radius: 5px;
+}
+
+
+/* Buttons */
+.navbar-toggler
+{
+  border: 3px solid #22211F;
+  border-radius: 25px;
+  background-color: none;
+  color: #ffffff;
+  width: 5rem;
+  height: 5rem;
+}
+
+/*Menu toggle*/
+button .bi-list{
+  width: fit-content;
+  height: fit-content;
+  color: #22211F;
+}
+
+.dropdown-toggle { outline: 0; }
+
+#trueNav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#trueNav a:hover{
+  text-decoration: underline;
+}
+#trueNav .red-hover a:hover {
+  text-decoration: underline;
+  color: #E87B6F;
+}
+#trueNav .blue-hover a:hover {
+  text-decoration: underline;
+  color: #6FA4DC;
+}
+#trueNav .green-hover a:hover {
+  text-decoration: underline;
+  color: #B2C480;
+}
+
+.btn{
+  border-radius: 25px;
+  min-width: 44px;
+  min-height: 44px;
+}
+.btn .inactive{
+  background: #C4BAB9;
+  border: 5px  dashed;
+}
+/*strawberry button */
+.btn.primary-strawberry{
+  background-color: #E87B6F;
+  color: #22211F;
+  border: 5px #E87B6F solid;
+}
+.btn.primary-strawberry.hover,
+.btn.primary-strawberry:hover,
+.btn.primary-strawberry.focus,
+.btn.primary-strawberry:focus,
+.btn.primary-strawberry.focus-visible,
+.btn.primary-strawberry:focus-visible
+{
+  border: 5px #22211F dashed;
+}
+.btn.secondary-strawberry{
+  background-color: #22211F;
+  color: white;
+  border: 5px #E87B6F solid;
+}
+.btn.secondary-strawberry.hover,
+.btn.secondary-strawberry:hover,
+.btn.secondary-strawberry.focus,
+.btn.secondary-strawberry:focus,
+.btn.secondary-strawberry.focus-visible,
+.btn.secondary-strawberry:focus-visible
+{
+  border: 5px #E87B6F dashed;
+}
+/* sky button*/
+.btn.primary-sky{
+  background-color: #6FA4DC;
+  color: #22211F;
+  border: 5px #6FA4DC solid;
+}
+.btn.primary-sky.hover,
+.btn.primary-sky:hover,
+.btn.primary-sky.focus,
+.btn.primary-sky:focus,
+.btn.primary-sky.focus-visible,
+.btn.primary-sky:focus-visible{
+  border: 5px #22211F dashed;
+}
+.btn.secondary-sky{
+  background-color: #22211F;
+  color: white;
+  border: 5px #6FA4DC solid;
+}
+.btn.secondary-sky.hover,
+.btn.secondary-sky:hover,
+.btn.secondary-sky.focus,
+.btn.secondary-sky:focus,
+.btn.secondary-sky.focus-visible,
+.btn.secondary-sky:focus-visible{
+  border: 5px #6FA4DC dashed;
+}
+/*inchworm button*/
+.btn.primary-inchworm{
+  background-color: #B2C480;
+  color: #22211F;
+  border: 5px #B2C480 solid;
+}
+.btn.primary-inchworm.hover,
+.btn.primary-inchworm:hover,
+.btn.primary-inchworm.focus,
+.btn.primary-inchworm:focus,
+.btn.primary-inchworm.focus-visible,
+.btn.primary-inchworm:focus-visible{
+  border: 5px #22211F dashed;
+}
+.btn.secondary-inchworm{
+  background-color: #22211F;
+  color: white;
+  border: 5px #B2C480 solid;
+}
+.btn.secondary-inchworm.hover,
+.btn.secondary-inchworm:hover,
+.btn.secondary-inchworm.focus,
+.btn.secondary-inchworm:focus,
+.btn.secondary-inchworm.focus-visible,
+.btn.secondary-inchworm:focus-visible{
+  border: 5px #B2C480 dashed;
+}
+
+/* Offcanvas */
+.offcanvas .btn-toggle {
+  padding: .25rem .5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #ffff;
+  background-color: transparent;
+}
+.offcanvas .red-hover .btn-toggle:hover,
+.offcanvas .red-hover .btn-toggle:focus {
+  color: #22211F;
+  background-color: #E87B6F;
+}
+.offcanvas .green-hover .btn-toggle:hover,
+.offcanvas .green-hover .btn-toggle:focus {
+  color: #22211F;
+  background-color: #B2C480;
+}
+.offcanvas .blue-hover .btn-toggle:hover,
+.offcanvas .blue-hover .btn-toggle:focus {
+  color: #22211F;
+  background-color: #6FA4DC;
+}
+
+.offcanvas .blue-hover .btn-toggle-nav a.active{
+  color: #6FA4DC !important;
+  text-decoration: underline !important;
+}
+.offcanvas .red-hover .btn-toggle-nav a.active{
+  color: #E87B6F !important;
+  text-decoration: underline !important;
+}
+.offcanvas .green-hover .btn-toggle-nav a.active{
+  color: #B2C480 !important;
+  text-decoration: underline !important;
+}
+
+/* .offcanvas .btn-toggle-nav a {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+} */
+/* .offcanvas .btn-toggle-nav.red-hover a:hover,
+.btn-toggle-nav.red-hover a:focus
+{
+  background-color: #E87B6F;
+}
+.offcanvas .btn-toggle-nav.green-hover a:hover,
+.offcanvas .btn-toggle-nav.green-hover a:focus
+{
+  background-color: #B2C480;
+}
+.offcanvas .btn-toggle-nav.blue-hover a:hover,
+.offcanvas .btn-toggle-nav.blue-hover a:focus
+{
+  background-color: #6FA4DC;
+} */
+
+.offcanvas .btn-close{
+  background-color: #ffffff;
+}
+
+.offcanvas {
+  background-color: #22211F;
+}
+
+/*Accordion*/
+.accordion-button,
+.accordion-button:not(.collapsed),
+.accordion-button:not(.collapsed)::after{
+  color: #22211F;
+}
+.accordion-button.strawberry{
+  background-color: #E87B6F;
+}
+.accordion-button.sky{
+  background-color: #6FA4DC;
+}
+.accordion-button.inchworm{
+  background-color: #B2C480;
+}

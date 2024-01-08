@@ -1,0 +1,15 @@
+
+@media (max-width: 768px) {
+    .mid-mascot-border{
+        border-left: 3px #22211F dashed !important;
+        border-right: 3px #22211F dashed !important;
+    }
+
+    .start-mascot-border{
+        border-bottom: none !important;
+    }
+
+    .end-mascot-border{
+        border-top: none !important;
+    }
+}

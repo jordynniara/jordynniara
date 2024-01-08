@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Nia - Buttons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/gradient/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/gradient/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/gradient/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/gradient/site.webmanifest">
+    <!-- Custom styles for this template -->
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <!--Adobe font-->
+    <link rel="stylesheet" href="https://use.typekit.net/hyl0lwn.css">
+  </head>
+  <body>
+    <!--Vertical Navbar-->
+    <nav id="trueNav">
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header align-items-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <a href="../home.html" class="d-flex flex-column text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+              <img src="../assets/logos/favicon.png" style="width: 20rem;" alt="JNS Logo"></img>
+              <h1 class="logo-name">
+                <span class="strawberry">Jordyn</span><span class="sky">Niara</span><span class="inchworm">Smith</span>
+              </h1>
+            </a>
+            
+            <ul class="list-unstyled ps-0 r">
+              <li class="mb-1 red-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                Foundations
+                </button>
+                <div class="collapse" id="foundations-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../foundation/type.html" class="d-inline-flex rounded ">Typography</a></li>
+                    <li><a href="../foundation/color.html" class="d-inline-flex rounded">Color Palette</a></li>
+                    <li><a href="../foundation/logo.html" class="d-inline-flex rounded">Logo Variations</a></li>
+            
+                  </ul>
+                </div>
+              </li>
+  
+              <li class="mb-1 blue-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                  Components
+                </button>
+                <div class="collapse" id="components-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="d-inline-flex active rounded">Buttons</a></li>
+                    <li><a href="./cards.html" class="d-inline-flex rounded">Cards</a></li>
+                    <li><a href="./navigation.html" class="d-inline-flex rounded">Navigation</a></li>
+                  </ul>
+                </div>
+              </li>
+  
+              <li class="mb-1 green-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                  Page Patterns
+                </button>
+                <div class="collapse" id="patterns-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../patterns/home.html" class="d-inline-flex rounded">Homepage</a></li>
+                    <li><a href="../patterns/projects.html" class="d-inline-flex rounded">Projects Page</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Header-->
+    <nav id="page-header" class="navbar bg-body-tertiary header d-flex p-1" style="background-color: #C4BAB9!important;">
+      <a id="nia-link" class="navbar-brand" href="../home.html" style="text-decoration: none; display: inline;">
+        <div class="p-1 m-3 nia sticker"><h1>Nia</h1></div>
+      </a>
+      <h1 class="align-self-center flex-lg-shrink-1">Design System: Components - Buttons</h1>
+      <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!-- Page Content  -->
+    <div class="grid-paper p-5">
+      <div class = "container-fluid" id="content">
+        <!--Sticker-->
+        <div class="row drop-shadow sticker mb-5 p-5">
+          <div class="col-12">
+            <h2>Buttons</h2> <!--Definition-->
+            <large>
+              Three states, two styles, three variations.
+              <br>
+              Used to complete actions on a page or within other components.
+            </large>
+          </div>
+        </div>
+        <!--Main Content-->
+        <!--Active-->
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Priamry Header-->
+            <div class="col-12pb-3 text-center">
+              <h3>Primary - Active</h3>
+            </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Primary buttons-->
+          <div class="col-lg-4 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border" >
+              <span class="m-2"><button type="button" class="btn primary-strawberry">Button</button></span>
+              <span class="m-2"><button type="button" class="btn primary-sky">Button</button></span>
+              <span class="m-2"><button type="button" class="btn primary-inchworm">Button</button></span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-lg-8 col-md-12">
+            <div class="accordion w-100" id="primaryActiveAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#primaryActiveUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="primaryActiveUsage" class="accordion-collapse collapse show" data-bs-parent="#primaryActiveAccordion">
+                  <div class="accordion-body inset-border">
+                    <p>To trigger a primary action. CSS can be modified as needed using classes 
+                      <span class="code">.btn</span> or <span class="code">.btn-*</span> where <span class="code">*</span> is one of 
+                      <span class="code">strawberry</span>, <span class="code">sky</span>, or <span class="code">inchworm</span> for each color variation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryActiveCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="primaryActiveCode" class="accordion-collapse collapse" data-bs-parent="#primaryActiveAccordion">
+                  <div class="accordion-body inset-border code">
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-strawberry"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-sky"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-inchworm"&gt;Button &lt;/button&gt;</small></span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryActiveA11y" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="primaryActiveA11y" class="accordion-collapse collapse" data-bs-parent="#primaryActiveAccordion">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the buttons are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links should not be styled as buttons. Buttons should maintain a <i>minimum</i> target size of 44 x 44 pixles.
+                      Buttons should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Secondary Header-->
+          <div class="col-12 pb-3 text-center">
+            <h3>Secondary - Active</h3>
+          </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Secondary buttons-->
+          <div class="col-lg-4 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border" >
+              <span class="m-2"><button type="button" class="btn secondary-strawberry">Button</button></span>
+              <span class="m-2"><button type="button" class="btn secondary-sky">Button</button></span>
+              <span class="m-2"><button type="button" class="btn secondary-inchworm">Button</button></span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-lg-8 col-md-12">
+            <div class="accordion w-100" id="secondaryActiveAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryActiveUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="secondaryActiveUsage" class="accordion-collapse collapse show" data-bs-parent="#secondaryActiveAccordion">
+                  <div class="accordion-body inset-border">
+                    <p>
+                      To trigger a secondary action. Should only be used when a primary actions is present.
+                      <span class="code">.btn</span> or <span class="code">.btn.secondary-*</span> where <span class="code">*</span> is one of 
+                      <span class="code">strawberry</span>, <span class="code">sky</span>, or <span class="code">inchworm</span> for each color variation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryActiveCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="secondaryActiveCode" class="accordion-collapse collapse" data-bs-parent="#secondaryActiveAccordion">
+                  <div class="accordion-body inset-border code">
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-strawberry"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-sky"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-inchworm"&gt;Button &lt;/button&gt;</small></span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryActiveA11y" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="secondaryActiveA11y" class="accordion-collapse collapse" data-bs-parent="#secondaryActiveAccordion">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the buttons are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links should not be styled as buttons. Buttons should maintain a <i>minimum</i> target size of 44 x 44 pixles.
+                      Buttons should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!--Focused/Hover-->
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Primary Header-->
+          <div class="col-12pb-3 text-center">
+            <h3>Primary - Hover/Focused</h3>
+          </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Primary buttons-->
+          <div class="col-lg-4 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border" >
+              <span class="m-2"><button type="button" class="btn primary-strawberry focus">Button</button></span>
+              <span class="m-2"><button type="button" class="btn primary-sky focus">Button</button></span>
+              <span class="m-2"><button type="button" class="btn primary-inchworm focus">Button</button></span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-lg-8 col-md-12">
+            <div class="accordion w-100" id="primaryFocusedAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#primaryFocusedUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="primaryFocusedUsage" class="accordion-collapse collapse show" data-bs-parent="#primaryFocusedAccordion">
+                  <div class="accordion-body inset-border">
+                    <p>
+                      When button is focused on (ex: keyboard navigation). 
+                      <span class="code">.btn.primary-*.focus</span> where <span class="code">*</span> is one of 
+                      <span class="code">strawberry</span>, <span class="code">sky</span>, or <span class="code">inchworm</span> for each color variation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryFocusedCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="primaryFocusedCode" class="accordion-collapse collapse" data-bs-parent="#primaryFocusedAccordion">
+                  <div class="accordion-body inset-border code">
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-strawberry focus"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-sky focus"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-inchworm focus"&gt;Button &lt;/button&gt;</small></span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryFocusedA11y" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="primaryFocusedA11y" class="accordion-collapse collapse" data-bs-parent="#primaryFocusedAccordion">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the buttons are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links should not be styled as buttons. Buttons should maintain a <i>minimum</i> target size of 44 x 44 pixles.
+                      Buttons should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Secondary Header-->
+          <div class="col-12 pb-3 text-center">
+            <h3>Secondary - Hover/Focused</h3>
+          </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Secondary buttons-->
+          <div class="col-lg-4 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border" >
+              <span class="m-2"><button type="button" class="btn secondary-strawberry focus">Button</button></span>
+              <span class="m-2"><button type="button" class="btn secondary-sky focus">Button</button></span>
+              <span class="m-2"><button type="button" class="btn secondary-inchworm focus">Button</button></span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-lg-8 col-md-12">
+            <div class="accordion w-100" id="secondaryFocusedAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryFocusedUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="secondaryFocusedUsage" class="accordion-collapse collapse show" data-bs-parent="#secondaryFocusedAccordion">
+                  <div class="accordion-body inset-border">
+                    <p>
+                      When button is focused on (ex: keyboard navigation). Follow similar usage guidelines as Secondary buttons.
+                      <span class="code">.btn.primary-*.focus</span> where <span class="code">*</span> is one of 
+                      <span class="code">strawberry</span>, <span class="code">sky</span>, or <span class="code">inchworm</span> for each color variation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryFocusedCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="secondaryFocusedCode" class="accordion-collapse collapse" data-bs-parent="#secondaryFocusedAccordion">
+                  <div class="accordion-body inset-border code">
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-strawberry focus"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-sky focus"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-inchworm focus"&gt;Button &lt;/button&gt;</small></span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryFocusedA11y" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="secondaryFocusedA11y" class="accordion-collapse collapse" data-bs-parent="#secondaryFocusedAccordion">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the buttons are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links should not be styled as buttons. Buttons should maintain a <i>minimum</i> target size of 44 x 44 pixles.
+                      Buttons should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!--Disabled-->
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Primary Header-->
+          <div class="col-12pb-3 text-center">
+            <h3>Primary - Disabled</h3>
+          </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Primary buttons-->
+          <div class="col-lg-4 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border" >
+              <span class="m-2"><button type="button" class="btn primary-strawberry disabled">Button</button></span>
+              <span class="m-2"><button type="button" class="btn primary-sky disabled">Button</button></span>
+              <span class="m-2"><button type="button" class="btn primary-inchworm disabled">Button</button></span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-lg-8 col-md-12">
+            <div class="accordion w-100" id="primaryDisabledAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#primaryDisabledUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="primaryDisabledUsage" class="accordion-collapse collapse show" data-bs-parent="#primaryDisabledAccordion">
+                  <div class="accordion-body inset-border">
+                    <p>
+                      When button is disabled and cannot be used.
+                      <span class="code">.btn</span> or <span class="code">.btn-*</span> where <span class="code">*</span> is one of 
+                      <span class="code">strawberry</span>, <span class="code">sky</span>, or <span class="code">inchworm</span> for each color variation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryDisabledCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="primaryDisabledCode" class="accordion-collapse collapse" data-bs-parent="#primaryDisabledAccordion">
+                  <div class="accordion-body inset-border code">
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-strawberry disabled"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-sky disabled"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn primary-inchworm disabled"&gt;Button &lt;/button&gt;</small></span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primaryDisabledA11y" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="primaryDisabledA11y" class="accordion-collapse collapse" data-bs-parent="#primaryDisabledAccordion">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the buttons are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links should not be styled as buttons. Buttons should maintain a <i>minimum</i> target size of 44 x 44 pixles.
+                      Buttons should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Secondary Header-->
+          <div class="col-12 pb-3 text-center">
+            <h3>Secondary - Disabled</h3>
+          </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5"> <!--Secondary buttons-->
+          <div class="col-lg-4 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border" >
+              <span class="m-2"><button type="button" class="btn secondary-strawberry disabled">Button</button></span>
+              <span class="m-2"><button type="button" class="btn secondary-sky disabled">Button</button></span>
+              <span class="m-2"><button type="button" class="btn secondary-inchworm disabled">Button</button></span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center col-lg-8 col-md-12">
+            <div class="accordion w-100" id="secondaryDisabledAccordian">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecondaryDisabledUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="collapseSecondaryDisabledUsage" class="accordion-collapse collapse show" data-bs-parent="#secondaryDisabledAccordian">
+                  <div class="accordion-body inset-border">
+                    <p>
+                      When button is disabled and cannot be used. Follow similar guidelines as Secondary Button.
+                      <span class="code">.btn</span> or <span class="code">.btn-*</span> where <span class="code">*</span> is one of 
+                      <span class="code">strawberry</span>, <span class="code">sky</span>, or <span class="code">inchworm</span> for each color variation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecondaryDisabledCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="collapseSecondaryDisabledCode" class="accordion-collapse collapse" data-bs-parent="#secondaryDisabledAccordian">
+                  <div class="accordion-body inset-border code">
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-strawberry disabled"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-sky disabled"&gt;Button &lt;/button&gt;</small></span><br>
+                    <span class="m-2"><small class="code">&lt;button type="button" class="btn secondary-inchworm disabled"&gt;Button &lt;/button&gt;</small></span>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSecondaryDisabledAlly" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="collapseSecondaryDisabledAlly" class="accordion-collapse collapse" data-bs-parent="#secondaryDisabledAccordian">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the buttons are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links should not be styled as buttons. Buttons should maintain a <i>minimum</i> target size of 44 x 44 pixles.
+                      Buttons should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row px-5 mx-5 mb-3">
+          <div class="col-4">
+            <img src="../assets/logos/mascot_strawberry.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_sky.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_inchworm.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="text-center small" style="background-color: #C4BAB9;" > 
+      <small>JNS © 2023</small>
+    </div>
+    <!-- </container> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/sidebars.js"></script>
+  </body>
+</html>
