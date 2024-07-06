@@ -1,8 +1,10 @@
-# I know what you're thinkging...
+# I know what you're thinking...
 ## This portfolio kind of sucks visually. I agree and I'm working on it.
 ### In the meantime I have a [Figma](https://www.figma.com/proto/2edUFCDTifKMp3XSe2IAjA/UX-Portfolio?node-id=1-2&t=u0YKlxkSYVZgey7y-1) that looks _a lot_ better than this. Plus, now you know I can work in Figma! 😉
 ### But since you're here, you can find the same projects hilighted in the Figma, below.
-#### jordynniara@gmail.com  |   815-404-3975    |   [Figma](https://www.figma.com/proto/2edUFCDTifKMp3XSe2IAjA/UX-Portfolio?node-id=1-2&t=u0YKlxkSYVZgey7y-1)
+
+#### jordynniara@gmail.com  |   815-404-3975    |   [Figma](https://www.figma.com/proto/2edUFCDTifKMp3XSe2IAjA/UX-Portfolio?node-id=1-2&t=u0YKlxkSYVZgey7y-1) |    [jordynniara.github.io](https://jordynniara.github.io)
+
 ---
 ## [Resume]()
 Just a resume.
