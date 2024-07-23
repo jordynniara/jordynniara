@@ -1,0 +1,43 @@
+/*Page Header*/
+.page-header{
+    background-color: #C4BAB9;
+    padding: 3%;
+  }
+  
+  
+  /* nav menu*/
+  .nav-menu-item-vert{
+    text-align: center;
+  }
+  
+  .nav-menu-item-vert.divider {
+    border-bottom: 3px #22211F dashed;
+  }
+  
+  .nav-menu-item-horiz{
+    width: 25% !important;
+    text-align: center;
+  }
+  
+  .nav-menu-item-horiz.divider {
+    border-right: 3px #22211F dashed;
+  }
+  
+  .nav-menu-item {
+    padding: 5px;
+  }
+  
+  .nav-menu-item a {
+    text-decoration: none;
+    color: #22211F;
+  }
+  
+  .nav-menu-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .expanded-nav-menu{
+    border-radius: 0px;
+    width: 100%;
+    /* justify-content: space-evenly; */
+  }
