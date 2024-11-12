@@ -1,0 +1,8 @@
+.sticker {
+    border: 20px solid white;
+    border-radius: 100px;
+    width: 30%;
+    background-color: #22211F;
+    color: white;
+    text-align: center;
+}

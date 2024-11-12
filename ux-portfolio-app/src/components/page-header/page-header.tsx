@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { ScreenSizeResponse } from '../../tools/utilities.ts'
 import { Button } from "@fluentui/react-components";
 import { NavigationFilled } from '@fluentui/react-icons'
-import { StackShim, StackItemShim } from "@fluentui/react-migration-v8-v9";
 
 function PageHeader() {
   const [isNavOpen, setNavIsOpen] = useState(false);
@@ -31,22 +30,22 @@ function PageHeader() {
     const menuItems = ['Protoypes', 'Evaluations & Analysis', 'Papers', 'Artwork'];
 
     return (
-    <StackShim className="expanded-nav-menu dashed-border rounded-border-std"
-      horizontal={horizontal}
-      verticalAlign = 'center'>
+    <div className={'expanded-nav-menu dashed-border rounded-border-std ' + (horizontal ? 'flex-row' : 'flex-col')}
+      // verticalAlign = 'center
+      >
         {menuItems.map( (value: string, index: number) => (
-          <StackShim key={"navItem"+value}
+          <Button key={"navItem"+value}
             className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
             <a href=''>{ value } </a>
-          </StackShim>))}
-    </StackShim>);
+          </Button>))}
+    </div>);
   }
 
   return (
-    <StackShim>
-      <StackShim horizontal={isTabletOrMobile} verticalAlign='center' className={'page-header ' + (isNavOpen ? 'drop-shadow': '')}
-        horizontalAlign={isTabletOrMobile ? 'space-evenly' : 'center'}>
-          <StackItemShim className="title-background">
+    <>
+      <div
+        className={'page-header ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
+          <div className="title-background sticker drop-shadow inset-border">
             <h1 className="title">
               {isDesktopOrLaptop && 
                <><span className='strawberry'>Jordyn</span><span className='sky'>Niara</span><span className='inchworm'>Smith</span></>}
@@ -54,15 +53,15 @@ function PageHeader() {
                 <><span className='strawberry'>J</span><span className='sky'>N</span><span className='inchworm'>S</span></>
               }
             </h1>
-          </StackItemShim>
+          </div>
           { isTabletOrMobile && 
-          <StackItemShim>
+          <div className="hamburger-nav">
             { renderHamburger() }
-          </StackItemShim> 
+          </div> 
           }
-      </StackShim>
+      </div>
       { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
-    </StackShim>
+    </>
   )
 }
 

@@ -21,12 +21,6 @@ h1.title{
   margin: 0px;
 }
 
-.title-background{
-  background: rgba(82, 82, 82, 0.50);
-  border-radius: 25px;
-  padding: 1%;
-}
-
 .center{
   display: flex;
   align-items: center;
@@ -78,7 +72,7 @@ small, .text_small {font-size: 0.833rem;}
 
 .pebble
 {
-  color: #C4BAB9
+  color: #d9d2cc
 }
 
 .white
@@ -112,4 +106,32 @@ small, .text_small {font-size: 0.833rem;}
   background-image:
     linear-gradient(to right, rgb(122, 157, 217) .5px, transparent .5px),
     linear-gradient(to bottom, rgb(122, 157, 217) .5px, transparent .5px);
+}
+
+/* layout */
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-margins {
+  height: 100vh;
+  padding: 2%;
 }
