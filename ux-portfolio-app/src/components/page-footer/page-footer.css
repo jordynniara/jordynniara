@@ -1,4 +1,4 @@
 .footer
 {
-    background-color: #d9d2cc;
+    background-color: var(--pebble);
 }

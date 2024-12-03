@@ -16,41 +16,41 @@ function PageHeader() {
     );
   };
 
-  const renderVertNavList = () => {
-    const orientationClassAttr = "nav-menu-item-vert";
-    return renderNavigationList(false, orientationClassAttr)
-  }
+  // const renderVertNavList = () => {
+  //   const orientationClassAttr = "nav-menu-item-vert";
+  //   return renderNavigationList(false, orientationClassAttr)
+  // }
 
-  const renderHorizNavList = () => {
-    const orientationClassAttr = "nav-menu-item-horiz";
-    return renderNavigationList(true, orientationClassAttr)
-  }
+  // const renderHorizNavList = () => {
+  //   const orientationClassAttr = "nav-menu-item-horiz";
+  //   return renderNavigationList(true, orientationClassAttr)
+  // }
 
-  const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['Protoypes', 'Evaluations & Analysis', 'Papers', 'Artwork'];
+  // const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
+  //   const menuItems = ['Protoypes', 'Evaluations & Analysis', 'Papers', 'Artwork'];
 
-    return (
-    <div className={'expanded-nav-menu dashed-border rounded-border-std ' + (horizontal ? 'flex-row' : 'flex-col')}
-      // verticalAlign = 'center
-      >
-        {menuItems.map( (value: string, index: number) => (
-          <Button key={"navItem"+value}
-            className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
-            <a href=''>{ value } </a>
-          </Button>))}
-    </div>);
-  }
+  //   return (
+  //   <div className={'expanded-nav-menu dashed-border rounded-border-std flex' + (horizontal ? 'row' : 'col')}
+  //     // verticalAlign = 'center
+  //     >
+  //       {menuItems.map( (value: string, index: number) => (
+  //         <Button key={"navItem"+value}
+  //           className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
+  //           <a href=''>{ value } </a>
+  //         </Button>))}
+  //   </div>);
+  // }
 
   return (
     <>
       <div
-        className={'page-header ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
-          <div className="title-background sticker drop-shadow inset-border">
+        className={'page-header leather-texture ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
+          <div className="title-background sticker drop-shadow inset-border border-radius-100" id="titelHomeButton">
             <h1 className="title">
               {isDesktopOrLaptop && 
-               <><span className='strawberry'>Jordyn</span><span className='sky'>Niara</span><span className='inchworm'>Smith</span></>}
+               <><span style={{color:"var(--strawberry)"}}>Jordyn</span><span style={{color:"var(--sky)"}}>Niara</span><span style={{color:"var(--inchworm)"}}>Smith</span></>}
               {isTabletOrMobile &&
-                <><span className='strawberry'>J</span><span className='sky'>N</span><span className='inchworm'>S</span></>
+                <><span style={{color:"var(--strawberry)"}}>J</span><span style={{color:"var(--sky)"}}>N</span><span style={{color:"var(--inchworm)"}}>S</span></>
               }
             </h1>
           </div>
@@ -60,7 +60,7 @@ function PageHeader() {
           </div> 
           }
       </div>
-      { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
+      {/* { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() } */}
     </>
   )
 }

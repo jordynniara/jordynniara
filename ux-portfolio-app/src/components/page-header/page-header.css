@@ -1,10 +1,10 @@
 /*Page Header*/
 .page-header{
-    background-color: #d9d2cc;
     padding: 3%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .page-header.center {
@@ -15,12 +15,17 @@
   justify-content: space-around;
 }
 
-  
+/*Title*/
 .title-background{
-  padding: 1%;
-  flex-grow: 3;
+  padding: 10px 50px 10px 50px;
+  flex-shrink: 2;
 }
 
+#titelHomeButton :hover{
+  cursor:pointer;
+}
+
+/* navigation */
 .hamburger-nav{
   flex-grow: 1;
   text-align: center;
@@ -33,7 +38,7 @@
 }
 
 .nav-menu-item-vert.divider {
-  border-bottom: 3px #22211F dashed;
+  border-bottom: 3px var(--soil) dashed;
 }
 
 .nav-menu-item-horiz{
@@ -42,7 +47,7 @@
 }
 
 .nav-menu-item-horiz.divider {
-  border-right: 3px #22211F dashed;
+  border-right: 3px var(--soil) dashed;
 }
 
 .nav-menu-item {
@@ -51,7 +56,7 @@
 
 .nav-menu-item a {
   text-decoration: none;
-  color: #22211F;
+  color: var(--soil);
 }
 
 .nav-menu-item:hover {
@@ -60,7 +65,7 @@
 
 .expanded-nav-menu {
   border-radius: 0px;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
   justify-content: space-evenly;
 }
