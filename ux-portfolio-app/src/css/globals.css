@@ -51,6 +51,36 @@ large, h5 {font-size: 1.2rem; font-weight: 400; line-height: 1.3;}
 
 small, .text_small {font-size: 0.833rem;}
 
+a {
+  padding: .05rem !important;
+  margin: .05rem !important;
+  border-radius: 3px;
+  border: 2px dashed #22211F;
+  display: inline;
+  text-decoration: none;
+  color: black;
+}
+a:hover, a.dark {
+  padding: .05rem !important;
+  margin: .05rem !important;
+  border-radius: 3px;
+  border: 2px dashed white;
+  display: inline;
+  background-color: var(--soil);
+}
+a.strawberry-hover:hover {
+  text-decoration: underline;
+  color: var(--strawberry);
+}
+a.sky-hover:hover {
+  text-decoration: underline;
+  color: var(--sky);
+}
+a.inchworm-hover:hover {
+  text-decoration: underline;
+  color: var(--inchworm);
+}
+
 /* theming */
 :root{
   --strawberry: #E87B6F;
@@ -115,6 +145,8 @@ small, .text_small {font-size: 0.833rem;}
 .rounded-border-std{
   border-radius: 10px;
 }
+
+
 
 /* Body */
 .grid-paper{

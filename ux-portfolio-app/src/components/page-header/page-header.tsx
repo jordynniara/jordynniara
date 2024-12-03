@@ -60,7 +60,12 @@ function PageHeader() {
           </div> 
           }
       </div>
-      {/* { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() } */}
+
+      {/* 
+            if on home page don't render menu (requires lifted state)
+      { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() } */}
+
+      <div className='sticker logo drop-shadow'></div>
     </>
   )
 }

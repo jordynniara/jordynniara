@@ -17,12 +17,12 @@ function Home() {
   return(
     //TODO: this should reorient vertically on mobile
     <div className="container">
-      <div></div>
+      {/* <div></div>
       <div className="page-title"><h1>Hi, I'm Jordyn :&#41;</h1></div>
-      <div></div>
+      <div></div> */}
       <div className="left-menu">
-        <div><h3>Prototypes</h3></div>
-        <div><h3>Papers</h3></div>
+        <div><h3><a className="strawberry-hover" href="/">Prototypes</a></h3></div>
+        <div><h3><a className="inchworm-hover" href="/">Papers</a></h3></div>
       </div>
       <div className="img-container"
         onMouseOver={() => setImgHover(jordynTheDevImg)}
@@ -32,12 +32,9 @@ function Home() {
       >
       </div>
       <div className="right-menu">
-      <div><h3>Evaluations & Analysis</h3></div>
-        <div><h3>Artwork</h3></div>
+      <div><h3><a className="sky-hover" style={{display:"inline-block"}} href="/">Evaluations & Analysis</a></h3></div>
+        <div><h3><a className="strawberry-hover" href="/">Artwork</a></h3></div>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
   )
 }

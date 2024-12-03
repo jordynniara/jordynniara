@@ -10,6 +10,7 @@
     grid-template-rows: 50% 50%;
     justify-items: center;
     align-items: center;
+    margin-left: 200px;
 }
 
 .right-menu {
@@ -19,6 +20,8 @@
     grid-template-rows: 50% 50%;
     justify-items: center;
     align-items: center;
+    text-align: center;
+    margin-right: 200px;
 }
 
 .img-container {
@@ -37,63 +40,9 @@
 .container {
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 20% 80%;
+    /* grid-template-rows: 20% 80%; */
     grid-template-areas:
-        ". header ."
+        /* ". header ." */
         "left-menu picture right-menu";
     width: 100%;
 }
-
-/* .img-container {
-    grid-area: gallery;
-    padding: 20px;
-    margin: 1%;
-    border: black dashed 4px;
-    background-color: white;
-} */
-
-.hover-img {
-    object-fit: cover;
-    width:100%;
-    height:100%;
-}
-
-.introduction-heading {
-    align-self: center;
-    margin-top: 0;
-}
-
-.home-bkg{
-    background-image: url(/assets/logos/mascot-orig.png);
-}
-
-.about-me-content {
-    padding: 20px;
-    margin: 1%;
-    grid-area: about-me;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    grid-template-areas:
-        "about-me-header"
-        "sticker-set"
-}
-
-.about-me-header {
-    justify-self: center;
-    margin-top: 0;
-    grid-area: about-me-header
-}
-
-.sticker-set {
-    padding: 20px;
-    margin: 1%;
-    grid-area: sticker-set;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-        "sticker-1 sticker-2"
-        "sticker-3 sticker-4"
-}
-
