@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Sacramento&display=swap');
 
 body {
-  min-height: 100vh;
+  /* min-height: 100%; */
+  height: 100%;
+  width: 100vw;
   font-family: "Alice", serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #22211F;
+  color: var(--soil);
   background-color: transparent;
+
+  /* border: 8px solid red !important; */
+  /* border-color: var(--pebble); */
+  /* border-image: url("https://www.transparenttextures.com/patterns/white-leather.png") !important; */
 }
 
 /* Typography */
@@ -16,15 +22,9 @@ h1.title{
   font-family: "Sacramento", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 8vw;
+  font-size: 5vw;
   vertical-align: middle;
   margin: 0px;
-}
-
-.title-background{
-  background: rgba(82, 82, 82, 0.50);
-  border-radius: 25px;
-  padding: 1%;
 }
 
 .center{
@@ -55,46 +55,98 @@ large, h5 {font-size: 1.2rem; font-weight: 400; line-height: 1.3;}
 
 small, .text_small {font-size: 0.833rem;}
 
-/* colors */
+a {
+  padding: .05rem !important;
+  margin: .05rem !important;
+  border-radius: 3px;
+  border: 2px dashed #22211F;
+  display: inline;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a.dark,
+button:hover, button.dark {
+  padding: .05rem !important;
+  margin: .05rem !important;
+  border-radius: 3px;
+  border: 2px dashed white;
+  display: inline;
+  background-color: var(--soil);
+}
+
+a.strawberry-hover:hover,
+button.strawberry-hover:hover {
+  /* text-decoration: underline; */
+  color: var(--strawberry);
+}
+
+a.sky-hover:hover,
+button.sky-hover:hover{
+  /* text-decoration: underline; */
+  color: var(--sky);
+}
+
+a.inchworm-hover:hover,
+button.inchworm-hover:hover{
+  /* text-decoration: underline; */
+  color: var(--inchworm);
+}
+
+/* theming */
+:root{
+  --strawberry: #E87B6F;
+  --sky: #6FA4DC;
+  --inchworm: #B2C480;
+  --soil: #22211F;
+  --pebble: #AD9885; /* #AE9279;   color: #d9d2cc */
+  --white: #FFFFF;
+}
 .strawberry
 {
-  color: #E87B6F;
+  color: var(--strawberry);
 }
 
 .sky
 {
-  color: #6FA4DC;
+  color: var(--sky);
 }
 
 .inchworm
 {
-  color: #B2C480
+  color: var(--inchworm)
 }
 
 .wetsoil
 {
-  color: #22211F
+  color: var(--soil)
 }
 
 .pebble
 {
-  color: #C4BAB9
+  /* color: #d9d2cc */
+  color: var(--pebble);
 }
 
 .white
 {
-  color: #FFFFFF
+  color: var(--white)
+}
+
+.leather-texture{
+  background-color: var(--pebble);
+  background-image: url("https://www.transparenttextures.com/patterns/white-leather.png"); /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .inset-border {
-  background-color: #ffffff;
+  background-color: var(--white)f;
   border: solid rgba(0, 0, 0, .15);
   border-width: 1px 0;
   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
 .dashed-border{
-  border: 3px #22211F dashed;
+  border: 3px var(--soil) dashed;
   background-color: transparent;
 }
 
@@ -106,10 +158,91 @@ small, .text_small {font-size: 0.833rem;}
   border-radius: 10px;
 }
 
+/* Components */
+.button {
+  background-color: white !important;
+  padding: 4px !important;
+  border: 3px var(--soil) dashed !important;
+  border-radius: 10% !important;
+  width: 70% !important;
+  margin: 5px !important;
+}
+
+.button:hover {
+  background-color: var(--soil) !important;
+  border: 3px white dashed !important;
+  border-radius: 10% !important;
+  width: 70% !important;
+  margin: 5px !important;
+  padding: 4px !important;
+}
+
 /* Body */
 .grid-paper{
   background-size: 40px 40px;
   background-image:
     linear-gradient(to right, rgb(122, 157, 217) .5px, transparent .5px),
     linear-gradient(to bottom, rgb(122, 157, 217) .5px, transparent .5px);
+}
+
+/* layout */
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-margins {
+  height: 100%;
+  padding: 2%;
+}
+
+/* Components */
+.sticker {
+  border: 20px solid white;
+  /* border-radius: 100px; */
+  /* width: 30%; */
+  background-color: var(--soil);
+  color: white;
+  text-align: center;
+}
+
+.border-radius-50
+{
+  border-radius: 50px; 
+}
+
+.border-radius-100
+{
+  border-radius: 100px; 
+}
+
+.mascot-column {
+  width:20%;
+  align-items: center;
+}
+
+.mascot-column img {
+  width: 100%;
+  padding: 3px;
 }

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { ScreenSizeResponse } from '../../tools/utilities.ts'
 import { Button } from "@fluentui/react-components";
 import { NavigationFilled } from '@fluentui/react-icons'
-import { StackShim, StackItemShim } from "@fluentui/react-migration-v8-v9";
 
 function PageHeader() {
   const [isNavOpen, setNavIsOpen] = useState(false);
@@ -17,52 +16,57 @@ function PageHeader() {
     );
   };
 
-  const renderVertNavList = () => {
-    const orientationClassAttr = "nav-menu-item-vert";
-    return renderNavigationList(false, orientationClassAttr)
-  }
+  // const renderVertNavList = () => {
+  //   const orientationClassAttr = "nav-menu-item-vert";
+  //   return renderNavigationList(false, orientationClassAttr)
+  // }
 
-  const renderHorizNavList = () => {
-    const orientationClassAttr = "nav-menu-item-horiz";
-    return renderNavigationList(true, orientationClassAttr)
-  }
+  // const renderHorizNavList = () => {
+  //   const orientationClassAttr = "nav-menu-item-horiz";
+  //   return renderNavigationList(true, orientationClassAttr)
+  // }
 
-  const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['Protoypes', 'Evaluations & Analysis', 'Papers', 'Artwork'];
+  // const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
+  //   const menuItems = ['Protoypes', 'Evaluations & Analysis', 'Papers', 'Artwork'];
 
-    return (
-    <StackShim className="expanded-nav-menu dashed-border rounded-border-std"
-      horizontal={horizontal}
-      verticalAlign = 'center'>
-        {menuItems.map( (value: string, index: number) => (
-          <StackShim key={"navItem"+value}
-            className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
-            <a href=''>{ value } </a>
-          </StackShim>))}
-    </StackShim>);
-  }
+  //   return (
+  //   <div className={'expanded-nav-menu dashed-border rounded-border-std flex' + (horizontal ? 'row' : 'col')}
+  //     // verticalAlign = 'center
+  //     >
+  //       {menuItems.map( (value: string, index: number) => (
+  //         <Button key={"navItem"+value}
+  //           className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
+  //           <a href=''>{ value } </a>
+  //         </Button>))}
+  //   </div>);
+  // }
 
   return (
-    <StackShim>
-      <StackShim horizontal={isTabletOrMobile} verticalAlign='center' className={'page-header ' + (isNavOpen ? 'drop-shadow': '')}
-        horizontalAlign={isTabletOrMobile ? 'space-evenly' : 'center'}>
-          <StackItemShim className="title-background">
+    <>
+      <div
+        className={'page-header leather-texture ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
+          <div className="title-background sticker drop-shadow inset-border border-radius-100" id="titelHomeButton">
             <h1 className="title">
               {isDesktopOrLaptop && 
-               <><span className='strawberry'>Jordyn</span><span className='sky'>Niara</span><span className='inchworm'>Smith</span></>}
+               <><span style={{color:"var(--strawberry)"}}>Jordyn</span><span style={{color:"var(--sky)"}}>Niara</span><span style={{color:"var(--inchworm)"}}>Smith</span></>}
               {isTabletOrMobile &&
-                <><span className='strawberry'>J</span><span className='sky'>N</span><span className='inchworm'>S</span></>
+                <><span style={{color:"var(--strawberry)"}}>J</span><span style={{color:"var(--sky)"}}>N</span><span style={{color:"var(--inchworm)"}}>S</span></>
               }
             </h1>
-          </StackItemShim>
+          </div>
           { isTabletOrMobile && 
-          <StackItemShim>
+          <div className="hamburger-nav">
             { renderHamburger() }
-          </StackItemShim> 
+          </div> 
           }
-      </StackShim>
-      { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
-    </StackShim>
+      </div>
+
+      {/* 
+            if on home page don't render menu (requires lifted state)
+      { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() } */}
+
+      <div className='sticker logo drop-shadow'></div>
+    </>
   )
 }
 

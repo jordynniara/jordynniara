@@ -1,13 +1,19 @@
 import './css/globals.css'
-import { StackShim} from "@fluentui/react-migration-v8-v9";
+import './app.css'
 import Home from "./pages/home/home"
+import PageHeader from './components/page-header/page-header';
+import PageFooter from './components/page-footer/page-footer';
 
 function App() {
   return (
-    <StackShim>
-      {/*routing here */}
-      {Home()}
-    </StackShim>
+    <div className='flex col page-container'>
+      {PageHeader()}
+      <div className='page-margins grid-paper flex page-justify'>
+        {/*routing here*/}
+        {Home()}
+      </div>
+      {PageFooter()}  
+    </div>
   )
 }
 
