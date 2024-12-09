@@ -46,3 +46,18 @@
         "left-menu picture right-menu";
     width: 100%;
 }
+
+.home-button {
+    background-color: white !important;
+    padding: 4px !important;
+    border: 3px var(--soil) dashed !important;
+    border-radius: 4% !important;
+    width: 70% !important;
+    margin: 5px !important;
+}
+
+.home-button:hover {
+    background-color: var(--soil) !important;
+    border: 3px white dashed !important;
+    border-radius: 4% !important;
+}

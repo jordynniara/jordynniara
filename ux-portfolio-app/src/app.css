@@ -1,6 +1,9 @@
 .page-container{
     height: 100vh;
     width: 100vw;
+    justify-self: center;
+
+    /* border: 10px solid red; */
 }
 
 .page-justify

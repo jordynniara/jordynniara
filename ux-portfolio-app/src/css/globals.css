@@ -9,6 +9,10 @@ body {
   line-height: 1.75;
   color: var(--soil);
   background-color: transparent;
+
+  /* border: 8px solid red !important; */
+  /* border-color: var(--pebble); */
+  /* border-image: url("https://www.transparenttextures.com/patterns/white-leather.png") !important; */
 }
 
 /* Typography */
@@ -60,7 +64,9 @@ a {
   text-decoration: none;
   color: black;
 }
-a:hover, a.dark {
+
+a:hover, a.dark,
+button:hover, button.dark {
   padding: .05rem !important;
   margin: .05rem !important;
   border-radius: 3px;
@@ -68,16 +74,22 @@ a:hover, a.dark {
   display: inline;
   background-color: var(--soil);
 }
-a.strawberry-hover:hover {
-  text-decoration: underline;
+
+a.strawberry-hover:hover,
+button.strawberry-hover:hover {
+  /* text-decoration: underline; */
   color: var(--strawberry);
 }
-a.sky-hover:hover {
-  text-decoration: underline;
+
+a.sky-hover:hover,
+button.sky-hover:hover{
+  /* text-decoration: underline; */
   color: var(--sky);
 }
-a.inchworm-hover:hover {
-  text-decoration: underline;
+
+a.inchworm-hover:hover,
+button.inchworm-hover:hover{
+  /* text-decoration: underline; */
   color: var(--inchworm);
 }
 
@@ -146,7 +158,24 @@ a.inchworm-hover:hover {
   border-radius: 10px;
 }
 
+/* Components */
+.button {
+  background-color: white !important;
+  padding: 4px !important;
+  border: 3px var(--soil) dashed !important;
+  border-radius: 10% !important;
+  width: 70% !important;
+  margin: 5px !important;
+}
 
+.button:hover {
+  background-color: var(--soil) !important;
+  border: 3px white dashed !important;
+  border-radius: 10% !important;
+  width: 70% !important;
+  margin: 5px !important;
+  padding: 4px !important;
+}
 
 /* Body */
 .grid-paper{
