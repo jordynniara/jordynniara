@@ -1,11 +1,12 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import '../../css/globals.css'
 import './home.css'
-import {
-  Button
-} from "@fluentui/react-components";
+// import {
+//   Button
+// } from "@fluentui/react-components";
 
-function Home() {
+const Home = () => {
   const mascotOrigImg:string = "/assets/logos/mascot-orig.png";
   const jordynTheDevImg:string ="/assets/photos/jordyn_the_dev.JPG";
   const [imgHover, setImgHover] = React.useState(mascotOrigImg);
@@ -14,12 +15,16 @@ function Home() {
     //TODO: this should reorient vertically on mobile
     <div className="container">
       <div className="left-menu">
-        <Button size="large" className="strawberry-hover button  drop-shadow">
+        <Link to="/prototypes" className="strawberry-hover button drop-shadow">
+          {/* <Button size="large" className="strawberry-hover button  drop-shadow"> */}
           <h3>Prototypes</h3>
-        </Button>
-        <Button size="large" className="inchworm-hover button  drop-shadow">
+        {/* </Button> */}
+        </Link>
+        <Link to="/papers" className="inchworm-hover button drop-shadow">
+          {/* <Button size="large" className="strawberry-hover button  drop-shadow"> */}
           <h3>Papers</h3>
-        </Button>
+        {/* </Button> */}
+        </Link>
       </div>
       <div className="img-container"
         onMouseOver={() => setImgHover(mascotOrigImg)}
@@ -29,12 +34,16 @@ function Home() {
       >
       </div>
       <div className="right-menu">
-        <Button size="large" className="sky-hover button  drop-shadow">
+        <Link to="/analysis" className="sky-hover button drop-shadow">
+        {/* <Button size="large" className="sky-hover button  drop-shadow"> */}
           <h3>Analysis</h3>
-        </Button>
-        <Button size="large" className="strawberry-hover button  drop-shadow">
-          <h3>Artwork</h3>
-        </Button>
+        {/* </Button> */}
+        </Link>
+        <Link to="/artwork" className="strawberry-hover button drop-shadow">
+          {/* <Button size="large" className="strawberry-hover button  drop-shadow"> */}
+            <h3>Artwork</h3>
+          {/* </Button> */}
+        </Link>
       </div>
     </div>
   )
