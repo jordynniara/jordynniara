@@ -13,23 +13,23 @@ import Artwork from "./pages/artwork/artwork";
 
 function App() {
   return (
-    <div className='flex col page-container'>
-      {PageHeader()}
-      <div className='page-margins grid-paper flex page-justify'>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/">
-              <Route index element={<Home/>}/>
-              <Route path="/prototypes" element={<Prototypes/>}/>
-              <Route path="/analysis" element={<Analysis/>}/>
-              <Route path="/papers" element={<Papers/>}/>
-              <Route path="/artwork" element={<Artwork/>}/>
-            </Route>
-          </Routes>
-        </BrowserRouter>
+    <BrowserRouter>
+      <div className='flex col page-container'>
+        {PageHeader()}
+        <div className='page-margins grid-paper flex page-justify'>
+            <Routes>
+              <Route path="/">
+                <Route index element={<Home/>}/>
+                <Route path="/prototypes" element={<Prototypes/>}/>
+                <Route path="/analysis" element={<Analysis/>}/>
+                <Route path="/papers" element={<Papers/>}/>
+                <Route path="/artwork" element={<Artwork/>}/>
+              </Route>
+            </Routes>
+        </div>
+        {PageFooter()}  
       </div>
-      {PageFooter()}  
-    </div>
+    </BrowserRouter>
   )
 }
 

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ScreenSizeResponse } from '../../tools/utilities.ts'
 import { Button } from "@fluentui/react-components";
 import { NavigationFilled } from '@fluentui/react-icons'
+import { Link } from "react-router-dom";
 
 function PageHeader() {
   const [isNavOpen, setNavIsOpen] = useState(false);
@@ -45,15 +46,17 @@ function PageHeader() {
     <>
       <div
         className={'page-header leather-texture ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
-          <div className="title-background sticker drop-shadow inset-border border-radius-100" id="titelHomeButton">
-            <h1 className="title">
-              {isDesktopOrLaptop && 
-               <><span style={{color:"var(--strawberry)"}}>Jordyn</span><span style={{color:"var(--sky)"}}>Niara</span><span style={{color:"var(--inchworm)"}}>Smith</span></>}
-              {isTabletOrMobile &&
-                <><span style={{color:"var(--strawberry)"}}>J</span><span style={{color:"var(--sky)"}}>N</span><span style={{color:"var(--inchworm)"}}>S</span></>
-              }
-            </h1>
-          </div>
+          <Link to="/" style={{border:"none"}}>
+            <div className="title-background sticker drop-shadow inset-border border-radius-100" id="titelHomeButton">
+              <h1 className="title">
+                {isDesktopOrLaptop && 
+                <><span style={{color:"var(--strawberry)"}}>Jordyn</span><span style={{color:"var(--sky)"}}>Niara</span><span style={{color:"var(--inchworm)"}}>Smith</span></>}
+                {isTabletOrMobile &&
+                  <><span style={{color:"var(--strawberry)"}}>J</span><span style={{color:"var(--sky)"}}>N</span><span style={{color:"var(--inchworm)"}}>S</span></>
+                }
+              </h1>
+            </div>
+          </Link>
           { isTabletOrMobile && 
           <div className="hamburger-nav">
             { renderHamburger() }
