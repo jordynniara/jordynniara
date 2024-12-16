@@ -13,7 +13,7 @@ import Artwork from "./pages/artwork/artwork";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className='flex col page-container'>
         {PageHeader()}
         <div className='page-margins grid-paper flex page-justify'>
