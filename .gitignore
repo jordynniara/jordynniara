@@ -5,6 +5,13 @@ package-lock.json
 node_modules
 /ux-portfolio-app/node_modules
 
+/index.html
+/jordynniara.github.io-workspace.code-workspace
+/package.json
+/readme.md
+/Web Assignments
+/projects
+
 # Logs
 logs
 *.log
