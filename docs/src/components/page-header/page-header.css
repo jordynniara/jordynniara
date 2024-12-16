@@ -36,6 +36,11 @@
   flex-shrink: 2;
 }
 
+a, a:hover{
+  border: none;
+  background-color: transparent;
+}
+
 #titelHomeButton :hover{
   cursor:pointer;
 }
