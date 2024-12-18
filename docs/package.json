@@ -21,6 +21,7 @@
     "@fluentui/react-components": "^9.54.4",
     "@fluentui/react-migration-v8-v9": "^9.6.20",
     "@fluentui/react-nav-preview": "^0.5.1",
+    "@types/node": "^22.10.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
