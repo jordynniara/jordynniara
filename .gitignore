@@ -5,7 +5,7 @@ package-lock.json
 node_modules
 /ux-portfolio-app/node_modules
 
-/index.html
+# /index.html
 /jordynniara.github.io-workspace.code-workspace
 /package.json
 /readme.md
