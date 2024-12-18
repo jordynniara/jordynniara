@@ -2,13 +2,15 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import '../../css/globals.css'
 import './home.css'
+import mascotOrigImg from "/assets/logos/mascot-orig.png"
+
 // import {
 //   Button
 // } from "@fluentui/react-components";
 
 const Home = () => {
-  const mascotOrigImg:string = "/assets/logos/mascot-orig.png";
-  const jordynTheDevImg:string ="/assets/photos/jordyn_the_dev.JPG";
+  // const mascotOrigImg:string = "jordynniara/assets/logos/mascot-orig.png";
+  const jordynTheDevImg:string ="jordynniara/assets/photos/jordyn_the_dev.JPG";
   const [imgHover, setImgHover] = React.useState(mascotOrigImg);
 
   return(

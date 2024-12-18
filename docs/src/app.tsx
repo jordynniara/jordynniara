@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './css/globals.css'
 import './app.css'
 import Home from "./pages/home/home"
@@ -13,7 +13,7 @@ import Artwork from "./pages/artwork/artwork";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className='flex col page-container'>
         {PageHeader()}
         <div className='page-margins grid-paper flex page-justify'>
@@ -29,7 +29,7 @@ function App() {
         </div>
         {PageFooter()}  
       </div>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
