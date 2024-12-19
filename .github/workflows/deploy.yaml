@@ -35,10 +35,11 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          cache-dependency-path: "./jordynniara/"
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build
+        run: npm run Build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
