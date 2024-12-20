@@ -1,9 +1,9 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route} from "react-router-dom";
 import './css/globals.css'
 import './app.css'
 import Home from "./pages/home/home"
-import PageHeader from './components/page-header/page-header';
-import PageFooter from './components/page-footer/page-footer';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 import Prototypes from "./pages/prototypes/prototypes";
 import Analysis from "./pages/analysis/analysis";
 import Papers from "./pages/papers/papers";
@@ -15,19 +15,19 @@ function App() {
   return (
     <HashRouter>
       <div className='flex col page-container'>
-        {PageHeader()}
+        <Header/>
         <div className='page-margins grid-paper flex page-justify'>
             <Routes>
               <Route path="/">
                 <Route index element={<Home/>}/>
-                <Route path="/prototypes" element={<Prototypes/>}/>
-                <Route path="/analysis" element={<Analysis/>}/>
-                <Route path="/papers" element={<Papers/>}/>
-                <Route path="/artwork" element={<Artwork/>}/>
+                <Route path="/Prototypes" element={<Prototypes/>}/>
+                <Route path="/Analysis" element={<Analysis/>}/>
+                <Route path="/Papers" element={<Papers/>}/>
+                <Route path="/Artwork" element={<Artwork/>}/>
               </Route>
             </Routes>
         </div>
-        {PageFooter()}  
+        <Footer/>  
       </div>
     </HashRouter>
   )

@@ -1,7 +1,7 @@
 import '../../css/globals.css'
-import './page-footer.css'
+import './footer.css'
 
-function PageFooter() {
+function Footer() {
   return (
     <div className="center footer leather-texture" style={{paddingTop:"5px"}}>
       <div>Jordyn N. Smith © 2024</div>
@@ -9,4 +9,4 @@ function PageFooter() {
   )
 }
 
-export default PageFooter
+export default Footer

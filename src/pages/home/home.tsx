@@ -18,14 +18,10 @@ const Home = () => {
     <div className="container">
       <div className="left-menu">
         <Link to="/prototypes" className="strawberry-hover button drop-shadow">
-          {/* <Button size="large" className="strawberry-hover button  drop-shadow"> */}
           <h3>Prototypes</h3>
-        {/* </Button> */}
         </Link>
         <Link to="/papers" className="inchworm-hover button drop-shadow">
-          {/* <Button size="large" className="strawberry-hover button  drop-shadow"> */}
           <h3>Papers</h3>
-        {/* </Button> */}
         </Link>
       </div>
       <div className="img-container"
@@ -37,14 +33,10 @@ const Home = () => {
       </div>
       <div className="right-menu">
         <Link to="/analysis" className="sky-hover button drop-shadow">
-        {/* <Button size="large" className="sky-hover button  drop-shadow"> */}
           <h3>Analysis</h3>
-        {/* </Button> */}
         </Link>
         <Link to="/artwork" className="strawberry-hover button drop-shadow">
-          {/* <Button size="large" className="strawberry-hover button  drop-shadow"> */}
             <h3>Artwork</h3>
-          {/* </Button> */}
         </Link>
       </div>
     </div>

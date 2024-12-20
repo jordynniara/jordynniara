@@ -85,7 +85,7 @@ a, a:hover{
 
 .expanded-nav-menu {
   border-radius: 0px;
-  /* width: 100%; */
-  align-items: center;
+  width: 100%;
+  align-self: center;
   justify-content: space-evenly;
 }

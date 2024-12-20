@@ -1,15 +1,20 @@
 import '../../css/globals.css'
-import './page-header.css'
+import './header.css'
 import { useState } from 'react'
 import { ScreenSizeResponse } from '../../tools/utilities.ts'
 import { Button } from "@fluentui/react-components";
 import { NavigationFilled } from '@fluentui/react-icons'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function PageHeader() {
-  const [isNavOpen, setNavIsOpen] = useState(false);
+function Header() {
+  const currPath = useLocation().pathname;
+  const onHomePage = currPath == '/jordynniara' || currPath == '/';
+
   const isTabletOrMobile = ScreenSizeResponse.IsTabletOrMobile();
   const isDesktopOrLaptop = ScreenSizeResponse.IsDesktopOrLaptop();
+
+  const [isNavOpen, setNavIsOpen] = useState(false);
+  
   const renderHamburger = () => {
     return (
         <Button icon={<NavigationFilled/>} title='hamburgerNavBtn' as='button' size='large' appearance='subtle' 
@@ -17,30 +22,28 @@ function PageHeader() {
     );
   };
 
-  // const renderVertNavList = () => {
-  //   const orientationClassAttr = "nav-menu-item-vert";
-  //   return renderNavigationList(false, orientationClassAttr)
-  // }
+  const renderVertNavList = () => {
+    const orientationClassAttr = "nav-menu-item-vert";
+    return renderNavigationList(false, orientationClassAttr)
+  }
 
-  // const renderHorizNavList = () => {
-  //   const orientationClassAttr = "nav-menu-item-horiz";
-  //   return renderNavigationList(true, orientationClassAttr)
-  // }
+  const renderHorizNavList = () => {
+    const orientationClassAttr = "nav-menu-item-horiz";
+    return renderNavigationList(true, orientationClassAttr)
+  }
 
-  // const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-  //   const menuItems = ['Protoypes', 'Evaluations & Analysis', 'Papers', 'Artwork'];
+  const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
+    const menuItems = ['Prototypes', 'Analysis', 'Papers', 'Artwork'];
 
-  //   return (
-  //   <div className={'expanded-nav-menu dashed-border rounded-border-std flex' + (horizontal ? 'row' : 'col')}
-  //     // verticalAlign = 'center
-  //     >
-  //       {menuItems.map( (value: string, index: number) => (
-  //         <Button key={"navItem"+value}
-  //           className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
-  //           <a href=''>{ value } </a>
-  //         </Button>))}
-  //   </div>);
-  // }
+    return (
+    <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`}>
+        {menuItems.map( (value: string, index: number) => (
+          <Link to={`/${value}`} key={`navItem-${value}`}
+            className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
+            { value }
+          </Link>))}
+    </div>);
+  }
 
   return (
     <>
@@ -63,14 +66,13 @@ function PageHeader() {
           </div> 
           }
       </div>
-
-      {/* 
-            if on home page don't render menu (requires lifted state)
-      { isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() } */}
-
-      <div className='sticker logo drop-shadow'></div>
+        {isTabletOrMobile ? isNavOpen && renderVertNavList() : !onHomePage && renderHorizNavList() }
+        {onHomePage && <div className='sticker logo drop-shadow'></div>}
     </>
   )
 }
 
-export default PageHeader
+export default Header
+
+// TODO: use logo as hamburger menu on widescreen
+// have it rotate out the nav menu and rotate in when closing
