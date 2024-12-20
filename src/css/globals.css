@@ -9,10 +9,6 @@ body {
   line-height: 1.75;
   color: var(--soil);
   background-color: transparent;
-
-  /* border: 8px solid red !important; */
-  /* border-color: var(--pebble); */
-  /* border-image: url("https://www.transparenttextures.com/patterns/white-leather.png") !important; */
 }
 
 /* Typography */
@@ -135,7 +131,7 @@ button.inchworm-hover:hover{
 
 .leather-texture{
   background-color: var(--pebble);
-  background-image: url("https://www.transparenttextures.com/patterns/white-leather.png"); /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("/assets/textures/white-leather.png");
 }
 
 .inset-border {
@@ -178,12 +174,13 @@ button.inchworm-hover:hover{
 }
 
 /* Body */
-.grid-paper{
+/* .grid-paper{
   background-size: 40px 40px;
   background-image:
     linear-gradient(to right, rgb(122, 157, 217) .5px, transparent .5px),
     linear-gradient(to bottom, rgb(122, 157, 217) .5px, transparent .5px);
-}
+  background-color: white;
+} */
 
 /* layout */
 html, body {
@@ -212,10 +209,12 @@ body {
   flex-direction: row;
 }
 
-.page-margins {
+/* .page-margins {
   height: 100%;
   padding: 2%;
-}
+
+  background: url("/assets/textures/white-leather.png") var(--pebble);
+} */
 
 /* Components */
 .sticker {

@@ -16,7 +16,8 @@ function App() {
     <HashRouter>
       <div className='flex col page-container'>
         <Header/>
-        <div className='page-margins grid-paper flex page-justify'>
+        <div className='page-margins flex'>
+          <div className='grid-paper flex page-justify drop-shadow'>
             <Routes>
               <Route path="/">
                 <Route index element={<Home/>}/>
@@ -24,8 +25,10 @@ function App() {
                 <Route path="/Analysis" element={<Analysis/>}/>
                 <Route path="/Papers" element={<Papers/>}/>
                 <Route path="/Artwork" element={<Artwork/>}/>
+                {/*Need 404 page*/}
               </Route>
             </Routes>
+          </div>
         </div>
         <Footer/>  
       </div>

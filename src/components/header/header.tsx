@@ -28,15 +28,24 @@ function Header() {
   }
 
   const renderHorizNavList = () => {
-    const orientationClassAttr = "nav-menu-item-horiz";
-    return renderNavigationList(true, orientationClassAttr)
+    if(!onHomePage)
+    {
+      const orientationClassAttr = "nav-menu-item-horiz";
+      return renderNavigationList(true, orientationClassAttr)
+    }
+
+    return(
+      <div className={`expanded-nav-menu dashed-border drop-shadow flex row}`} style={{justifyContent:'center'}}>
+        Niara [nee ⋅ air ⋅ uh] - (Swahili) Woman with purpose
+      </div>
+    );
   }
 
   const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
     const menuItems = ['Prototypes', 'Analysis', 'Papers', 'Artwork'];
 
     return (
-    <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`}>
+    <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`} style={{justifyContent:'space-evenly'}}>
         {menuItems.map( (value: string, index: number) => (
           <Link to={`/${value}`} key={`navItem-${value}`}
             className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
@@ -66,7 +75,7 @@ function Header() {
           </div> 
           }
       </div>
-        {isTabletOrMobile ? isNavOpen && renderVertNavList() : !onHomePage && renderHorizNavList() }
+        {isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
         {onHomePage && <div className='sticker logo drop-shadow'></div>}
     </>
   )
