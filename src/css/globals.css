@@ -209,13 +209,6 @@ body {
   flex-direction: row;
 }
 
-/* .page-margins {
-  height: 100%;
-  padding: 2%;
-
-  background: url("/assets/textures/white-leather.png") var(--pebble);
-} */
-
 /* Components */
 .sticker {
   border: 20px solid white;
