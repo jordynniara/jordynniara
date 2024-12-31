@@ -42,7 +42,7 @@ function Header() {
   }
 
   const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['', 'Prototypes', 'Analysis', 'Papers', 'Artwork'];
+    const menuItems = ['', 'Projects', 'Analysis', 'Papers', 'Artwork'];
 
     return (
     <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`} style={{justifyContent:'space-evenly'}}>
@@ -59,7 +59,7 @@ function Header() {
       <div
         className={'page-header leather-texture ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
           <Link to="/" style={{border:"none"}}>
-            <div className="title-background sticker drop-shadow inset-border border-radius-100" id="titelHomeButton">
+            <div className="title-background sticker drop-shadow border-radius-100" id="titelHomeButton">
               <h1 className="title">
                 {isDesktopOrLaptop && 
                 <><span style={{color:"var(--strawberry)"}}>Jordyn</span><span style={{color:"var(--sky)"}}>Niara</span><span style={{color:"var(--inchworm)"}}>Smith</span></>}

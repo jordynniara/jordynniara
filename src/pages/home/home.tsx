@@ -15,7 +15,7 @@ const Home = () => {
 
   return(
     //TODO: this should reorient vertically on mobile
-    <div className="container">
+    <div className="home-container">
       <div className="left-menu">
         <Link to="/prototypes" className="strawberry-hover button drop-shadow">
           <h3>Prototypes</h3>

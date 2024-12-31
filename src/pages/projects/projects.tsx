@@ -1,11 +1,18 @@
-// import * as React from "react";
-
-import { ReactElement } from "react"
+import * as React from "react";
+import "../../css/globals.css"
+import "../../css/pages.css"
+import "./projects.css"
 
 const Projects = () => {
     return (
-        <div>
-            
+        <div className="projects-container">
+            <div className="title"><h1>Projects</h1></div>
+            <div className="content">
+                <div className="project-list">list</div>
+                <div className="project-preview-container">
+                    <div className="project-preview dashed-border rounder-border-std inset-border"></div>
+                </div>
+            </div>
         </div>
     )
 }
@@ -17,7 +24,7 @@ interface IProject {
     description: string
     github: URL
     preview: URL
-    iframe: ReactElement | null
+    iframe: React.ReactElement | null
 }
 
 const generateProjectData = () : { [id: number]: IProject} => {

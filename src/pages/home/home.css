@@ -38,7 +38,8 @@
     height: 100%;
 }
 
-.container {
+.home-container {
+    flex: 1;
     display: grid;
     grid-template-columns: 30% 40% 30%;
     /* grid-template-rows: 20% 80%; */
