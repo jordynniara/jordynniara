@@ -42,14 +42,14 @@ function Header() {
   }
 
   const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['Prototypes', 'Analysis', 'Papers', 'Artwork'];
+    const menuItems = ['', 'Prototypes', 'Analysis', 'Papers', 'Artwork'];
 
     return (
     <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`} style={{justifyContent:'space-evenly'}}>
         {menuItems.map( (value: string, index: number) => (
           <Link to={`/${value}`} key={`navItem-${value}`}
             className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
-            { value }
+            { value == '' ? 'Home' : value }
           </Link>))}
     </div>);
   }
@@ -74,9 +74,10 @@ function Header() {
             { renderHamburger() }
           </div> 
           }
+           {isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
+           {onHomePage && isDesktopOrLaptop && <div className='sticker logo drop-shadow'></div>}
       </div>
-        {isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
-        {onHomePage && <div className='sticker logo drop-shadow'></div>}
+       
     </>
   )
 }
