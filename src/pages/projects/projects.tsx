@@ -2,13 +2,35 @@ import * as React from "react";
 import "../../css/globals.css"
 import "../../css/pages.css"
 import "./projects.css"
+import { Accordion, AccordionItem, AccordionHeader, AccordionPanel } from "@fluentui/react-components";
 
 const Projects = () => {
+    const renderAccordion = () => {
+        let projectDict: {[id:number]: IProject} = generateProjectData()
+
+        Object.keys(projectDict).map((value:string , id: number) => {
+            console.log("id" + id)
+            console.log("value" + value)
+    })
+
+        return (
+            <Accordion collapsible multiple> 
+                { Object.keys(projectDict).map((id: string) => (
+                     <AccordionItem value={id} key={id}> 
+                        <AccordionHeader size='large'>{projectDict[Number(id)].name}</AccordionHeader>
+                        <AccordionPanel className="inset-border"> {projectDict[Number(id)].description} </AccordionPanel>
+                    </AccordionItem> ))
+                } 
+            </Accordion>
+        )
+    }
     return (
         <div className="projects-container">
             <div className="title"><h1>Projects</h1></div>
             <div className="content">
-                <div className="project-list">list</div>
+                <div className="project-list">
+                    {renderAccordion()}
+                </div>
                 <div className="project-preview-container">
                     <div className="project-preview dashed-border rounder-border-std inset-border"></div>
                 </div>
@@ -23,7 +45,7 @@ interface IProject {
     name: string
     description: string
     github: URL
-    preview: URL
+    preview: URL | null
     iframe: React.ReactElement | null
 }
 
@@ -48,7 +70,7 @@ const generateProjectData = () : { [id: number]: IProject} => {
                 "The app also fosters social interaction by notifying users when friends or co-workers are taking breaks, encouraging a collaborative and healthy work environment. "+
                 "Tailored for organizations, Get Up! enhances employee engagement and productivity through a fun and interactive approach.",
             github: new URL("https://github.com/jordynniara/jordynniara"),
-            preview: new URL(""),
+            preview: null,
             iframe: null
         },
         3: {
@@ -69,7 +91,7 @@ const generateProjectData = () : { [id: number]: IProject} => {
                 "While the portfolio has evolved, this design system remains a cornerstone, influencing its final look and feel. " +
                 "Explore the elements that bring consistency and elegance to my digital presence.",
             github: new URL("https://github.com/jordynniara/jordynniara"),
-            preview: new URL("jordynniara/assets/projects/miniDesignSystem/home.html"),
+            preview: null, //new URL("/jordynniara/assets/projects/miniDesignSystem/home.html"),
             iframe: null
         },
         5: {

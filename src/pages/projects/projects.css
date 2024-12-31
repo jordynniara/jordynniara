@@ -54,6 +54,11 @@
     display: flex;
 }
 
+.project-list AccordionPanel {
+    background-color: white;
+}
+
+
 .project-preview-container {
     grid-area: projectPreview;
     justify-self: center;
