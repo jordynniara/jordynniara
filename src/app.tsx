@@ -4,7 +4,7 @@ import './app.css'
 import Home from "./pages/home/home"
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
-import Prototypes from "./pages/prototypes/prototypes";
+import Projects from "./pages/projects/projects";
 import Analysis from "./pages/analysis/analysis";
 import Papers from "./pages/papers/papers";
 import Artwork from "./pages/artwork/artwork";
@@ -21,7 +21,7 @@ function App() {
             <Routes>
               <Route path="/">
                 <Route index element={<Home/>}/>
-                <Route path="/Prototypes" element={<Prototypes/>}/>
+                <Route path="/Projects" element={<Projects/>}/>
                 <Route path="/Analysis" element={<Analysis/>}/>
                 <Route path="/Papers" element={<Papers/>}/>
                 <Route path="/Artwork" element={<Artwork/>}/>

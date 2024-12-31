@@ -1,9 +1,9 @@
 // import * as React from "react";
 
-const Prototypes = () => {
+const Projects = () => {
     return (
         <h1>Prototypes</h1>
     )
 }
 
-export default Prototypes
+export default Projects
