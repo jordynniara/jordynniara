@@ -1,0 +1,20 @@
+.nav-pills .dropdown-menu.show button{
+    border-radius: 0%;
+    border: none;
+    background-color: transparent;
+}
+
+.nav-pills .dropdown-menu.show.strawberry {
+    background-color: #E87B6F;
+    color: #22211F;
+}
+
+.nav-pills .dropdown-menu.show.sky {
+    background-color: #6FA4DC;
+    color: #22211F;
+}
+
+.nav-pills .dropdown-menu.show.inchworm {
+    background-color: #B2C480;
+    color: #22211F;
+}

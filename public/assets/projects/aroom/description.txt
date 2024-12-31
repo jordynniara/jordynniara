@@ -1,0 +1,4 @@
+ARoom
+ARoom transforms the furniture shopping experience by utilizing augmented reality to allow users to preview items in their space. The app includes a style quiz to help users discover their preferred interior decorating style and enables them to add items to a wish list and create virtual rooms. Users can purchase items from multiple stores in a single transaction, streamlining the shopping process. On the desktop app, users can generate QR codes to view items in AR on their mobile devices. ARoom offers a personalized, interactive, and efficient approach to furniture shopping.
+https://github.com/jordynniara/jordynniara?tab=readme-ov-file
+https://www.figma.com/proto/rOjBqh29Ded8iq2WHfwGi3/ARoom-Project?node-id=371-1973&p=f&t=8fje0lhhpQgWTKb9-1&scaling=min-zoom&content-scaling=fixed&page-id=371%3A1742&starting-point-node-id=371%3A1973&show-proto-sidebar=1

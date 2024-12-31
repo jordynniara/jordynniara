@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Nia - Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/gradient/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/gradient/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/gradient/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/gradient/site.webmanifest">
+    <!-- Custom styles for this template -->
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="css/cards.css" rel="stylesheet">
+    <!--Adobe font-->
+    <link rel="stylesheet" href="https://use.typekit.net/hyl0lwn.css">
+  </head>
+  <body>
+    <!--Vertical Navbar-->
+    <nav id="trueNav">
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header align-items-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <a href="../home.html" class="d-flex flex-column text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+              <img src="../assets/logos/favicon.png" style="width: 20rem;" alt="JNS Logo"></img>
+              <h1 class="logo-name">
+                <span class="strawberry">Jordyn</span><span class="sky">Niara</span><span class="inchworm">Smith</span>
+              </h1>
+            </a>
+            
+            <ul class="list-unstyled ps-0 r">
+              <li class="mb-1 red-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                Foundations
+                </button>
+                <div class="collapse" id="foundations-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../foundation/type.html" class="d-inline-flex rounded ">Typography</a></li>
+                    <li><a href="../foundation/color.html" class="d-inline-flex rounded">Color Palette</a></li>
+                    <li><a href="../foundation/logo.html" class="d-inline-flex rounded">Logo Variations</a></li>
+            
+                  </ul>
+                </div>
+              </li>
+  
+              <li class="mb-1 blue-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                  Components
+                </button>
+                <div class="collapse" id="components-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="./buttons.html" class="d-inline-flex rounded">Buttons</a></li>
+                    <li><a href="#" class="d-inline-flex rounded active">Cards</a></li>
+                    <li><a href="./navigation.html" class="d-inline-flex rounded">Navigation</a></li>
+                  </ul>
+                </div>
+              </li>
+  
+              <li class="mb-1 green-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                  Page Patterns
+                </button>
+                <div class="collapse" id="patterns-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../patterns/home.html" class="d-inline-flex rounded">Homepage</a></li>
+                    <li><a href="../patterns/projects.html" class="d-inline-flex rounded">Projects Page</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Header-->
+    <nav id="page-header" class="navbar bg-body-tertiary header d-flex p-1" style="background-color: #C4BAB9!important;">
+      <a id="nia-link" class="navbar-brand" href="../home.html" style="text-decoration: none; display: inline;">
+        <div class="p-1 m-3 nia sticker"><h1>Nia</h1></div>
+      </a>
+      <h1 class="align-self-center flex-lg-shrink-1">Design System: Components - Cards</h1>
+      <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!-- Page Content  -->
+    <div class="grid-paper p-5">
+      <div class = "container-fluid" id="content">
+        <!--Sticker-->
+        <div class="row drop-shadow sticker mb-5 p-5">
+          <div class="col-12">
+            <h2>Cards</h2> <!--Definition-->
+            <large>
+              A container to summarize content typically with an image, title, short description, and a button to open a larger container like a modal.
+              Button can be omitted or swapped with a link.
+            </large>
+          </div>
+        </div>
+        <!--Main Content-->
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Default Card Header-->
+            <div class="col-12 pb-3 text-center">
+              <h3>Default Card</h3>
+            </div>
+        </div>
+        <div class="row ms-0 px-5 mx-5 mb-5"> <!--Default Card Example-->
+          <div class="col-lg-6 col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border p-3">
+              <div class="card default">
+                <img src="../assets/images/dragon.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="card-header">
+                    <h4 class="m-0">Title</h4>
+                  </div>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+                  </p>
+                  <div class="card-footer">
+                    <button type="button" class="btn primary-sky">Button</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center col-lg-6 col-md-12"> <!--Accordion-->
+            <div class="accordion w-100" id="defaulCardAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Usage-->
+                  <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#defaultAccordionUsage" aria-expanded="true" aria-controls="collapseOne">
+                    Usage
+                  </button>
+                </h2>
+                <div id="defaultAccordionUsage" class="accordion-collapse collapse show" data-bs-parent="#defaulCardAccordion">
+                  <div class="accordion-body inset-border">
+                    <p>
+                      Primary card to be used to preview projects with a picture, title, and short description. 
+                      Button can added to open a larger description in a modal or similar pop-up, or can be swapped with a link to navigate to an
+                      an internal or external site such as GitHub.
+                      <br>
+                      Overflow is turned off to keep body text short but can be added with <span class="code">Overflow-y:scroll</span>.
+                      <br>
+                      Code shown is for card on display. CSS can be modified as needed using classes 
+                      <span class="code">.card</span>, <span class="code">.card-body</span>, <span class="code">.card-header</span>,
+                      <span class="code">.card-text</span>, and <span class="code">.card-footer</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item"> <!--Code-->
+                <h2 class="accordion-header">
+                  <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#defaultAccordionCode" aria-expanded="false" aria-controls="collapseTwo">
+                    Code
+                  </button>
+                </h2>
+                <div id="defaultAccordionCode" class="accordion-collapse collapse" data-bs-parent="#defaulCardAccordion">
+                  <div class="accordion-body inset-border code">
+                    <small>
+                      &lt;div class="card"&gt;<br>
+                      &emsp;&lt;img src="../assets/images/dragon.jpg" class="card-img-top" alt="..."&gt;<br>
+                      &emsp;&lt;div class="card-body"&gt;<br>
+                      &emsp;&emsp;&lt;div class="card-header"&gt;<br>
+                      &emsp;&emsp;&emsp;&lt;h4 class="m-0"&gt;Title&lt;/h4&gt;<br>
+                      &emsp;&emsp;&lt;/div&gt;<br>
+                      &emsp;&emsp;&lt;p class="card-text"&gt;<br>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br> 
+                      &emsp;&emsp;&lt;/p&gt;<br>
+                      &emsp;&emsp;&lt;div class="card-footer "&gt;<br>
+                      &emsp;&emsp;&emsp;&lt;button type="button" class="btn primary-sky"&gt;Button&lt/button&gt;<br>
+                      &emsp;&emsp;&lt;/div&gt;
+                      &emsp;&lt;/div&gt;<br>
+                      &lt;/div&gt;
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"> <!--Accessibility-->
+                  <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#defaultAccordionA11y" aria-expanded="false" aria-controls="collapseThree">
+                    Accessibility Considerations
+                  </button>
+                </h2>
+                <div id="defaultAccordionA11y" class="accordion-collapse collapse" data-bs-parent="#defaulCardAccordion">
+                  <div class="accordion-body">
+                    <p style="display:inline">
+                      Coloring for the cards are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                      Links and Buttons should be used distinctly from each as defined in <a href="./buttons.html">Buttons</a>. Cards should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                      See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                      for more accessibility guidelines.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row px-5 mx-5 mb-3" style="background-color: transparent;"> <!--Exanded Card Wide Header-->
+          <div class="col-12 pb-3 text-center">
+            <h3>Expanded Card</h3>
+          </div>
+      </div>
+      <div class="row ms-0 px-5 mx-5 mb-5"> <!--Expanded Card Example-->
+        <div class="col-lg-6 col-md-12 ">
+          <div class="d-flex flex-column justify-content-center align-items-center dashed-border inset-border p-3">
+            <div class="card expanded">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-4 col-md-12">
+                    <img src="../assets/images/dragon.jpg" class="card-img-top" alt="...">
+                  </div>
+                  <div class="col-lg-8 col-md-12">
+                    <div class="card-header">
+                      <h4 class="m-0">Title</h4>
+                    </div>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                      Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    </p>
+                    <div class="card-footer">
+                      <a href="#">Link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center col-lg-6 col-md-12"> <!--Accordion-->
+          <div class="accordion w-100" id="expandedCardAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header"> <!--Usage-->
+                <button class="accordion-button strawberry" type="button" data-bs-toggle="collapse" data-bs-target="#expandedCardUsage" aria-expanded="true" aria-controls="collapseOne">
+                  Usage
+                </button>
+              </h2>
+              <div id="expandedCardUsage" class="accordion-collapse collapse show" data-bs-parent="#expandedCardAccordion">
+                <div class="accordion-body inset-border">
+                  <p>
+                    An expanded version of the card that can be used similarly to the default card but when more text is required. 
+                    Button can added to open a larger description in a modal or similar pop-up, or can be swapped with a link to navigate to an
+                    an internal or external site such as GitHub.
+                    Has a wide layout for larger screens and a narrow layout for smaller screens (reduce screen size for demo).
+                    <br>
+                    Code shown is for card on display. CSS can be modified as needed using classes 
+                    <span class="code">.card.expanded</span> and <span class="code">.card.expanded .card-*</span> where <span class="code">*</span> is 
+                    on of <span class="code">body</span>, <span class="code">text</span>, and <span class="code">footer</span>.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item"> <!--Code-->
+              <h2 class="accordion-header">
+                <button class="accordion-button sky collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expandedCardCode" aria-expanded="false" aria-controls="collapseTwo">
+                  Code
+                </button>
+              </h2>
+              <div id="expandedCardCode" class="accordion-collapse collapse" data-bs-parent="#expandedCardAccordion">
+                <div class="accordion-body inset-border code">
+                  <small>
+                    &lt;div class="card expanded"&gt;<br>
+                    &emsp;&lt;div class="card-body"&gt;<br>
+                    &emsp;&emsp;&lt;div class="row"&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;div class="col-lg-4 col-md-12"&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;img src="../assets/images/dragon.jpg" class="card-img-top" alt="..."&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;/div&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;div class="col-lg-8 col-md-12"&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;div class="card-header"&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&lt;h4 class="m-0">Title&lt;/h4&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;p class="card-text"&gt;<br>
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                              Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;/p&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;div class="card-footer"&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&lt;a href="#"&gt;Link&lt;/a&gt;<br>
+                    &emsp;&emsp;&emsp;&emsp;&lt;/div&gt;<br>
+                    &emsp;&emsp;&emsp;&lt;/div&gt;<br>
+                    &emsp;&emsp;&lt;/div&gt;<br>
+                    &emsp;&lt;/div&gt;<br>
+                    &lt;/div&gt;<br>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"> <!--Accessibility-->
+                <button class="accordion-button inchworm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#expandedCardA11y" aria-expanded="false" aria-controls="collapseThree">
+                  Accessibility Considerations
+                </button>
+              </h2>
+              <div id="expandedCardA11y" class="accordion-collapse collapse" data-bs-parent="#expandedCardAccordion">
+                <div class="accordion-body">
+                  <p style="display:inline">
+                    Coloring for the cards are chosen to fit the theme of the system while also maintaining WCAG color contrast standards.
+                    Links and Buttons should be used distinctly from each as defined in <a href="./buttons.html">Buttons</a>. Cards should have text, be focusable, and have the appropriate aria labelling for keyboard navigation and screen readers. 
+                    See <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">Mozilla Web Documents</a>
+                    for more accessibility guidelines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+        <div class="row px-5 mx-5 mb-3">
+          <div class="col-4">
+            <img src="../assets/logos/mascot_strawberry.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_sky.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_inchworm.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="text-center small" style="background-color: #C4BAB9;" > 
+      <small>JNS © 2023</small>
+    </div>
+    <!-- </container> -->
+    <script>
+      function showCardInfo(item) {
+        document.getElementById("dropdownMenuButton").innerHTML = item.innerHTML;
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/sidebars.js"></script>
+  </body>
+</html>

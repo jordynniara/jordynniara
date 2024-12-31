@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Nia - Typography</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/gradient/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/gradient/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/gradient/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/gradient/site.webmanifest">
+    <!-- Custom styles for this template -->
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="css/type.css" rel="stylesheet">
+    <!--Adobe font-->
+    <link rel="stylesheet" href="https://use.typekit.net/hyl0lwn.css">
+  </head>
+  <body>
+    <!--Vertical Navbar-->
+    <nav id="trueNav">
+      <div class="container-fluid">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header align-items-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <a href="../home.html" class="d-flex flex-column text-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+              <img src="../assets/logos/favicon.png" style="width: 20rem;" alt="JNS Logo"></img>
+              <h1 class="logo-name">
+                <span class="strawberry">Jordyn</span><span class="sky">Niara</span><span class="inchworm">Smith</span>
+              </h1>
+            </a>
+            <ul class="list-unstyled ps-0 r">
+              <li class="mb-1 red-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+                data-bs-toggle="collapse" data-bs-target="#foundations-collapse" aria-expanded="false">
+                Foundations
+                </button>
+                <div class="collapse" id="foundations-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="d-inline-flex rounded active">Typography</a></li>
+                    <li><a href="./color.html" class="d-inline-flex rounded">Color Palette</a></li>
+                    <li><a href="./logo.html" class="d-inline-flex rounded">Logo Variations</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1 blue-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                  Components
+                </button>
+                <div class="collapse" id="components-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../components/buttons.html" class="d-inline-flex rounded">Buttons</a></li>
+                    <li><a href="../components/cards.html" class="d-inline-flex rounded">Cards</a></li>
+                    <li><a href="../components/navigation.html" class="d-inline-flex rounded ">Navigation</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1 green-hover">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed " 
+                data-bs-toggle="collapse" data-bs-target="#patterns-collapse" aria-expanded="false">
+                  Page Patterns
+                </button>
+                <div class="collapse" id="patterns-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="../patterns/home.html" class="d-inline-flex rounded">Homepage</a></li>
+                    <li><a href="../patterns/projects.html" class="d-inline-flex rounded">Projects Page</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Header-->
+    <nav id="page-header" class="navbar bg-body-tertiary header d-flex p-1" style="background-color: #C4BAB9!important;">
+      <a id="nia-link" class="navbar-brand" href="../home.html" style="text-decoration: none; display: inline;">
+        <div class="p-1 m-3 nia sticker"><h1>Nia</h1></div>
+      </a>
+      <h1 class="align-self-center flex-lg-shrink-1">Design System: Foundation - Typography</h1>
+      <button class="navbar-toggler ms-auto me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!-- Page Content  -->
+    <div class="grid-paper px-4 pt-5">
+      <div class = "container-fluid" id="content">
+        <!--Sticker-->
+        <div class="row drop-shadow sticker p-5 mb-5">
+          <div class="col-12">
+            <h2 class="playfair-display">Playfair Display & Playfair</h2>
+            <large>Minor Third Scale / Base size: 16px</large>
+            <p>
+              I chose Playfair for it's simple elegance and charm. It gives a feeling of luxury without feeling unapproachable.
+              It's display and general variations made it easy to pair with itself. However, as a display type I wanted something 
+              a little heavier and set it to 700 by default.
+            </p> <!--Definition-->
+          </div>
+        </div>
+        <!--Main Content-->
+        <div class="row px-5">
+          <!--Heading 1-->
+          <div class="col-lg-9 col-md-12">
+              <h1>Heading 1</h1>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend</p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair Display; </p>
+              <p>font-size: 39.81px; </p>
+              <p>font-weight: 700; </p>
+              <p>font-style: normal; </p>
+              <p>color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!-- Heading 2 -->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <h2>Heading 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend</p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair Display; </p>
+              <p>font-size: 33.18px; </p>
+              <p>font-weight: 700; </p>
+              <p>font-style: normal; </p>
+              <p>color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!--Heading 3-->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <h3>Heading 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend</p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair Display; </p>
+              <p>font-size: 27.65px; </p>
+              <p>font-weight: 700; </p>
+              <p>font-style: normal; </p>
+              <p>color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!--Heading 4-->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <h4>Heading 4</h4>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend</p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair Display; </p>
+              <p>font-size: 23.04px; </p>
+              <p>font-weight: 700; </p>
+              <p>font-style: normal; </p>
+              <p>color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!--Large body-->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <large>Large Body Text</large>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend</p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair Display </p>
+              <p>font-size: 19.20px; </p>
+              <p>font-weight: 700; </p>
+              <p>font-style: normal; </p>
+              <p>color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!--Body Text-->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <p>Body Text</p>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend</p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair </p>
+              <p>font-size: 16px; </p>
+              <p>font-weight: 400; </p>
+              <p>font-style: normal; </p>
+              <p>color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!--Emphasized Text-->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <p> <span class="emphasized-text">Emphasized Text</span></p>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                  <span class="emphasized-text">Nulla consequat</span>massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+              </p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair; </p>
+              <p>font-size: 16px; </p>
+              <p>font-weight: 400; </p>
+              <p>font-style: normal; </p>
+              <p>color: #6FA4DC; </p>
+              <p>background-color: #22211F; </p>
+          </div>
+        </div>
+        <hr>
+        <!--Hyperlink Text-->
+        <div class="row mt-5 px-5">
+          <div class="col-lg-9 col-md-12">
+              <a href="">Hyperlink Text</a>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+                  <a href="">Nulla consequat massa </a> quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+              </p>
+          </div>
+          <div class="col-lg-3 col-md-12 code inset-border" style="background-color: #ffff;">
+              <p>font-family: Playfair; </p>
+              <p>font-size: 16px; </p>
+              <p>font-weight: 400; </p>
+              <p>font-style: underlined; (:hover) </p>
+              <p>color: #FFFFFF; (default) </p>
+          </div>
+        </div>
+        <hr>
+        <div class="row mt-5 px-5">
+          <div class="col-12">
+              Generated with <a href="https://typescale.com/?size=16&scale=1.250&text=A%20Visual%20Type%20Scale&font=Yeseva%20One&fontweight=400&bodyfont=Josefin%2BSans&bodyfontweight=400&lineheight=1.75&backgroundcolor=%23ffffff&fontcolor=%23000000&preview=false">type-scale.com</a > 
+          </div>
+        </div>
+        <hr>
+        <div class="row px-5 mx-5 mb-3">
+          <div class="col-4">
+            <img src="../assets/logos/mascot_strawberry.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_sky.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+          <div class="col-4">
+            <img src="../assets/logos/mascot_inchworm.png"class="w-25" style="display: block; margin: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <div class="text-center small" style="background-color: #C4BAB9;" > 
+      <small>JNS © 2023</small>
+    </div>
+    <!-- </container> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../js/sidebars.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+Mini Design System & Kit
+This Mini Design System is the backbone of my online portfolio. Built using HTML5, Bootstrap, and CSS, it showcases a cohesive and adaptable framework. While the portfolio has evolved, this design system remains a cornerstone, influencing its final look and feel. Explore the elements that bring consistency and elegance to my digital presence.
+https://github.com/jordynniara/jordynniara?tab=readme-ov-file

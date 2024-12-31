@@ -1,0 +1,4 @@
+Get Up!
+Get Up! is an innovative application designed to promote workplace wellness by encouraging regular breaks. Featuring an interactive GUI, it gamifies break-taking with badges, in-app prizes, and leaderboards. Users can customize avatars, earn points, and receive both disruptive and non-disruptive notifications based on their preferences. The app also fosters social interaction by notifying users when friends or co-workers are taking breaks, encouraging a collaborative and healthy work environment. Tailored for organizations, Get Up! enhances employee engagement and productivity through a fun and interactive approach.
+https://github.com/jordynniara/jordynniara?tab=readme-ov-file
+https://depauledu.sharepoint.com/:p:/s/HCI516-Group4/EXvIl_Au101JkySR4eTDQLwBl01ctnzO82eyvW6TmNHj5w?e=vOUapr
