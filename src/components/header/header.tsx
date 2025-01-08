@@ -69,12 +69,12 @@ function Header() {
               </h1>
             </div>
           </Link>
-          { isTabletOrMobile && 
+          {/* { isTabletOrMobile && 
           <div className="hamburger-nav">
             { renderHamburger() }
           </div> 
-          }
-           {isTabletOrMobile ? isNavOpen && renderVertNavList() : renderHorizNavList() }
+          } */}
+           {/*isTabletOrMobile ? isNavOpen && renderVertNavList() :*/ renderHorizNavList() }
            {onHomePage && isDesktopOrLaptop && <div className='sticker logo drop-shadow'></div>}
       </div>
        

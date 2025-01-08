@@ -15,7 +15,10 @@ const useStyles = makeStyles ({
         padding: '10px',
         maxHeight: '100ox',
         overflowY: 'scroll'
-    }  
+    },
+    projLinks:{
+        textAlign: 'center'
+    }
 })
 
 const Projects = () => {
@@ -24,7 +27,7 @@ const Projects = () => {
         let projectDict: {[id:number]: IProject} = generateProjectData()
         const accordionHeaderColors = ['strawberry', 'sky', 'inchworm'];
         return (
-            <Accordion collapsible multiple> 
+            <Accordion collapsible className={classes.root}> 
                 {
                     Object.keys(projectDict).map((id: string, index:number) => (
                      <AccordionItem value={id} key={id}> 
@@ -36,9 +39,10 @@ const Projects = () => {
                              {projectDict[Number(id)].description}
                              <br/>
                              {projectDict[Number(id)].github != null && 
-                                <Link href={projectDict[Number(id)].github} target="_blank">See in Github</Link>}
+                                <Link href={projectDict[Number(id)].github} className={classes.projLinks}  target="_blank">See in Github </Link>}
+                             
                              {projectDict[Number(id)].preview != null && 
-                                <Link href={projectDict[Number(id)].preview} target="_blank">Prototype</Link>}
+                                <Link href={projectDict[Number(id)].preview} className={classes.projLinks} target="_blank">Prototype</Link>}
                         </AccordionPanel>
                     </AccordionItem> ))
                 } 
