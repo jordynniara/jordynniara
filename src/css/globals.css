@@ -55,41 +55,18 @@ large, h5 {font-size: 1.2rem; font-weight: 400; line-height: 1.3;}
 
 small, .text_small {font-size: 0.833rem;}
 
-/*a {
-  padding: .05rem !important;
-  margin: .05rem !important;
-  border-radius: 3px;
-  border: 2px dashed #22211F;
-  display: inline;
-  text-decoration: none;
-  color: black;
-}*/
-
-/*a:hover, a.dark,
-button:hover, button.dark {
-  padding: .05rem !important;
-  margin: .05rem !important;
-  border-radius: 3px;
-  border: 2px dashed white;
-  display: inline;
-  background-color: var(--soil);
-}*/
-
 a.strawberry-hover:hover,
 button.strawberry-hover:hover {
-  /* text-decoration: underline; */
   color: var(--strawberry);
 }
 
 a.sky-hover:hover,
-button.sky-hover:hover{
-  /* text-decoration: underline; */
+button.sky-hover:hover {
   color: var(--sky);
 }
 
 a.inchworm-hover:hover,
 button.inchworm-hover:hover{
-  /* text-decoration: underline; */
   color: var(--inchworm);
 }
 
@@ -104,17 +81,20 @@ button.inchworm-hover:hover{
 }
 .strawberry
 {
-  color: var(--strawberry);
+  --text-color: var(--strawberry);
+  color: var(--text-color);
 }
 
 .sky
 {
-  color: var(--sky);
+  --text-color: var(--sky);
+  color: var(--text-color);
 }
 
 .inchworm
 {
-  color: var(--inchworm)
+  --text-color: var(--inchworm);
+  color: var(--text-color)
 }
 
 .wetsoil
@@ -124,7 +104,6 @@ button.inchworm-hover:hover{
 
 .pebble
 {
-  /* color: #d9d2cc */
   color: var(--pebble);
 }
 
@@ -159,32 +138,26 @@ button.inchworm-hover:hover{
 }
 
 /* Components */
-.button {
-  background-color: white !important;
-  padding: 4px !important;
-  border: 3px var(--soil) dashed !important;
-  border-radius: 10% !important;
-  width: 70% !important;
-  margin: 5px !important;
+.button, .button-dark:hover{
+  background-color: white;
+  border: 3px var(--soil) dashed;
+  border-radius: 10px;
+  color: var(--soil);
 }
 
-.button:hover {
-  background-color: var(--soil) !important;
-  border: 3px white dashed !important;
-  border-radius: 10% !important;
-  width: 70% !important;
-  margin: 5px !important;
-  padding: 4px !important;
+.button:hover, .button-dark {
+  --bg-color: var(--soil);
+  background-color: var(--bg-color);
+  border: 3px white dashed;
+  border-radius: 10px;
+}
+
+.button-dark.inverted:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 /* Body */
-/* .grid-paper{
-  background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, rgb(122, 157, 217) .5px, transparent .5px),
-    linear-gradient(to bottom, rgb(122, 157, 217) .5px, transparent .5px);
-  background-color: white;
-} */
 
 /* layout */
 html, body {
@@ -213,11 +186,19 @@ body {
   flex-direction: row;
 }
 
+.flex.row .break{
+  flex-basis: 100%;
+  height: 0;
+}
+
+.flex.col .break{
+  flex-basis: 100%;
+  width: 0;
+}
+
 /* Components */
 .sticker {
   border: 20px solid white;
-  /* border-radius: 100px; */
-  /* width: 30%; */
   background-color: var(--soil);
   color: white;
   text-align: center;

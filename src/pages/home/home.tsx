@@ -4,39 +4,27 @@ import '../../css/globals.css'
 import './home.css'
 import mascotOrigImg from "/assets/logos/mascot-orig.png"
 
-// import {
-//   Button
-// } from "@fluentui/react-components";
-
 const Home = () => {
-  // const mascotOrigImg:string = "jordynniara/assets/logos/mascot-orig.png";
-  const jordynTheDevImg:string ="jordynniara/assets/photos/jordyn_the_dev.JPG";
-  const [imgHover, setImgHover] = React.useState(mascotOrigImg);
-
   return(
     //TODO: this should reorient vertically on mobile
     <div className="home-container">
-      <div className="left-menu">
-        <Link to="/projects" className="strawberry-hover button drop-shadow">
-          <h3>Projects</h3>
+      <div id="left-menu" className="menu">
+        <Link to="/projects" className="strawberry button-dark inverted drop-shadow">
+          Projects
         </Link>
-        <Link to="/papers" className="inchworm-hover button drop-shadow">
-          <h3>Papers</h3>
+        <Link to="/papers" className="inchworm button-dark inverted drop-shadow">
+          Papers
         </Link>
       </div>
-      <div className="img-container"
-        onMouseOver={() => setImgHover(mascotOrigImg)}
-        onMouseOut={() => setImgHover(mascotOrigImg)}
-        style={{backgroundImage:`url(${imgHover})`, transition:'background-image 0.5s ease-in-out', 
-          backgroundSize: imgHover==jordynTheDevImg ? "contain" : "auto"}}
-      >
+      <div className="img-container">
+        <img src={mascotOrigImg} alt="cartoon mascot image" />
       </div>
-      <div className="right-menu">
-        <Link to="/analysis" className="sky-hover button drop-shadow">
-          <h3>Analysis</h3>
+      <div id="right-menu" className="menu">
+        <Link to="/analysis" className="sky button-dark inverted drop-shadow">
+          Analysis
         </Link>
-        <Link to="/artwork" className="strawberry-hover button drop-shadow">
-            <h3>Artwork</h3>
+        <Link to="/artwork" className="strawberry button-dark inverted drop-shadow">
+          Artwork
         </Link>
       </div>
     </div>

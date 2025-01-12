@@ -56,8 +56,7 @@ function Header() {
 
   return (
     <>
-      <div
-        className={'page-header leather-texture ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
+      <div className={'flex row page-header leather-texture ' + (isNavOpen ? 'drop-shadow ': '') + (isTabletOrMobile ? 'space-evenly' : 'center')}>
           <Link to="/" style={{border:"none"}}>
             <div className="title-background sticker drop-shadow border-radius-100" id="titelHomeButton">
               <h1 className="title">
@@ -69,13 +68,9 @@ function Header() {
               </h1>
             </div>
           </Link>
-          {/* { isTabletOrMobile && 
-          <div className="hamburger-nav">
-            { renderHamburger() }
-          </div> 
-          } */}
-           {/*isTabletOrMobile ? isNavOpen && renderVertNavList() :*/ renderHorizNavList() }
-           {onHomePage && isDesktopOrLaptop && <div className='sticker logo drop-shadow'></div>}
+          <div className='break' style={{height:"15px"}}/>
+          {/*isTabletOrMobile ? isNavOpen && renderVertNavList() :*/ renderHorizNavList() }
+          {onHomePage && isDesktopOrLaptop && <div className='sticker logo drop-shadow'></div>}
       </div>
        
     </>

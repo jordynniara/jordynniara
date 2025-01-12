@@ -3,50 +3,43 @@
     justify-self: center;
 }
 
-.left-menu {
-    grid-area: left-menu;
+.menu{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
     justify-items: center;
     align-items: center;
     text-align: center;
-    margin-left: 200px;
+    margin: 5px;
 }
 
-.right-menu {
+#left-menu.menu{
+    grid-area: left-menu;
+}
+
+#right-menu.menu{
     grid-area: right-menu;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    margin-right: 200px;
 }
 
 .img-container {
     grid-area: picture;
-    /* background-image: url("/assets/logos/mascot-orig.png"); */
-    background-repeat: no-repeat;
-    /* background-size: contain; */
-    background-position: center;
+    align-self: center;
 }
 
-.img {
-    width: 100%;
-    height: 100%;
+img {
+    width: 70%;
+    display: block;
+    justify-self: center;
 }
 
 .home-container {
     flex: 1;
     display: grid;
     grid-template-columns: 30% 40% 30%;
-    /* grid-template-rows: 20% 80%; */
     grid-template-areas:
-        /* ". header ." */
         "left-menu picture right-menu";
     width: 100%;
+    padding: 35px 45px;
 }
 
 .home-button {
@@ -62,4 +55,12 @@
     background-color: var(--soil) !important;
     border: 3px white dashed !important;
     border-radius: 4% !important;
+}
+
+.menu a {
+    width: 52%;
+    height: 40%;
+    padding: 8px 16px;
+    align-content: center;
+    font-size: 3vw;
 }
