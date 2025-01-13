@@ -94,7 +94,7 @@ import {
   const getAnnouncement: CarouselAnnouncerFunction = (
     index: number,
     totalSlides: number,
-    slideGroupList: number[][]
+    // slideGroupList: number[][]
   ) => {
     return `Carousel slide ${index + 1} of ${totalSlides}`;
   };

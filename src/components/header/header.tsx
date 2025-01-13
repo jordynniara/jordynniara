@@ -15,17 +15,17 @@ function Header() {
 
   const [isNavOpen, setNavIsOpen] = useState(false);
   
-  const renderHamburger = () => {
-    return (
-        <Button icon={<NavigationFilled/>} title='hamburgerNavBtn' as='button' size='large' appearance='subtle' 
-          onClick = {()=>setNavIsOpen(!isNavOpen)} />
-    );
-  };
+  // const renderHamburger = () => {
+  //   return (
+  //       <Button icon={<NavigationFilled/>} title='hamburgerNavBtn' as='button' size='large' appearance='subtle' 
+  //         onClick = {()=>setNavIsOpen(!isNavOpen)} />
+  //   );
+  // };
 
-  const renderVertNavList = () => {
-    const orientationClassAttr = "nav-menu-item-vert";
-    return renderNavigationList(false, orientationClassAttr)
-  }
+  // const renderVertNavList = () => {
+  //   const orientationClassAttr = "nav-menu-item-vert";
+  //   return renderNavigationList(false, orientationClassAttr)
+  // }
 
   const renderHorizNavList = () => {
     if(!onHomePage)
