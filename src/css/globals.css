@@ -138,18 +138,23 @@ button.inchworm-hover:hover{
 }
 
 /* Components */
+.button, .button-dark, button:hover, .button-dark:hover{
+  border: 3px; 
+  border-radius: 20px;
+}
+
 .button, .button-dark:hover{
   background-color: white;
-  border: 3px var(--soil) dashed;
-  border-radius: 10px;
+  border-color: var(--soil); 
+  border-style: dashed;
   color: var(--soil);
 }
 
 .button:hover, .button-dark {
   --bg-color: var(--soil);
   background-color: var(--bg-color);
-  border: 3px white dashed;
-  border-radius: 10px;
+  border-color: white;
+  border-style: dashed;
 }
 
 .button-dark.inverted:hover {

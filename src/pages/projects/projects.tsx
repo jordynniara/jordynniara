@@ -2,133 +2,129 @@ import * as React from "react";
 import "../../css/globals.css"
 import "../../css/pages.css"
 import "./projects.css"
-import { Accordion, AccordionItem, AccordionHeader, AccordionPanel, mergeClasses, Link } from "@fluentui/react-components";
-import { makeStyles } from '@fluentui/react-components';
-
-const useStyles = makeStyles ({
-    root: {
-        width:'100%'
+import {
+    Button,
+    Image,
+    makeStyles,
+    tokens,
+    typographyStyles,
+  } from "@fluentui/react-components";
+  import {
+    Carousel,
+    CarouselCard,
+    CarouselNav,
+    CarouselNavButton,
+    CarouselNavContainer,
+    CarouselViewport,
+    CarouselAnnouncerFunction,
+    CarouselSlider,
+  } from "@fluentui/react-components";
+  
+  const useClasses = makeStyles({
+    bannerCard: {
+      alignContent: "center",
+      borderRadius: tokens.borderRadiusLarge,
+      height: "450px",
+      textAlign: "left",
+      position: "relative",
     },
-    accordPanel: {
-        backgroundColor: 'white',
-        borderRadius: '3px',
-        padding: '10px',
-        maxHeight: '100ox',
-        overflowY: 'scroll'
+    cardContainer: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "8px",
+  
+      position: "absolute",
+      left: "10%",
+      top: "25%",
+      background: tokens.colorNeutralBackground1,
+      padding: "18px",
+      maxWidth: "270px",
+      width: "50%",
     },
-    projLinks:{
-        textAlign: 'center'
-    }
-})
-
-const Projects = () => {
-    const classes = useStyles();
-    const renderAccordion = () => {
-        let projectDict: {[id:number]: IProject} = generateProjectData()
-        const accordionHeaderColors = ['strawberry', 'sky', 'inchworm'];
-        return (
-            <Accordion collapsible className={classes.root}> 
-                {
-                    Object.keys(projectDict).map((id: string, index:number) => (
-                     <AccordionItem value={id} key={id}> 
-                        <AccordionHeader size='extra-large' 
-                            style={{ backgroundColor: `var(--${accordionHeaderColors[index % accordionHeaderColors.length]}`}}>
-                                {projectDict[Number(id)].name}
-                        </AccordionHeader>
-                        <AccordionPanel className={mergeClasses('inset-border', classes.accordPanel)}>
-                             {projectDict[Number(id)].description}
-                             <br/>
-                             {projectDict[Number(id)].github != null && 
-                                <Link href={projectDict[Number(id)].github} className={classes.projLinks}  target="_blank">See in Github </Link>}
-                             
-                             {projectDict[Number(id)].preview != null && 
-                                <Link href={projectDict[Number(id)].preview} className={classes.projLinks} target="_blank">Prototype</Link>}
-                        </AccordionPanel>
-                    </AccordionItem> ))
-                } 
-            </Accordion>
-        )
-    }
+    title: {
+      ...typographyStyles.title1,
+    },
+    subtext: {
+      ...typographyStyles.body1,
+    },
+  });
+  
+  const IMAGES = [
+    "https://fabricweb.azureedge.net/fabric-website/assets/images/swatch-picker/sea-full-img.jpg",
+    "https://fabricweb.azureedge.net/fabric-website/assets/images/swatch-picker/bridge-full-img.jpg",
+    "https://fabricweb.azureedge.net/fabric-website/assets/images/swatch-picker/park-full-img.jpg",
+    "https://fabricweb.azureedge.net/fabric-website/assets/images/swatch-picker/sea-full-img.jpg",
+    "https://fabricweb.azureedge.net/fabric-website/assets/images/swatch-picker/bridge-full-img.jpg",
+    "https://fabricweb.azureedge.net/fabric-website/assets/images/swatch-picker/park-full-img.jpg",
+  ];
+  
+  const BannerCard: React.FC<{
+    children: React.ReactNode;
+    imageSrc: string;
+    index: number;
+  }> = (props) => {
+    const { children, imageSrc, index } = props;
+    const classes = useClasses();
+  
     return (
-        <div className="projects-container">
-            <div className="title"><h1>Projects</h1></div>
-            <div className="content">
-                <div className="project-list">
-                    {renderAccordion()}
-                </div>
-                <div className="project-preview-container">
-                    <div className="project-preview dashed-border rounder-border-std inset-border"></div>
-                </div>
-            </div>
+      <CarouselCard
+        className={classes.bannerCard}
+        aria-label={`${index + 1} of ${IMAGES.length}`}
+        id={`test-${index}`}
+      >
+        <Image fit="cover" src={imageSrc} role="presentation" />
+  
+        <div className={classes.cardContainer}>
+          <div className={classes.title}>{children}</div>
+          <div className={classes.subtext}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam.
+          </div>
+          <div>
+            <Button size="small" shape="square" appearance="primary">
+              Call to action
+            </Button>
+          </div>
         </div>
-    )
-}
+      </CarouselCard>
+    );
+  };
+  
+  const getAnnouncement: CarouselAnnouncerFunction = (
+    index: number,
+    totalSlides: number,
+    slideGroupList: number[][]
+  ) => {
+    return `Carousel slide ${index + 1} of ${totalSlides}`;
+  };
+  
+const Projects = () => (
+    <Carousel groupSize={1} circular announcement={getAnnouncement}>
+      <CarouselViewport>
+        <CarouselSlider>
+          {IMAGES.map((imageSrc, index) => (
+            <BannerCard key={`image-${index}`} imageSrc={imageSrc} index={index}>
+              Card {index + 1}
+            </BannerCard>
+          ))}
+        </CarouselSlider>
+      </CarouselViewport>
+      <CarouselNavContainer
+        layout="inline"
+        autoplay={{
+          "aria-label": "Enable autoplay",
+        }}
+        next={{ "aria-label": "go to next" }}
+        prev={{ "aria-label": "go to prev" }}
+      >
+        <CarouselNav>
+          {(index) => (
+            <CarouselNavButton aria-label={`Carousel Nav Button ${index}`} />
+          )}
+        </CarouselNav>
+      </CarouselNavContainer>
+    </Carousel>
+  );
 
-export default Projects
-
-interface IProject {
-    name: string
-    description: string
-    github: string
-    preview: string
-    iframe: React.ReactElement | null
-}
-
-const generateProjectData = () : { [id: number]: IProject} => {
-    return ({
-        1: {
-            name: "A Room",
-            description: "ARoom transforms the furniture shopping experience by utilizing augmented reality to allow users to preview items in their space. "+
-                "The app includes a style quiz to help users discover their preferred interior decorating style and enables them to add items to a wish list and create virtual rooms. " +
-                "Users can purchase items from multiple stores in a single transaction, streamlining the shopping process. " +
-                "On the desktop app, users can generate QR codes to view items in AR on their mobile devices. " + 
-                "ARoom offers a personalized, interactive, and efficient approach to furniture shopping.",
-            github: "https://github.com/jordynniara/jordynniara",
-            preview: "https://www.figma.com/proto/rOjBqh29Ded8iq2WHfwGi3/ARoom-Project?node-id=371-1973&p=f&t=8fje0lhhpQgWTKb9-1&scaling=min-zoom&content-scaling=fixed&page-id=371%3A1742&starting-point-node-id=371%3A1973&show-proto-sidebar=1",
-            iframe: null
-        },
-        2: {
-            name: "Get Up!",
-            description: "Get Up! is an innovative application designed to promote workplace wellness by encouraging regular breaks. " +
-                "Featuring an interactive GUI, it gamifies break-taking with badges, in-app prizes, and leaderboards. " +
-                "Users can customize avatars, earn points, and receive both disruptive and non-disruptive notifications based on their preferences. " +
-                "The app also fosters social interaction by notifying users when friends or co-workers are taking breaks, encouraging a collaborative and healthy work environment. "+
-                "Tailored for organizations, Get Up! enhances employee engagement and productivity through a fun and interactive approach.",
-            github: "https://github.com/jordynniara/jordynniara",
-            preview: "",
-            iframe: null
-        },
-        3: {
-            name: "Gilbert",
-            description: "Gilbert is an AI chatbot designed to enhance team collaboration and effectiveness within communication apps like Slack and Microsoft Teams. " +
-                "By assessing each team member's personality and preferred role, Gilbert provides tailored guidance during meetings and conversations, both individually and as a group. " +
-                "The bot offers recaps after meetings, delivering feedback on team collaboration and private messages with individual stats, upcoming tasks, and schedules. " + 
-                "During meetings, Gilbert facilitates ice breakers, retrieves recorded information from past interactions, and provides summaries of individual contributions. " + 
-                "This innovative tool helps newly formed teams warm up to each other quickly, fostering a productive and cohesive work environment.",
-            github: "https://github.com/jordynniara/jordynniara",
-            preview: "https://www.figma.com/proto/EtDBAgfAsyL5beOuSeP0FT/Gilbert-(AI)-Project?node-id=197-1461&p=f&t=aw3TPifU3XOhSUZP-1&scaling=contain&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=197%3A1461&show-proto-sidebar=1",
-            iframe: <iframe title="gilbertPrototype" style={{border: "1px solid rgba(0, 0, 0, 0.1);"}} width="800" height="450" src="https://embed.figma.com/proto/EtDBAgfAsyL5beOuSeP0FT/Gilbert-(AI)-Project?node-id=197-1461&p=f&scaling=contain&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=197%3A1461&show-proto-sidebar=1&embed-host=share" allowFullScreen></iframe>
-        },
-        4: {
-            name: "Mini Design System & Kit",
-            description: "This Mini Design System is the backbone of my online portfolio. " +
-                "Built using HTML5, Bootstrap, and CSS, it showcases a cohesive and adaptable framework. " +
-                "While the portfolio has evolved, this design system remains a cornerstone, influencing its final look and feel. " +
-                "Explore the elements that bring consistency and elegance to my digital presence.",
-            github: "https://github.com/jordynniara/jordynniara",
-            preview: "", //new URL("/jordynniara/assets/projects/miniDesignSystem/home.html"),
-            iframe: null
-        },
-        5: {
-            name: "Neighborhood Woof",
-            description: "Neighborhood Woof is a cutting-edge dog walking aid application designed to enhance safety and convenience for dog owners available in website, mobile and smart-watch format. " +
-                "Utilizing crowdsourcing, it provides real-time updates on potential hazards and obstacles along walking routes. " +
-                "The app features a route creator, navigation system, and detailed dog profiles, including breed, temperament, and more. " +
-                "Users receive alerts about nearby dogs and specific dogs with known interactions, ensuring a smooth and enjoyable walking experience. " +
-                "This innovative solution demonstrates my ability to blend user-centric design with advanced technology to address real-world challenges.",
-            github: "https://github.com/jordynniara/jordynniara",
-            preview: "https://taz9bd.axshare.com/#id=vgjv6f&p=home",
-            iframe: null
-        }
-    })
-}
+  export default Projects

@@ -42,7 +42,7 @@ function Header() {
   }
 
   const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['', 'Projects', 'Analysis', 'Papers', 'Artwork'];
+    const menuItems = ['', 'old_projects', 'Analysis', 'Papers', 'Artwork'];
 
     return (
     <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`} style={{justifyContent:'space-evenly'}}>
