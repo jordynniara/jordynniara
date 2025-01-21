@@ -1,8 +1,8 @@
-import * as React from "react";
 import { Link } from "react-router-dom";
 import '../../css/globals.css'
 import './home.css'
 import mascotOrigImg from "/assets/logos/mascot-orig.png"
+import ContactMeDropDown from "../../components/contactMeDropdown/contactMeDropdown.tsx"
 
 const Home = () => {
   return(
@@ -26,6 +26,9 @@ const Home = () => {
         <Link to="/artwork" className="strawberry button-dark inverted drop-shadow">
           Artwork
         </Link>
+      </div>
+      <div id="bottom-menu">
+        <ContactMeDropDown dark/>
       </div>
     </div>
   )

@@ -2,11 +2,12 @@ import '../../css/globals.css'
 import './header.css'
 import { useState } from 'react'
 import { ScreenSizeResponse } from '../../tools/utilities.ts'
-import { Button } from "@fluentui/react-components";
+import { Button} from "@fluentui/react-components";
 import { NavigationFilled } from '@fluentui/react-icons'
 import { Link, useLocation } from "react-router-dom";
+import ContactMeDropDown from '../contactMeDropdown/contactMeDropdown.tsx'
 
-function Header() {
+function Header(/*props: Partial<DropdownProps>*/) {
   const currPath = useLocation().pathname;
   const onHomePage = currPath == '/jordynniara' || currPath == '/';
 
@@ -35,22 +36,25 @@ function Header() {
     }
 
     return(
-      <div className={`expanded-nav-menu dashed-border drop-shadow flex row}`} style={{justifyContent:'center'}}>
+      <div className={`expanded-nav-menu dashed-border drop-shadow flex row}`}>
         Niara [nee ⋅ air ⋅ uh] - (Swahili) Woman with purpose
       </div>
     );
   }
 
   const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['', 'old_projects', 'Analysis', 'Papers', 'Artwork'];
-
+    const menuItems = ['', 'old_projects', 'Analysis', 'Papers', 'Artwork', 'Contact Me'];
     return (
-    <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`} style={{justifyContent:'space-evenly'}}>
+    <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`}>
         {menuItems.map( (value: string, index: number) => (
+          value == 'Contact Me' ?
+          <ContactMeDropDown/>
+          :
           <Link to={`/${value}`} key={`navItem-${value}`}
             className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
             { value == '' ? 'Home' : value }
-          </Link>))}
+          </Link>
+        ))}
     </div>);
   }
 
