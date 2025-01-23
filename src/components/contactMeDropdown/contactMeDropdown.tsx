@@ -1,26 +1,25 @@
 import { Dropdown, Option, makeStyles, mergeClasses } from "@fluentui/react-components";
 import type { DropdownProps } from "@fluentui/react-components";
+import { useState } from "react";
 
 interface IContactMeDropDownProps extends Partial<DropdownProps> {
   dark?: boolean
 }
+
 const useStyles = makeStyles({
   root:{
-    justifyContent:"center"
+    justifyContent:"center",
   },
   contactMe : {
     justifyItems:"center",
-    paddingLeft: "5px"
+    paddingLeft: "5px",
   },
   option : {
     backgroundColor:"white",
     paddingLeft: "5px",
-    border:'3px dashed var(--soil)',
-    borderRadius:"20px",
+    border:'1px solid var(--soil)',
     '&:hover': {
-      backgroundColor:'white',
       border:'3px dashed var(--soil)',
-      borderRadius:"20px"
     }
   },
   dark : {
@@ -32,14 +31,21 @@ const useStyles = makeStyles({
 })
 
 const ContactMeDropDown = (props: IContactMeDropDownProps) => {
-    const classes = useStyles();
     const contactOptions = ['Email', 'LinkedIn', 'GitHub', 'Resume [PDF]']
+    const accordionHeaderColors = ['strawberry', 'sky', 'inchworm'];
+    const [hoveredOption, setHoveredOption] = useState<string | null>(null);
+    const classes = useStyles();
 
     return (
         <Dropdown {...props} value='Contact Me' aria-label='Contact Options Dropdown' 
           className={mergeClasses(classes.root, classes.contactMe, props.dark ? classes.dark:"")}>
-            {contactOptions.map((option) => (
-              <Option key={option} checkIcon={null} className={classes.option}>
+            {contactOptions.map((option: string, index:number) => (
+              <Option key={option} checkIcon={null} 
+                className={classes.option} 
+                style={{backgroundColor:hoveredOption === option ? `var(--${accordionHeaderColors[index % accordionHeaderColors.length]})` : 'white'}}
+                onMouseEnter={()=>setHoveredOption(option)}
+                onMouseLeave={()=>setHoveredOption(null)}
+              >
                 {option}
               </Option>
             ))}
