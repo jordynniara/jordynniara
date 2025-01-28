@@ -5,11 +5,9 @@ import Home from "./pages/home/home"
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Projects from "./pages/projects/projects";
-import OldProjects from "./pages/projects/projects_old";
-import Analysis from "./pages/analysis/analysis";
-import Papers from "./pages/papers/papers";
-import Artwork from "./pages/artwork/artwork";
-// import Layout from "./pages/Layout";
+import About from "./pages/about/about";
+import Papers from "./pages/contacts/contacts";
+import Artwork from "./pages/resume/resume";
 
 
 function App() {
@@ -22,11 +20,10 @@ function App() {
             <Routes>
               <Route path="/">
                 <Route index element={<Home/>}/>
-                <Route path="/old_projects" element={<OldProjects/>}/>
                 <Route path="/Projects" element={<Projects/>}/>
-                <Route path="/Analysis" element={<Analysis/>}/>
-                <Route path="/Papers" element={<Papers/>}/>
-                <Route path="/Artwork" element={<Artwork/>}/>
+                <Route path="/About" element={<About/>}/>
+                <Route path="/Contacts" element={<Papers/>}/>
+                <Route path="/Resume" element={<Artwork/>}/>
                 {/*Need 404 page*/}
               </Route>
             </Routes>

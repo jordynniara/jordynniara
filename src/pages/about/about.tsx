@@ -1,9 +1,9 @@
 // import * as React from "react";
 
-const Analysis = () => {
+const About = () => {
     return (
         <h1>Analysis</h1>
     )
 }
 
-export default Analysis
+export default About

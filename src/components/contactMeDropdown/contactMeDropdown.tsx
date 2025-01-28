@@ -1,4 +1,4 @@
-import { Dropdown, Option, makeStyles, mergeClasses } from "@fluentui/react-components";
+import { Dropdown, Option, makeStyles, mergeClasses, Link } from "@fluentui/react-components";
 import type { DropdownProps } from "@fluentui/react-components";
 import { useState } from "react";
 
@@ -45,6 +45,7 @@ const ContactMeDropDown = (props: IContactMeDropDownProps) => {
                 style={{backgroundColor:hoveredOption === option ? `var(--${accordionHeaderColors[index % accordionHeaderColors.length]})` : 'white'}}
                 onMouseEnter={()=>setHoveredOption(option)}
                 onMouseLeave={()=>setHoveredOption(null)}
+                text={option}
               >
                 {option}
               </Option>

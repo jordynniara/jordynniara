@@ -43,13 +43,10 @@ function Header(/*props: Partial<DropdownProps>*/) {
   }
 
   const renderNavigationList = (horizontal: boolean, orientationClassAttr: string) => {
-    const menuItems = ['', 'old_projects', 'Analysis', 'Papers', 'Artwork', 'Contact Me'];
+    const menuItems = ['', 'Projects', 'About', 'Contacts', 'Resume'];
     return (
     <div className={`expanded-nav-menu dashed-border drop-shadow flex ${horizontal ? 'row' : 'col'}`}>
         {menuItems.map( (value: string, index: number) => (
-          value == 'Contact Me' ?
-          <ContactMeDropDown/>
-          :
           <Link to={`/${value}`} key={`navItem-${value}`}
             className={"nav-menu-item " + orientationClassAttr + (index == menuItems.length-1 ? "" : " divider")}>
             { value == '' ? 'Home' : value }

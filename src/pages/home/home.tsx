@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import '../../css/globals.css'
 import './home.css'
 import mascotOrigImg from "/assets/logos/mascot-orig.png"
-import ContactMeDropDown from "../../components/contactMeDropdown/contactMeDropdown.tsx"
 
 const Home = () => {
   return(
@@ -13,7 +12,7 @@ const Home = () => {
           Projects
         </Link>
         <Link to="/papers" className="inchworm button-dark inverted drop-shadow">
-          Papers
+          Contacts
         </Link>
       </div>
       <div className="img-container">
@@ -21,14 +20,14 @@ const Home = () => {
       </div>
       <div id="right-menu" className="menu">
         <Link to="/analysis" className="sky button-dark inverted drop-shadow">
-          Analysis
+          About
         </Link>
         <Link to="/artwork" className="strawberry button-dark inverted drop-shadow">
-          Artwork
+          Resume
         </Link>
       </div>
-      <div id="bottom-menu">
-        <ContactMeDropDown dark/>
+      <div id="bottom-menu" className="menu-horiz">
+        {/*TODO: add quick by-line */}
       </div>
     </div>
   )
