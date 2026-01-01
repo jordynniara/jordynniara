@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export const Button = ({
   variant = "strawberry", // default color
   size = "default",
@@ -6,7 +8,45 @@ export const Button = ({
   ...props
 }) => {
   const baseClasses = "btn";
-  
+  return ButtonBase({
+    variant,
+    size,
+    className: `${baseClasses} ${className}`,
+    children,
+    ...props
+  });
+};
+
+export const LinkButton = ({
+  variant = "strawberry",
+  size = "default",
+  to = "/",
+  className = "",
+  children,
+  ...props
+}) => {
+  const baseClasses = "link-btn";
+  const classes = `${baseClasses} ${className}`;
+  return (
+    <Link to={to} {...props}>
+      {ButtonBase({
+        variant,
+        size,
+        className: classes,
+        children
+      })}
+    </Link>
+  );
+};
+
+function ButtonBase({
+  variant = "strawberry",
+  size = "default",
+  to = "/",
+  className = "",
+  children,
+  ...props
+}) {
   const variantClasses = {
     sky: "btn-sky",
     strawberry: "btn-strawberry",
@@ -19,11 +59,11 @@ export const Button = ({
     lg: "px-5 py-2.5 text-base md:px-8 md:py-4 md:text-lg lg:px-10 lg:py-5 lg:text-xl xl:text-2xl",
   };
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `${className} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   return (
-    <button className={classes} {...props}>
-      {children}
-    </button>
+      <button className={classes} {...props}>
+        {children}
+      </button>
   );
-};
+}

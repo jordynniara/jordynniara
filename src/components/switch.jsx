@@ -1,0 +1,59 @@
+import { useState } from "react";
+
+export const Switch = ({
+  size = "default",
+  left = "Option 1",
+  right = "Option 2",
+  defaultOption = "left",
+  onChange,
+  className = "",
+  ...props
+}) => {
+  const baseClasses = "switch";
+
+  const sizeClasses = {
+    sm: "px-3 py-1.5 text-sm md:px-4 md:py-2 md:text-base",
+    default: "px-4 py-2 text-sm md:px-6 md:py-3 md:text-base lg:px-8 lg:py-4 lg:text-lg xl:text-xl",
+    lg: "px-5 py-2.5 text-base md:px-8 md:py-4 md:text-lg lg:px-10 lg:py-5 lg:text-xl xl:text-2xl",
+  };
+
+  const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+
+  const [active, setActive] = useState(defaultOption);
+  
+  const handleToggle = (option) => {
+    setActive(option);
+    if (onChange) {
+      onChange(option);
+    }
+  };
+
+  return (
+    <div className={classes} {...props}>
+      <button 
+        onClick={() => handleToggle('left')} 
+        className={`
+          px-6 py-3 rounded-full font-body text-base transition-all
+          ${active === 'left' 
+            ? 'switch-toggled switch-option-left' 
+            : 'hover:bg-white/10'
+          }
+        `}
+      >
+        {left}
+      </button>
+      <button 
+        onClick={() => handleToggle('right')} 
+        className={`
+          px-6 py-3 rounded-full font-body text-base transition-all
+          ${active === 'right' 
+            ? 'switch-toggled switch-option-right' 
+            : 'hover:bg-white/10'
+          }
+        `}
+      >
+        {right}
+      </button>
+    </div>
+  );
+};

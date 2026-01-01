@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 @theme{
   --color-wetsoil: #22211F;
@@ -8,7 +9,7 @@
   --color-pebble: #C4BAB9;
 
   --font-title: "Sacramento", cursive;
-  --font-header: "Playfair Display", serif;
+  --font-body: "Playfair Display", serif;
   --font-accent: "Cutive Mono", monospace;
 
   --text-title: 64px;
@@ -53,46 +54,36 @@
     }
   }
 
-  @keyframes shimmer {
-    0%, 100% {
-      filter: brightness(1) saturate(1);
-    }
-    50% {
-      filter: brightness(1.2) saturate(1.3);
-    }
-  }
-
   @keyframes shimmer-sweep {
-  0% {
-    transform: translateX(-100%);
+    0% {
+      transform: translateX(-100%) translateY(-100%);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%);
+    }
   }
-  100% {
-    transform: translateX(100%);
-  }
-}
 
   @keyframes flash {
-    0%, 90%, 100% {
-      opacity: 1;
+    0%, 50%, 100% {
+      opacity: 0;
     }
-    95% {
-      opacity: 0.3;
-      filter: brightness(2);
+    25%, 75% {
+      opacity: 1;
     }
   }
 }
 
 @layer base {
   :root{
-    @apply bg-white text-wetsoil;
+    @apply bg-pebble text-wetsoil;
   }
 
   h1 {
-    @apply font-header text-h1 text-wetsoil;
+    @apply font-body text-h1 text-wetsoil;
   }
 
   h2 {
-    @apply font-header text-h2 text-wetsoil;
+    @apply font-body text-h2 text-wetsoil;
   }
 
   p {
@@ -106,23 +97,170 @@
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-full font-header border-dashed border-2 hover:border-4 shadow-lg transition-all border-wetsoil text-white;
+    @apply px-4 py-2 rounded-full font-body border-dashed border-2 shadow-lg transition-all border-wetsoil text-white
+    hover:border-4 hover:border-white hover:bg-wetsoil/80 
+    focus:outline-none focus-visible:border-4 focus-visible:border-white focus-visible:bg-wetsoil/80;
   }
 
   .btn-sky {
-    @apply bg-sky hover:bg-sky/80;
+    @apply bg-sky hover:text-sky focus-visible:text-sky;
   }
 
   .btn-strawberry {
-    @apply bg-strawberry hover:bg-strawberry/80;
+    @apply bg-strawberry hover:text-strawberry focus-visible:text-strawberry;
   }
 
   .btn-inchworm {
-    @apply bg-inchworm hover:bg-inchworm/80;
+    @apply bg-inchworm hover:text-inchworm focus-visible:text-inchworm;
+  }
+
+  .link-btn {
+    @apply px-4 py-2 rounded-sm font-body border-2 border-dashed border-white text-white underline bg-wetsoil
+    hover:border-2 hover:border-wetsoil hover:text-wetsoil hover:bg-white 
+    focus:outline-none focus-visible:border-4 focus-visible:text-wetsoil focus-visible:bg-white;
+  }
+
+  .link-btn-sky {
+    @apply text-sky;
+  }
+
+  .link-btn-strawberry {
+    @apply text-strawberry;
+  }
+
+  .link-btn-inchworm {
+    @apply text-inchworm;
+  }
+
+  .sticker {
+    @apply bg-wetsoil text-white border-white font-body shadow-lg items-center justify-center flex transition-all;
   }
 
   .shimmer-wrapper {
     @apply relative overflow-hidden;
+  }
+
+  .shimmer-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: var(--animate-shimmer-sweep);
+    pointer-events: none;
+    transform: translateX(-100%) translateY(-100%);
+}
+
+.gradient-bg {
+  @apply relative overflow-hidden rounded-lg border-2 border-wetsoil;
+  background: linear-gradient(
+    90deg,
+    var(--color-inchworm) 0%,
+    var(--color-sky) 50%,
+    var(--color-strawberry) 100%
+  );
+  padding: 1rem;
+}
+
+  .switch {
+    @apply bg-wetsoil relative inline-flex items-center font-body text-white items-center justify-center flex rounded-full border-6 border-white mx-auto my-4;
+  }
+
+  .switch-option-left {
+    @apply border-r-4 border-white;
+  }
+
+  .switch-option-right {
+    @apply border-l-4 border-white;
+  }
+
+  .switch-toggled {
+    @apply bg-pebble text-wetsoil inset-shadow-sm;
+  }
+
+  .notebook {
+    @apply relative rounded-lg inset-shadow-sm p-8 md:p-12 lg:p-16;
+    
+    /* Off-white paper color */
+    background-color: #f9f7f4;
+    
+    /* Horizontal ruled lines */
+    background-image: 
+      repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #b8d4e8 31px,
+        #b8d4e8 32px
+      );
+    
+    /* Red margin line on left */
+    border-left: 3px solid #e87b6f;
+    padding-left: 3.5rem;
+  }
+
+  /* Pink accent line (double red line effect) */
+  .notebook::before {
+    content: '';
+    position: absolute;
+    left: 2.75rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #f4a5a0;
+    opacity: 0.5;
+  }
+
+  /* Hole punch effects on the left */
+  /* .notebook::after {
+    content: '';
+    position: absolute;
+    left: 1.25rem;
+    top: 3rem;
+    width: 1rem;
+    height: calc(100% - 6rem);
+    background-image: 
+      radial-gradient(
+        circle at center,
+        #d4d0cb 5px,
+        transparent 5px
+      );
+    background-size: 1rem 4rem;
+    background-repeat: repeat-y;
+  } */
+
+  .prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .prose li {
+    margin: 0.25rem 0;
+  }
+
+  .prose a {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+
+  .prose h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -158,36 +296,24 @@
   text-align: center;
 }
 
-.shimmer-wrapper::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  animation: var(--animate-shimmer-sweep);
-  pointer-events: none;
-}
-
-.gradient-bg {
-  @apply relative overflow-hidden rounded-lg;
-  background: linear-gradient(
-    90deg,
-    var(--color-inchworm) 0%,
-    var(--color-sky) 50%,
-    var(--color-strawberry) 100%
-  );
-  padding: 1rem;
-}
-
 @media (min-width: 768px) {
   .gradient-bg {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .notebook {
+    padding-left: 2.5rem;
+    border-left-width: 2px;
+  }
+  
+  .notebook::before {
+    left: 2rem;
+  }
+  
+  .notebook::after {
+    left: 0.75rem;
+    background-size: 0.75rem 3rem;
   }
 }
