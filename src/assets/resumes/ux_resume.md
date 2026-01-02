@@ -75,12 +75,3 @@ September 2021 - December 2025
 ### North Carolina Agricultural & Technical State University - Greensboro, NC
 *B.S. of Computer Science, 3.99*
 August 2014 - May 2018
-
----
-## Hobbies
-- Mentorship
-- Cooking and baking
-- Learning Spanish
-- Martial Arts
-- Roller Skating
-- Hiking

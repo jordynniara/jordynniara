@@ -122,14 +122,32 @@
 
   .link-btn-sky {
     @apply text-sky;
+    
+    #mobile {
+      @apply text-wetsoil bg-sky;
+    }
   }
 
   .link-btn-strawberry {
     @apply text-strawberry;
+    #mobile {
+      @apply text-wetsoil bg-strawberry;
+    }
   }
 
   .link-btn-inchworm {
     @apply text-inchworm;
+    #mobile {
+      @apply text-wetsoil bg-sky;
+    }
+  }
+
+  .mobile-menu-nav-link {
+    @apply text-wetsoil !border-b-2 border-white border-solid rounded-none hover:opacity-90 px-6 py-4 w-full text-center;
+  }
+  
+  .mobile-menu-nav-link:last-child {
+    @apply border-b-0;
   }
 
   .sticker {
@@ -158,18 +176,7 @@
     animation: var(--animate-shimmer-sweep);
     pointer-events: none;
     transform: translateX(-100%) translateY(-100%);
-}
-
-.gradient-bg {
-  @apply relative overflow-hidden rounded-lg border-2 border-wetsoil;
-  background: linear-gradient(
-    90deg,
-    var(--color-inchworm) 0%,
-    var(--color-sky) 50%,
-    var(--color-strawberry) 100%
-  );
-  padding: 1rem;
-}
+  }
 
   .switch {
     @apply bg-wetsoil relative inline-flex items-center font-body text-white items-center justify-center flex rounded-full border-6 border-white mx-auto my-4;
@@ -188,8 +195,8 @@
   }
 
   .notebook {
-    @apply relative rounded-lg inset-shadow-sm p-8 md:p-12 lg:p-16;
-    
+    @apply relative border-2 border-dashed border-wetsoil rounded-lg shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)] p-8 md:p-12 lg:p-16;
+
     /* Off-white paper color */
     background-color: #f9f7f4;
     
@@ -203,7 +210,6 @@
       );
     
     /* Red margin line on left */
-    border-left: 3px solid #e87b6f;
     padding-left: 3.5rem;
   }
 
@@ -287,6 +293,16 @@
 
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-[6px];
+}
+
+@utility gradient-bg {
+    @apply relative overflow-hidden rounded-lg border-2 border-wetsoil;
+    background: linear-gradient(
+      90deg,
+      var(--color-inchworm) 0%,
+      var(--color-sky) 50%,
+      var(--color-strawberry) 100%
+    );
 }
 
 #root {
