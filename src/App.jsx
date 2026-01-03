@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router'
+import { Header } from './layout/header';
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { Resume } from './pages/Resume'
-import { Header } from './layout/header';
+import { About } from './pages/About'
+import { CreativityProject } from './pages/CreativityProject'
 import { Footer } from './layout/footer';
 
 function AppContent() {
@@ -20,6 +22,8 @@ function AppContent() {
         return "Contact";
       case "/resume":
         return "Resume";
+      case "/creativity-project":
+        return "Creativity Project";
       default:
         return "";
     }
@@ -29,10 +33,11 @@ function AppContent() {
       {!isHomePage && <Header pageName={pageName()} />}  {/* Navbar only on non-home pages */}
         <Routes>
           <Route index element={<Home/>} />
-          {/* <Route path="/about" element={<About/>} />
-          <Route path="/projects" element={<Projects/>} />
+          <Route path="/about" element={<About/>} />
+          {/*<Route path="/projects" element={<Projects/>} />
           <Route path="/contact" element={<Contact/>} /> */}
           <Route path="/resume" element={<Resume/>} />
+          <Route path="/creativity-project" element={<CreativityProject />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       <Footer pageName={pageName()} />

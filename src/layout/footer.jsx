@@ -6,7 +6,7 @@ import inchwormMascot from '../assets/images/mascot_inchworm.png'
 export const Footer = () => {
 
     return (
-        <footer className="bg-wetsoil p-4 shadow-lg w-full relative justify-center flex flex-col">
+        <footer className="bg-wetsoil p-4 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] w-full relative justify-center flex flex-col">
             <div className="text-white text-sm">
                 Jordyn Niara Parker &copy; {new Date().getFullYear()}
             </div>

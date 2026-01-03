@@ -98,7 +98,7 @@
 @layer components {
   .btn {
     @apply px-4 py-2 rounded-full font-body border-dashed border-2 shadow-lg transition-all border-wetsoil text-white
-    hover:border-4 hover:border-white hover:bg-wetsoil/80 
+    hover:border-4 hover:border-white hover:bg-wetsoil/80 hover:cursor-pointer
     focus:outline-none focus-visible:border-4 focus-visible:border-white focus-visible:bg-wetsoil/80;
   }
 
@@ -116,7 +116,7 @@
 
   .link-btn {
     @apply px-4 py-2 rounded-sm font-body border-2 border-dashed border-white text-white underline bg-wetsoil
-    hover:border-2 hover:border-wetsoil hover:text-wetsoil hover:bg-white 
+    hover:border-2 hover:border-wetsoil hover:text-wetsoil hover:bg-white hover:cursor-pointer
     focus:outline-none focus-visible:border-4 focus-visible:text-wetsoil focus-visible:bg-white;
   }
 
@@ -195,7 +195,7 @@
   }
 
   .notebook {
-    @apply relative border-2 border-dashed border-wetsoil rounded-lg shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)] p-8 md:p-12 lg:p-16;
+    @apply relative border-2 border-dashed border-wetsoil rounded-lg inset-shadow-md p-8 md:p-12 lg:p-16;
 
     /* Off-white paper color */
     background-color: #f9f7f4;
@@ -225,48 +225,30 @@
     opacity: 0.5;
   }
 
-  /* Hole punch effects on the left */
-  /* .notebook::after {
-    content: '';
-    position: absolute;
-    left: 1.25rem;
-    top: 3rem;
-    width: 1rem;
-    height: calc(100% - 6rem);
-    background-image: 
-      radial-gradient(
-        circle at center,
-        #d4d0cb 5px,
-        transparent 5px
-      );
-    background-size: 1rem 4rem;
-    background-repeat: repeat-y;
-  } */
+  .card {
+    @apply border rounded-sm p-4 inset-shadow-md border-2 border-wetsoil border-dashed cursor-default;
+  }
+  
+  .card:hover {
+      @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-4;
 
-  .prose ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin: 1rem 0;
   }
 
-  .prose ol {
-    list-style-type: decimal;
-    padding-left: 1.5rem;
-    margin: 1rem 0;
+  .img-card {
+    @apply rounded-t-none border-t-0 mt-0 
+      hover:scale-105;
   }
 
-  .prose li {
-    margin: 0.25rem 0;
+  .img-card:hover {
+    @apply scale-105 cursor-pointer transition-transform duration-300;
   }
 
-  .prose a {
-    color: #3b82f6;
-    text-decoration: underline;
+  .about-modal-content {
+    @apply flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 items-center;
   }
 
-  .prose h4 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+  .about-modal-content img {
+    @apply w-full h-auto max-h-48 md:max-h-64 object-contain;
   }
 }
 
@@ -291,8 +273,16 @@
   }
 }
 
+@utility inset-shadow-md {
+  @apply shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)];
+}
+
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-[6px];
+}
+
+@utility about-card {
+  @apply flex-1 prose font-accent text-body hover:!scale-100 hover:!border-2 hover:inset-shadow-md;
 }
 
 @utility gradient-bg {

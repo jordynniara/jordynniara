@@ -6,7 +6,13 @@ import inchwormMascot from '../assets/images/mascot_inchworm.png'
 
 const mascots = [inchwormMascot, skyMascot, strawberryMascot];
 
-export const StickerPageDecoration = () => {
+export const StickerPageDecoration = ({ 
+    stickerCount = null,      // null = auto-calculate based on page height
+    startOffset = 200,         // Pixels from top where stickers start
+    density = 'medium',        // 'low', 'medium', 'high'
+    sides = 'both',            // 'left', 'right', 'both'
+    sizeVariety = 'mixed'      // 'small', 'medium', 'large', 'mixed'
+}) => {
     const [scrollY, setScrollY] = useState(0);
     const [pageHeight, setPageHeight] = useState(0);
     
@@ -42,24 +48,55 @@ export const StickerPageDecoration = () => {
     // Generate random positions only once using useMemo
     const stickerPositions = useMemo(() => {
         const positions = [];
-        const stickerCount = Math.floor(pageHeight / 200) || 10; // One every ~300px
-        const sizes = ['xs', 'sm', 'default', 'lg'];
         
-        for (let i = 0; i < stickerCount; i++) {
-            const isLeft = Math.random() > 0.5;
+        // Density multipliers affect spacing
+        const densitySpacing = {
+            low: 400,      // One every ~400px
+            medium: 250,   // One every ~250px
+            high: 150      // One every ~150px
+        };
+        
+        const spacing = densitySpacing[density] || 250;
+        
+        // Calculate count based on density or use provided count
+        const calculatedCount = stickerCount !== null 
+            ? stickerCount 
+            : Math.floor((pageHeight - startOffset) / spacing) || 10;
+        
+        // Size variety configurations
+        const sizeConfigs = {
+            small: ['xs', 'sm'],
+            medium: ['sm', 'default'],
+            large: ['default', 'lg'],
+            mixed: ['xs', 'sm', 'default', 'lg']
+        };
+        
+        const sizes = sizeConfigs[sizeVariety] || sizeConfigs.mixed;
+        
+        for (let i = 0; i < calculatedCount; i++) {
+            // Determine side based on 'sides' prop
+            let isLeft;
+            if (sides === 'left') {
+                isLeft = true;
+            } else if (sides === 'right') {
+                isLeft = false;
+            } else {
+                isLeft = Math.random() > 0.5;
+            }
+            
             const mascotIndex = Math.floor(Math.random() * mascots.length);
             const size = sizes[Math.floor(Math.random() * sizes.length)];
             
-            // Random vertical position within page bounds
-            const verticalPosition = (Math.random() * (pageHeight));
+            // Random vertical position starting from startOffset
+            const verticalPosition = startOffset + (Math.random() * (pageHeight - startOffset));
             
-            // Random horizontal offset for variety (larger number => wider spread)
+            // Random horizontal offset for variety
             const horizontalOffset = Math.random() * 100 - 50; // -50px to +50px
             
             // Random parallax speed for depth variety
             const parallaxSpeed = 0.3 + (Math.random() * 0.4); // 0.3 to 0.7
             
-            // Random rotation (larger number => more dramatic)
+            // Random rotation
             const rotation = Math.random() * 30 - 15; // -15deg to +15deg
             
             positions.push({
@@ -75,9 +112,9 @@ export const StickerPageDecoration = () => {
         }
         
         return positions;
-    }, [pageHeight]); // Only regenerate when page height changes
+    }, [pageHeight, stickerCount, startOffset, density, sides, sizeVariety]);
   
-    if (pageHeight === 0) return null; // Don't render until we know page height
+    if (pageHeight === 0) return null;
     
     return (
         <div className="absolute top-0 left-0 w-full pointer-events-none" style={{ height: `${pageHeight}px` }}>
@@ -85,7 +122,7 @@ export const StickerPageDecoration = () => {
                 const parallaxOffset = scrollY * (1 - sticker.parallaxSpeed);
                 const finalPosition = sticker.basePosition - parallaxOffset;
                 
-                // Only render if within visible range (performance optimization)
+                // Only render if within visible range
                 const isVisible = finalPosition > scrollY - 200 && finalPosition < scrollY + window.innerHeight + 200;
                 
                 if (!isVisible) return null;

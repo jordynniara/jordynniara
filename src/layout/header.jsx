@@ -2,11 +2,10 @@ import { useState } from "react";
 import { LinkButton } from "../components/button";
 import { SquareMenu, CircleX } from "lucide-react"; 
 import HomeLogo from "../assets/images/logo_transparent.png";
-export const Header = (
-    {
+
+export const Header = ({
         pageName = "Title"
-    }
-) => {
+    }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);

@@ -36,8 +36,7 @@ export const Resume = () => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      {/* Stickers - fixed, doesn't affect layout */}
-      <StickerPageDecoration />
+      <StickerPageDecoration/>
       
       {/* Main content */}
       <div className="resume-content relative z-10 p-8">
@@ -71,7 +70,6 @@ export const Resume = () => {
         <a href="#top" className="text-wetsoil underline">Back to Top</a>
       </div>
       
-      {/* Fixed nav at bottom of viewport */}
       {<ResumeNav headings={resumeSectionHeadings} />}
     </div>
   );

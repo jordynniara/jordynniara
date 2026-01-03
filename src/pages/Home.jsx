@@ -62,7 +62,7 @@ export const Home = () => {
                     <Link to="/projects"><Button variant="sky">Projects</Button></Link>
                     <Link to="/resume"><Button variant="strawberry">Resume</Button></Link>
                     <Link to="/contact"><Button variant="inchworm">Contact</Button></Link>
-                    <Link to="/creativity-project"><Button variant="sky" disabled className="opacity-50 cursor-not-allowed">The Creativity Project</Button></Link>
+                    <Link to="/creativity-project"><Button variant="sky">The Creativity Project</Button></Link>
                 </div>
             </div>
         </div>
