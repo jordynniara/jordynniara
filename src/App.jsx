@@ -5,6 +5,7 @@ import { NotFound } from './pages/NotFound'
 import { Resume } from './pages/Resume'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
+import { Projects } from './pages/projects';
 import { CreativityProject } from './pages/CreativityProject'
 import { Footer } from './layout/footer';
 
@@ -35,7 +36,7 @@ function AppContent() {
         <Routes>
           <Route index element={<Home/>} />
           <Route path="/about" element={<About/>} />
-          {/*<Route path="/projects" element={<Projects/>} />*/}
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact/>} /> 
           <Route path="/resume" element={<Resume/>} />
           <Route path="/creativity-project" element={<CreativityProject />} />

@@ -8,6 +8,7 @@ import resumeSWE from '../assets/resumes/SWE_Resume.md?raw'
 import { StickerPageDecoration } from "../components/stickerPageDeco"
 import { ResumeNav } from "../components/ResumeNav";
 import { LinkButton } from "../components/button";
+import { Download } from "lucide-react"
 
 export const Resume = () => {
     const [resumeType, setResumeType] = useState("ux");
@@ -37,7 +38,7 @@ export const Resume = () => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      <StickerPageDecoration/>
+      <StickerPageDecoration sizeVariety="small" stickerCount={30} density="high"/>
       
       {/* Main content */}
       <div className="resume-content relative z-10 p-8">
@@ -45,10 +46,7 @@ export const Resume = () => {
           <h1 className="font-body text-body text-wetsoil text-center mb-6">
             Switch between my experiences in UX and Software Engineering and download the pdf.
           </h1>
-          <div id="top" className="flex justify-center items-center mb-8">
-            <LinkButton href="/resumes/ux_resume.pdf" size="small" download="JordynParker_Resume.pdf">
-              Download UX Resume PDF
-            </LinkButton>
+          <div id="top" className="flex flex-col justify-center items-center mb-8"> 
             <Switch
               left={"UXE"}
               right={"SWE"}
@@ -56,15 +54,22 @@ export const Resume = () => {
               onChange={(option) => {
                 setResumeType(option === "left" ? "ux" : "swe");
               }}
+              className="mb-0"
             />
-            <LinkButton href="/resumes/swe_resume.pdf" size="small" download="JordynParker_Resume.pdf">
-              Download SWE Resume PDF
-            </LinkButton>
+            <a
+              href={resumeType === "ux" ? "/resumes/ux_resume.pdf" : "/resumes/swe_resume.pdf"} 
+              download="JordynParker_Resume.pdf"
+              className="mx-auto w-9 h-7 flex items-center justify-center py-2 bg-white text-wetsoil rounded-sm font-accent hover:cursor-pointer
+                  rounded-t-none border-t-0 mt-0"
+              aria-label="Download Resume as PDF"
+            >
+              <Download className="w-9 h-6"/>
+            </a>
           </div>
         </div>
 
         {/* Notebook */}
-        <div className="max-w-4xl mx-auto notebook mb-16">
+        <div className="max-w-6xl mx-auto notebook mb-16">
           <div className="prose prose-h1:font-accent prose-h2:font-accent prose-h3:font-accent prose-h4:font-accent font-accent text-body text-left">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
@@ -74,8 +79,12 @@ export const Resume = () => {
             </ReactMarkdown>
           </div>
         </div>
-        {/* <a href="#top" className="text-wetsoil underline">Back to Top</a> */}
-        <LinkButton to="#top" size="small" >Back to Top</LinkButton>
+        <div className="flex justify-center gap-4" >
+          <LinkButton to="#top" size="small" >Back to Top</LinkButton>
+          <LinkButton href={resumeType === "ux" ? "/resumes/ux_resume.pdf" : "/resumes/swe_resume.pdf"} size="small" download="JordynParker_Resume.pdf">
+            Download resume as PDF
+          </LinkButton>
+        </div>
       </div>
       
       {<ResumeNav headings={resumeSectionHeadings} />}

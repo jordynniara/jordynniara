@@ -74,14 +74,7 @@ export const About = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-      <StickerPageDecoration 
-        stickerCount={6}
-        startOffset={800}
-        density="low"
-        sizeVariety="smaller"
-        sides="both"
-      />
-      <div className="max-w-4xl sm:mx-4 md:mx-4 flex flex-col items-center">
+      <div className="max-w-6xl sm:mx-4 md:mx-4 flex flex-col items-center">
         <h1 className="font-title text-h1 md:text-title text-wetsoil mb-4 text-center">
           Jordyn Niara Parker
         </h1>
