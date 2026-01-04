@@ -7,6 +7,7 @@ import resumeUX from '../assets/resumes/UX_Resume.md?raw'
 import resumeSWE from '../assets/resumes/SWE_Resume.md?raw'
 import { StickerPageDecoration } from "../components/stickerPageDeco"
 import { ResumeNav } from "../components/ResumeNav";
+import { LinkButton } from "../components/button";
 
 export const Resume = () => {
     const [resumeType, setResumeType] = useState("ux");
@@ -44,8 +45,11 @@ export const Resume = () => {
           <h1 className="font-body text-body text-wetsoil text-center mb-6">
             Switch between my experiences in UX and Software Engineering and download the pdf.
           </h1>
-          <div id="top" className="flex justify-start mb-8">
-            <Switch 
+          <div id="top" className="flex justify-center items-center mb-8">
+            <LinkButton href="/resumes/ux_resume.pdf" size="small" download="JordynParker_Resume.pdf">
+              Download UX Resume PDF
+            </LinkButton>
+            <Switch
               left={"UXE"}
               right={"SWE"}
               defaultOption={"left"}
@@ -53,6 +57,9 @@ export const Resume = () => {
                 setResumeType(option === "left" ? "ux" : "swe");
               }}
             />
+            <LinkButton href="/resumes/swe_resume.pdf" size="small" download="JordynParker_Resume.pdf">
+              Download SWE Resume PDF
+            </LinkButton>
           </div>
         </div>
 
@@ -67,7 +74,8 @@ export const Resume = () => {
             </ReactMarkdown>
           </div>
         </div>
-        <a href="#top" className="text-wetsoil underline">Back to Top</a>
+        {/* <a href="#top" className="text-wetsoil underline">Back to Top</a> */}
+        <LinkButton to="#top" size="small" >Back to Top</LinkButton>
       </div>
       
       {<ResumeNav headings={resumeSectionHeadings} />}
