@@ -1,0 +1,59 @@
+{
+    "projects": [
+        {
+            "title": "Pulse",
+            "description": "Real time crowd info for your next move",
+            "artifacts": ["Research Report", "Wireframes", "Prototypes"],
+            "images": [
+                {
+                    "src": "./projects/pulse/pulse_1.jpg",
+                    "alt": "Description of image 1",
+                    "caption": "Pulse is a real-time crowd and vibe checker to help beat decision paralysis and empower people to move through their city with confidence."
+                },
+                {
+                    "src": "./projects/pulse/pulse_2.jpg",
+                    "alt": "Description of image 2",
+                    "caption": "Leverages real-time user data to provide information about crowd density and user sentiment for any location."
+                },
+                {
+                    "src": "./projects/pulse/pulse_3.jpg",
+                    "alt": "Description of image 3",
+                    "caption": "Users contribute to the data pool via short in-app feedback surveys."
+                },
+                {
+                    "src": "./projects/pulse/pulse_4.jpg",
+                    "alt": "Description of image 4",
+                    "caption": "Data is then used to provide machine backed recommendations for personalized points of interest for their next move."
+                }
+            ]
+
+        },
+        {
+            "title": "Gilbert",
+            "description": "A collaborative platform AI assistant to help teams get to synergy sooner.",
+            "artifacts": ["Research Report", "Prototypes"],
+            "images": [
+                {
+                    "src": "./projects/gilbert/gilbert_1.jpg",
+                    "alt": "Description of image 1",
+                    "caption": "Gilbert is a collaborative platform AI assistant designed to help teams achieve synergy more quickly."
+                },
+                {
+                    "src": "./projects/gilbert/gilbert_2.jpg",
+                    "alt": "Description of image 2",
+                    "caption": "Utilizes advanced AI algorithms to analyze team dynamics and provide actionable insights."
+                },
+                {
+                    "src": "./projects/gilbert/gilbert_3.jpg",
+                    "alt": "Description of image 3",
+                    "caption": "Users contribute to the data pool via short in-app feedback surveys."
+                },
+                {
+                    "src": "./projects/gilbert/gilbert_4.jpg",
+                    "alt": "Description of image 4",
+                    "caption": "Data is then used to provide machine backed recommendations for personalized points of interest for their next move."
+                }
+            ]
+        }
+    ]
+}

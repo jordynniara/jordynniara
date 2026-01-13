@@ -250,6 +250,54 @@
   .about-modal-content img {
     @apply w-full h-auto max-h-48 md:max-h-64 object-contain;
   }
+
+  .project-card {
+    @apply flex flex-col p-4 sm:p-6 md:p-8 mx-auto max-w-6xl;
+  }
+
+  .card.project-card:hover {
+    @apply inset-shadow-md scale-100 border-2;
+  }
+
+  .project-card-header {
+    @apply flex flex-col sm:flex-row justify-between gap-4 sm:gap-0;
+  }
+
+  .project-card-header-sticker {
+     @apply z-50 w-full h-full -rotate-15 -translate-x-15;
+  }
+
+  .project-card-header-title {
+    @apply text-white text-h3;
+  }
+
+  .project-card-header-short-desc {
+    @apply text-bodySm font-accent mt-6 md:text-h3 text-wetsoil;
+  }
+
+  .project-card-body {
+    @apply flex flex-col lg:flex-row gap-8 mt-6 lg:mt-8 mx-4 sm:mx-6 lg:mx-10;
+  }
+
+  .project-card-body-rightSide {
+    @apply flex flex-col justify-between flex-1;
+  }
+
+  .project-card-body-desc {
+   @apply flex font-accent flex-1 items-center text-body sm:text-bodyLg;
+  }
+
+  .project-card-body-actions {
+     @apply flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4;
+  }
+
+  .divider::before{
+    @apply content-[''] flex-1 border-b border-solid border-wetsoil/80
+  }
+
+  .divider::after{
+    @apply content-[''] flex-1 border-b border-solid border-wetsoil/80
+  }
 }
 
 @utility containers {

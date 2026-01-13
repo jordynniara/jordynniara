@@ -38,11 +38,6 @@ const verbColors = [
   "text-strawberry",
 ];
 
-const modalContent = {
-  Explore: "Content for Explore",
-  Build: "Content for Build",
-  Impact: "Content for Impact"
-}
 export const About = () => {
   const [currentVerbIndex, setCurrentVerbIndex] = useState(0);
   const [currentVerbColor, setCurrentVerbColor] = useState(verbColors[0]);
@@ -78,9 +73,7 @@ export const About = () => {
         <h1 className="font-title text-h1 md:text-title text-wetsoil mb-4 text-center">
           Jordyn Niara Parker
         </h1>
-        <p className="flex items-center text-center font-accent text-wetsoil/80 gap-2 sm:gap-4 w-full
-          before:content-[''] before:flex-1 before:border-b before:border-solid before:border-wetsoil/80
-          after:content-[''] after:flex-1 after:border-b after:border-solid after:border-wetsoil/80">
+        <p className="flex items-center text-center font-accent text-wetsoil/80 gap-2 sm:gap-4 w-full divider">
           <span>Niara /nee ⋅ air ⋅ uh/ - (<i>noun</i>) In Swahili, woman with purpose</span>
         </p>
 
