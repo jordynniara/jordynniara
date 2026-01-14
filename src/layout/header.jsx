@@ -2,21 +2,30 @@ import { useState } from "react";
 import { LinkButton } from "../components/button";
 import { SquareMenu, CircleX } from "lucide-react"; 
 import HomeLogo from "../assets/images/logo_transparent.png";
+import { Sticker } from "../components/sticker";
 
-export const Header = ({
-        pageName = "Title"
-    }) => {
+export const Header = (
+    // {
+        // pageName = "Title"
+    // }
+) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <header className="bg-wetsoil p-4 shadow-lg top-0 left-0 w-full relative">
-            <div className="flex items-center justify-between">
-                <h1 className="font-title text-h1 text-white text-left underline">
-                    {pageName}.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                </h1>
+        <header className="bg-wetsoil p-4 shadow-lg top-0 left-0 w-[100%] relative">
+            <div className="flex items-center justify-between max-h-15">
+                <LinkButton to="/" className="header-home-btn -translate-x-[10%]">
+                    <Sticker className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28">
+                        <img 
+                            src={HomeLogo} 
+                            alt="Home Logo" 
+                            className="w-full h-full object-contain" 
+                        />
+                    </Sticker>
+                </LinkButton>
                 {/* nav links */}
                 <nav className="hidden md:flex gap-2">
                     <LinkButton to="/about" className="link-btn-inchworm" size="sm">About</LinkButton>
@@ -24,7 +33,7 @@ export const Header = ({
                     <LinkButton to="/resume" className="link-btn-strawberry" size="sm">Resume</LinkButton>
                     <LinkButton to="/contact" className="link-btn-inchworm" size="sm">Contact</LinkButton>
                     <LinkButton to="/creativity-project" className="link-btn-sky" size="sm">The Creativity Project</LinkButton>
-                    <LinkButton 
+                    {/* <LinkButton 
                         to="/" 
                         size="sm" 
                         className="border-2 border-white border-solid hover:gradient-bg hover:border-2 hover:border-white hover:border-solid hover:rounded-sm relative overflow-hidden group"
@@ -32,7 +41,7 @@ export const Header = ({
                         <div className="group-hover:shimmer-wrapper relative">
                             <img src={HomeLogo} alt="Home Logo" className="border-0 max-h-6 hover:max-h-6 object-contain relative z-10" />
                         </div>
-                    </LinkButton>
+                    </LinkButton> */}
                 </nav>
                 <button className="md:hidden" onClick={toggleMenu}>
                     {isMenuOpen ? <CircleX className="h-10 w-10 text-white" /> :

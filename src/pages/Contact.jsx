@@ -23,21 +23,22 @@ export const Contact = () => {
                 setShowForm(false);
             },
             (error) => {
+                console.error('Email sending error:', error);
                 setShowEmailError(true);
             },
         );
     };
 
     return (
-        <div className="min-h-screen flex flex-col justify-center p-4 sm:p-6 md:p-8 max-w-4xl mx-auto mb-8">
+        <div className="flex-col justify-center p-4">
             <StickerPageDecoration 
                 stickerCount={10}
                 sizeVariety='medium'
             />
-            <h1 className="text-h1 font-title md:text-title text-wetsoil mb-4">Contact Me</h1>
-            <p className="text-body font-body text-wetsoil">
+            <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">Contact Me</h1>
+            <h2 className="font-body text-body text-wetsoil text-center">
                 If you're interested in collaborating or just want to say hi, feel free to reach out!
-            </p>
+            </h2>
             <div className="my-8 flex flex-col lg:flex-row justify-center gap-8">
                 <div className="flex flex-col items-center gap-2">
                     <Github className="text-wetsoil w-18 h-18"/>

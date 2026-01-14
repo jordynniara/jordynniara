@@ -8,7 +8,7 @@ import { Link } from "react-router"
 
 export const Home = () => {
   return (
-    <div className="min-h-screen p-8 flex items-center">
+    <div className="">
         {/* Main layout: mascots on left, content on right */}
         <div className="flex gap-8 w-full">
             {/* Left side: mascot stack spanning full height */}
@@ -46,11 +46,6 @@ export const Home = () => {
                             alt="JNS - Jordyn Niara Smith Logo with rainbow gradient background and shimmering animation" 
                             className="w-full max-h-64 md:max-h-80 lg:max-h-96 object-contain relative z-10"
                         />
-                        {/* Flash effect positioned on star */}
-                        {/* <div 
-                            className="star-flash top-[15%] right-[20%] w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
-                            aria-hidden="true"
-                        /> */}
                     </div>
                     <div className="font-title text-h2 md:text-h1 lg:text-title text-wetsoil text-center mt-4 md:mt-4 lg:mt-6 relative z-10">
                         Jordyn Niara Smith

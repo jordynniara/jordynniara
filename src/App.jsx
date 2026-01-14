@@ -33,6 +33,7 @@ function AppContent() {
   return (
     <>
       {!isHomePage && <Header pageName={pageName()} />}  {/* Navbar only on non-home pages */}
+      <div className="body">
         <Routes>
           <Route index element={<Home/>} />
           <Route path="/about" element={<About/>} />
@@ -42,8 +43,9 @@ function AppContent() {
           <Route path="/creativity-project" element={<CreativityProject />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
+      </div>
       <Footer pageName={pageName()} />
-    </>
+      </>
   )
 }
 

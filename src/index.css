@@ -252,7 +252,7 @@
   }
 
   .project-card {
-    @apply flex flex-col p-4 sm:p-6 md:p-8 mx-auto max-w-6xl;
+    @apply flex flex-col mx-auto max-w-6xl;
   }
 
   .card.project-card:hover {
@@ -280,7 +280,7 @@
   }
 
   .project-card-body-rightSide {
-    @apply flex flex-col justify-between flex-1;
+    @apply flex flex-col gap-2 justify-between flex-1;
   }
 
   .project-card-body-desc {
@@ -288,7 +288,7 @@
   }
 
   .project-card-body-actions {
-     @apply flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4;
+     @apply flex flex-row sm:flex-row justify-center items-center gap-3 sm:gap-4;
   }
 
   .divider::before{
@@ -343,11 +343,20 @@
     );
 }
 
+@utility header-home-btn {
+  @apply border-none bg-transparent p-0 m-0 cursor-pointer translate-y-[15%] hover:bg-transparent;
+}
+
+
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+.body {
+  @apply min-h-screen max-w-[100%] flex flex-col items-center justify-center mx-4 mb-8 p-4 sm:p-6 md:p-8;
 }
 
 @media (min-width: 768px) {

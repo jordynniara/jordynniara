@@ -11,10 +11,12 @@ const stickerSrc= [inchwormMascot, skyMascot, strawberryMascot]
 export const Projects = () => {
     const projects = projectsObj.projects;
     return (
-        <div className="min-h-screen flex flex-col p-4 sm:p-6 md:p-8 mx-auto max-w-6xl">
-            <div className="mb-16">
+        <div className="w-full max-w-6xl mx-auto">
+            <div className="mb-6 sm:mb-16">
                 <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">Projects</h1>
-                <h2 className="text-h2 font-body text-wetsoil mb-4 sm:mb-6">Check out some of the cool work I've done!</h2>
+                <h2 className="font-body text-body text-wetsoil text-center">
+                    Check out some of the cool work I've done!
+                </h2>
             </div>
             {projects.map((project, index) => (
                 <>

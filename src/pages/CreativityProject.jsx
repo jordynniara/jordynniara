@@ -1,7 +1,7 @@
 export const CreativityProject = () => {
   return (
-    <div className="min-h-screen p-8 flex flex-col justify-center">
-      <h1 className="text-h1 font-title md:text-title text-wetsoil mb-4">The Creativity Project</h1>
+    <div className="">
+      <h1 className="text-h1 font-title md:text-title text-wetsoil my-4">The Creativity Project</h1>
       <p className="text-body font-body">
         The Creativity Project is an exploration of the intersection between technology and creativity. It aims to understand how can technology,
         especially AI, enhance our creativity, but also how can it usurp it. I'm fascinated by the ethical implications of AI and its impact on society.

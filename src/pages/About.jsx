@@ -68,12 +68,12 @@ export const About = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-      <div className="max-w-6xl sm:mx-4 md:mx-4 flex flex-col items-center">
-        <h1 className="font-title text-h1 md:text-title text-wetsoil mb-4 text-center">
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
+        <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">About Me</h1>
+        <h2 className="font-body text-body text-wetsoil text-center">
           Jordyn Niara Parker
-        </h1>
-        <p className="flex items-center text-center font-accent text-wetsoil/80 gap-2 sm:gap-4 w-full divider">
+        </h2>
+        <p className="flex items-center text-sm text-center font-accent text-wetsoil/80 gap-2 sm:gap-4 w-full divider">
           <span>Niara /nee ⋅ air ⋅ uh/ - (<i>noun</i>) In Swahili, woman with purpose</span>
         </p>
 
@@ -111,7 +111,6 @@ export const About = () => {
           {modalContent}
         </Modal>
       </div>
-    </div>
   );
 };
 
@@ -122,7 +121,6 @@ const ExploreCard = () => {
         <img 
           src={inchwormMascot} 
           alt="Inchworm colored Mascot" 
-          // className="w-full h-auto max-h-48 md:max-h-64 object-contain"
         />
       </Sticker>
       <Card className="about-card">
@@ -143,7 +141,6 @@ const BuildCard = () => {
         <img 
           src={skyMascot} 
           alt="Sky colored Mascot" 
-          // className="w-full h-auto max-h-48 md:max-h-64 object-contain"
         />
       </Sticker>
       <Card className="about-card">
@@ -160,10 +157,9 @@ const ImpactCard = () => {
         <img 
           src={strawberryMascot} 
           alt="Strawberry colored Mascot" 
-          // className="w-full h-auto max-h-48 md:max-h-64 object-contain"
         />
       </Sticker>
-      <Card className="about-card">
+      <Card className="about-card flex flex-col gap-2 justify-center">
         <ReactMarkdown>{ImpactContent}</ReactMarkdown>
         <p> 
           These questions also inspired{' '}
@@ -193,7 +189,9 @@ const ImpactCard = () => {
           </span>
           . Click here to learn more about it:
         </p>
-        <LinkButton to="/creativity-project" variant="inchworm">The Creativity Project</LinkButton>
+        <LinkButton to="/creativity-project" variant="inchworm">
+          The Creativity Project
+        </LinkButton>
       </Card>
     </div>
   );
