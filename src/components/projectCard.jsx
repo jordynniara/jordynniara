@@ -4,6 +4,7 @@ import { Sticker } from "../components/sticker";
 import testImg1 from "../assets/images/excuseMe.png";
 import { Button, LinkButton } from "../components/button";
 import { Carousel } from "../components/carousel";
+import { Download, ExternalLink } from "lucide-react";
 
 
 export const ProjectCard = (
@@ -56,8 +57,14 @@ export const ProjectCard = (
                                     // <Button key={index} size="sm" onClick={() => openModal(modalContent.title, modalContent.body)}>
                                     //     {button.label}
                                     // </Button> :
-                                    <LinkButton key={index} size="sm" href={button.href}>
-                                        {button.label}
+                                    <LinkButton key={index} size="sm" href={button.href} download={button.type === "PDF" ? `Parker_${title}.pdf` : undefined}>
+                                        <span className="flex items-center gap-2">
+                                        {button.label} 
+                                        {button.type === "PDF" ? 
+                                            <Download size={16} /> : 
+                                            <ExternalLink size={16} />
+                                        }
+                                        </span>
                                     </LinkButton>
                                 ))}
                             </div>

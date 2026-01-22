@@ -22,7 +22,7 @@
                 {
                     "src": "/projects/Pulse/images/pulse_4.png",
                     "alt": "Screen shot of interface displaying personalized recommendations",
-                    "caption": "Data is then used to provide machine backed recommendations for personalized points of interest for their next move."
+                    "caption": "Data is used to provide machine backed recommendations for personalized points of interest for their next move."
                 },
                 {
                     "src": "/projects/Pulse/images/pulse_5.png",
@@ -47,13 +47,13 @@
                     "href": "https://www.figma.com/proto/j01TK3Bj9dvRC8luU7ZiTL/Pulse-app-hi-fi-draft?node-id=6046-8779&p=f&t=s3q9YE1EXp1Ha0MK-1&scaling=scale-down&content-scaling=fixed&page-id=6%3A7495&starting-point-node-id=6046%3A8779"
                 },
                 {
-                    "type": "link",
+                    "type": "PDF",
                     "label": "Presentation",
                     "href": "/projects/Pulse/pulse_presentation.pdf"
                 },
                 {
-                    "type": "link",
-                    "label": "Project Research and Findings",
+                    "type": "PDF",
+                    "label": "Research and Findings",
                     "href": "/projects/Pulse/pulse_research.pdf"
                 }
             ],
@@ -68,34 +68,41 @@
             "description": "A collaborative platform AI assistant to help teams get to synergy sooner.",
             "images": [
                 {
-                    "src": "/projects/Gilbert/gilbert_2.jpg",
-                    "alt": "Description of image 1",
+                    "src": "/projects/Gilbert/images/gilbert.png",
+                    "alt": "Title screen for Gilbert",
                     "caption": "Gilbert is a collaborative platform AI assistant designed to help teams achieve synergy more quickly."
                 },
                 {
-                    "src": "/projects/Gilbert/gilbert_2.jpg",
-                    "alt": "Description of image 2",
-                    "caption": "Utilizes advanced AI algorithms to analyze team dynamics and provide actionable insights."
+                    "src": "/projects/Gilbert/images/inMeeting.png",
+                    "alt": "Screen shot of Gilbert providing in-meeting insights",
+                    "caption": "Intended for integration with existing team meeting and collaboration platforms, Gilbert utilizes AI algorithms to analyze team dynamics and provide actionable insights."
                 },
                 {
-                    "src": "/projects/Gilbert/gilbert_3.jpg",
-                    "alt": "Description of image 3",
-                    "caption": "Users contribute to the data pool via short in-app feedback surveys."
+                    "src": "/projects/Gilbert/images/icebreaker.png",
+                    "alt": "Screen shot of Gilbert facilitating an icebreaker activity",
+                    "caption": "From breaking the ice to post-meeting reflections, Gilbert enhances every stage of collaboration."
                 },
                 {
-                    "src": "/projects/Gilbert/gilbert_4.jpg",
-                    "alt": "Description of image 4",
-                    "caption": "Data is then used to provide machine backed recommendations for personalized points of interest for their next move."
+                    "src": "/projects/Gilbert/images/postMeeting.png",
+                    "alt": "Screen shot of Gilbert providing post-meeting insights",
+                    "caption": "From breaking the ice to post-meeting reflections, Gilbert enhances every stage of collaboration."
                 }
             ],
             "buttons": [
                 {
-                    "label": "Prototype",
-                    "href": "/projects/Gilbert/overview.pdf"
+                    "type": "link",
+                    "label": "Prototype (User Flows) (TODO)",
+                    "href": "#"
                 },
                 {
-                    "label": "Research Plan",
-                    "href": "/projects/Gilbert/research_plan.pdf"
+                    "type": "PDF",
+                    "label": "Presentation",
+                    "href": "/projects/Gilbert/gilbert_presentation.pdf"
+                },
+                {
+                    "type": "PDF",
+                    "label": "Research and Findings",
+                    "href": "/projects/Gilbert/gilbert_research.pdf"
                 }
             ]
         },
@@ -126,8 +133,9 @@
             ],
             "buttons": [
                 {
-                    "label": "Prototype",
-                    "href": "/projects/ARoom/prototype.pdf"
+                    "type": "Link",
+                    "label": "Prototype (TODO)",
+                    "href": "#"
                 },
                 {
                     "label": "User Testing",
@@ -140,15 +148,16 @@
             "description": "The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies.",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/global_hci.jpg",
+                    "src": "/projects/ResearchStudies/GlobalHCI/global_hci.jpg",
                     "alt": "Global HCI research study",
                     "caption": "Essay that explores the negative effects of colonialism on research done in HCI by reviewing three popular research methods in the field."
                 }
             ],
             "buttons": [
                 {
-                    "label": "Research Paper",
-                    "href": "/projects/ResearchStudies/GlobalHCI/globalHCI.pdf"
+                    "type": "link",
+                    "label": "Medium Article",
+                    "href": "https://medium.com/@jordynniara/western-culture-in-hci-8e16a6781774"
                 }
             ]
         },
@@ -157,13 +166,14 @@
             "description": "Improving the Rideshare Experience of Users Who are Blind or Have Low Vision.",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/blind_rideshare.jpg",
+                    "src": "/projects/ResearchStudies/BlindRideshare/blind_rideshare.jpg",
                     "alt": "Blind rideshare research study",
                     "caption": "Research study that discusses the rideshare experiences of blind or low vision users and suggests improvements for the end-to-end experience."
                 }
             ],
             "buttons": [
                 {
+                    "type": "PDF",
                     "label": "Research Paper",
                     "href": "/projects/ResearchStudies/BlindRideshare/blindRideshare.pdf"
                 }
@@ -174,17 +184,19 @@
             "description": "A Heuristic Evaluation and Cognitive Walkthrough of the NYT Cooking website.",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/nyt_evaluation.jpg",
+                    "src": "/projects/ResearchStudies/NYTEval/nyt_evaluation.jpg",
                     "alt": "NYT Cooking evaluation",
                     "caption": "Analysis of the NYTCooking website based on the “10 Usability Heuristics for User Interface Design” determined by the Nielsen Norman Group and an assessment of the site’s learnability."
                 }
             ],
             "buttons": [
                 {
+                    "type": "PDF",
                     "label": "Heuristic Evaluation",
                     "href": "/projects/ResearchStudies/NYTEvaluation/nytHeuristic.pdf"
                 },
                 {
+                    "type": "PDF",
                     "label": "Cognitive Walkthrough",
                     "href": "/projects/ResearchStudies/NYTEvaluation/nytCognitive.pdf"
                 }
@@ -195,15 +207,16 @@
             "description": "A redesign of the Turkish Airlines website",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/turkish_airlines.jpg",
+                    "src": "/projects/ResearchStudies/TurkishAir/turkishAir.jpg",
                     "alt": "Turkish Airlines redesign",
                     "caption": "Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations."
                 }
             ],
             "buttons": [
                 {
+                    "type": "PDF",
                     "label": "Research Paper",
-                    "href": "/projects/ResearchStudies/TurkishAirlines/turkishAir.pdf"
+                    "href": "/projects/ResearchStudies/TurkishAir/turkishAir.pdf"
                 }
             ]
         }

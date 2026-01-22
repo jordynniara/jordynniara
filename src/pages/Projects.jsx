@@ -12,7 +12,7 @@ export const Projects = () => {
     const projects = projectsObj.projects;
     return (
         <div className="w-full max-w-6xl mx-auto">
-            <div className="mb-6 sm:mb-16">
+            <div className="mb-6 sm:mb-20">
                 <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">Projects</h1>
                 <h2 className="font-body text-body text-wetsoil text-center">
                     Check out some of the cool work I've done!
@@ -28,7 +28,7 @@ export const Projects = () => {
                         buttons={project.buttons}
                         modalContent={project.modalContent}
                     />
-                    <div className="flex my-8 justify-center items-center divider">
+                    <div className="flex my-15 justify-center items-center divider">
                         <Sticker size="lg" className="mx-4">
                             <img 
                                 src={stickerSrc[index % stickerSrc.length]} 
