@@ -3,55 +3,207 @@
         {
             "title": "Pulse",
             "description": "Real time crowd info for your next move",
-            "artifacts": ["Research Report", "Wireframes", "Prototypes"],
             "images": [
                 {
-                    "src": "./projects/pulse/pulse_1.jpg",
-                    "alt": "Description of image 1",
+                    "src": "/projects/Pulse/images/pulse_1.png",
+                    "alt": "Dinner table with glasses with Pulse logo overlayed",
                     "caption": "Pulse is a real-time crowd and vibe checker to help beat decision paralysis and empower people to move through their city with confidence."
                 },
                 {
-                    "src": "./projects/pulse/pulse_2.jpg",
-                    "alt": "Description of image 2",
+                    "src": "/projects/Pulse/images/pulse_2.png",
+                    "alt": "Screen shot of interface displaying real-time crowd data",
                     "caption": "Leverages real-time user data to provide information about crowd density and user sentiment for any location."
                 },
                 {
-                    "src": "./projects/pulse/pulse_3.jpg",
-                    "alt": "Description of image 3",
+                    "src": "/projects/Pulse/images/pulse_3.png",
+                    "alt": "Screen shot of interface displaying user feedback survey",
                     "caption": "Users contribute to the data pool via short in-app feedback surveys."
                 },
                 {
-                    "src": "./projects/pulse/pulse_4.jpg",
-                    "alt": "Description of image 4",
+                    "src": "/projects/Pulse/images/pulse_4.png",
+                    "alt": "Screen shot of interface displaying personalized recommendations",
                     "caption": "Data is then used to provide machine backed recommendations for personalized points of interest for their next move."
+                },
+                {
+                    "src": "/projects/Pulse/images/pulse_5.png",
+                    "alt": "Screen shot of interface displaying map with vibe indicators",
+                    "caption": "Pulse uses geolocation and user-provided data to provide users with real-time information about their surroundings."
+                },
+                {
+                    "src": "/projects/Pulse/images/pulse_7.png",
+                    "alt": "Screen shot of interface displaying POI reviews",
+                    "caption": "Pulse is designed to mimic popular map interfaces while adding the recommendations users love from their favorite social platforms, making it easy for anyone to access without needing extensive training."
+                },
+                {
+                    "src": "/projects/Pulse/images/pulse_8.png",
+                    "alt": "Screen shot of interface displaying POI information",
+                    "caption": "Pulse is designed to mimic popular map interfaces while adding the recommendations users love from their favorite social platforms, making it easy for anyone to access without needing extensive training."
                 }
-            ]
-
+            ],
+            "buttons": [
+                {
+                    "type": "link",
+                    "label": "Prototype",
+                    "href": "https://www.figma.com/proto/j01TK3Bj9dvRC8luU7ZiTL/Pulse-app-hi-fi-draft?node-id=6046-8779&p=f&t=s3q9YE1EXp1Ha0MK-1&scaling=scale-down&content-scaling=fixed&page-id=6%3A7495&starting-point-node-id=6046%3A8779"
+                },
+                {
+                    "type": "link",
+                    "label": "Presentation",
+                    "href": "/projects/Pulse/pulse_presentation.pdf"
+                },
+                {
+                    "type": "link",
+                    "label": "Project Research and Findings",
+                    "href": "/projects/Pulse/pulse_research.pdf"
+                }
+            ],
+            "modalContent" : {
+                "title": "Pulse High-Fidelity Prototype",
+                "body": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https://embed.figma.com/proto/j01TK3Bj9dvRC8luU7ZiTL/Pulse-app-hi-fi-draft?node-id=6046-8779&p=f&scaling=scale-down&content-scaling=fixed&page-id=6%3A7495&starting-point-node-id=6046%3A8779&embed-host=share\" allowfullscreen></iframe>",
+                "backupLink": "https://www.figma.com/proto/j01TK3Bj9dvRC8luU7ZiTL/Pulse-app-hi-fi-draft?node-id=6046-8779&p=f&t=s3q9YE1EXp1Ha0MK-1&scaling=scale-down&content-scaling=fixed&page-id=6%3A7495&starting-point-node-id=6046%3A8779"
+            }
         },
         {
             "title": "Gilbert",
             "description": "A collaborative platform AI assistant to help teams get to synergy sooner.",
-            "artifacts": ["Research Report", "Prototypes"],
             "images": [
                 {
-                    "src": "./projects/gilbert/gilbert_1.jpg",
+                    "src": "/projects/Gilbert/gilbert_2.jpg",
                     "alt": "Description of image 1",
                     "caption": "Gilbert is a collaborative platform AI assistant designed to help teams achieve synergy more quickly."
                 },
                 {
-                    "src": "./projects/gilbert/gilbert_2.jpg",
+                    "src": "/projects/Gilbert/gilbert_2.jpg",
                     "alt": "Description of image 2",
                     "caption": "Utilizes advanced AI algorithms to analyze team dynamics and provide actionable insights."
                 },
                 {
-                    "src": "./projects/gilbert/gilbert_3.jpg",
+                    "src": "/projects/Gilbert/gilbert_3.jpg",
                     "alt": "Description of image 3",
                     "caption": "Users contribute to the data pool via short in-app feedback surveys."
                 },
                 {
-                    "src": "./projects/gilbert/gilbert_4.jpg",
+                    "src": "/projects/Gilbert/gilbert_4.jpg",
                     "alt": "Description of image 4",
                     "caption": "Data is then used to provide machine backed recommendations for personalized points of interest for their next move."
+                }
+            ],
+            "buttons": [
+                {
+                    "label": "Prototype",
+                    "href": "/projects/Gilbert/overview.pdf"
+                },
+                {
+                    "label": "Research Plan",
+                    "href": "/projects/Gilbert/research_plan.pdf"
+                }
+            ]
+        },
+        {
+            "title": "ARoom",
+            "description": "AR‑based furniture preview and shopping  experience across mobile and desktop; conducted competitive analysis and usability testing.",
+            "images": [
+                {
+                    "src": "/projects/ARoom/aroom_1.jpg",
+                    "alt": "Description of image 1",
+                    "caption": "ARoom provides an immersive environment for teams to brainstorm and collaborate."
+                },
+                {
+                    "src": "/projects/ARoom/aroom_2.jpg",
+                    "alt": "Description of image 2",
+                    "caption": "Users can interact with 3D models and digital whiteboards in real-time."
+                },
+                {
+                    "src": "/projects/ARoom/aroom_3.jpg",
+                    "alt": "Description of image 3",
+                    "caption": "The space is customizable to fit the needs of different teams and projects."
+                },
+                {
+                    "src": "/projects/ARoom/aroom_4.jpg",
+                    "alt": "Description of image 4",
+                    "caption": "ARoom aims to enhance remote collaboration and creativity."
+                }
+            ],
+            "buttons": [
+                {
+                    "label": "Prototype",
+                    "href": "/projects/ARoom/prototype.pdf"
+                },
+                {
+                    "label": "User Testing",
+                    "href": "/projects/ARoom/user_testing.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Decolonizing HCI",
+            "description": "The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies.",
+            "images": [
+                {
+                    "src": "/projects/ResearchStudies/global_hci.jpg",
+                    "alt": "Global HCI research study",
+                    "caption": "Essay that explores the negative effects of colonialism on research done in HCI by reviewing three popular research methods in the field."
+                }
+            ],
+            "buttons": [
+                {
+                    "label": "Research Paper",
+                    "href": "/projects/ResearchStudies/GlobalHCI/globalHCI.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Rideshare for Low Vision Users",
+            "description": "Improving the Rideshare Experience of Users Who are Blind or Have Low Vision.",
+            "images": [
+                {
+                    "src": "/projects/ResearchStudies/blind_rideshare.jpg",
+                    "alt": "Blind rideshare research study",
+                    "caption": "Research study that discusses the rideshare experiences of blind or low vision users and suggests improvements for the end-to-end experience."
+                }
+            ],
+            "buttons": [
+                {
+                    "label": "Research Paper",
+                    "href": "/projects/ResearchStudies/BlindRideshare/blindRideshare.pdf"
+                }
+            ]
+        },
+        {
+            "title": "NYT Cooking Evaluation",
+            "description": "A Heuristic Evaluation and Cognitive Walkthrough of the NYT Cooking website.",
+            "images": [
+                {
+                    "src": "/projects/ResearchStudies/nyt_evaluation.jpg",
+                    "alt": "NYT Cooking evaluation",
+                    "caption": "Analysis of the NYTCooking website based on the “10 Usability Heuristics for User Interface Design” determined by the Nielsen Norman Group and an assessment of the site’s learnability."
+                }
+            ],
+            "buttons": [
+                {
+                    "label": "Heuristic Evaluation",
+                    "href": "/projects/ResearchStudies/NYTEvaluation/nytHeuristic.pdf"
+                },
+                {
+                    "label": "Cognitive Walkthrough",
+                    "href": "/projects/ResearchStudies/NYTEvaluation/nytCognitive.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Turkish Airlines Redesign",
+            "description": "A redesign of the Turkish Airlines website",
+            "images": [
+                {
+                    "src": "/projects/ResearchStudies/turkish_airlines.jpg",
+                    "alt": "Turkish Airlines redesign",
+                    "caption": "Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations."
+                }
+            ],
+            "buttons": [
+                {
+                    "label": "Research Paper",
+                    "href": "/projects/ResearchStudies/TurkishAirlines/turkishAir.pdf"
                 }
             ]
         }
