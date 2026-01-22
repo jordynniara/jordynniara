@@ -25,6 +25,8 @@ export const Projects = () => {
                         title={project.title}
                         shortDescription={project.description}
                         images={project.images}
+                        buttons={project.buttons}
+                        modalContent={project.modalContent}
                     />
                     <div className="flex my-8 justify-center items-center divider">
                         <Sticker size="lg" className="mx-4">

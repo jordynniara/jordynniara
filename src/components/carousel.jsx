@@ -1,5 +1,6 @@
-import { useEffect} from "react";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { useEffect, useState} from "react";
+import { ChevronRight, ChevronLeft, ZoomIn } from "lucide-react";
+import { Modal } from "./modal";
 
 // const images = [
 //     { src: "", alt: "Project Screenshot" },
@@ -13,6 +14,9 @@ export const Carousel = (
     }
 ) => {
     const numberOfImages = images.length;
+    const [isModalOpen, setModalOpen] = useState(false);
+    // const [modalTitle, setModalTitle] = useState("");
+    // const [modalContent, setModalContent] = useState("");
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % numberOfImages);
@@ -23,20 +27,24 @@ export const Carousel = (
     };
 
     useEffect(() => {
+        if (isModalOpen) return; // prevent interval changes while modal is open
+
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % numberOfImages);
         }, 10000); // Change every 10 seconds
 
         // Cleanup: stop the interval when component unmounts or currentIndex changes
         return () => clearInterval(interval);
-    }, [currentIndex, numberOfImages, setCurrentIndex]); // Restart timer whenever currentIndex changes
+    }, [currentIndex, numberOfImages, setCurrentIndex, isModalOpen]);
 
     return (
+        <>
         <div className="flex flex-col gap-2 flex-1">
             <div className="flex justify-center border-4 border-dashed border-wetsoil inset-shadow-md bg-wetsoil/10 p-4 sm:p-6 lg:p-8">
                 <img src={images[currentIndex].src} 
                     alt={`Carousel Image ${currentIndex + 1}: ${images[currentIndex].alt}`} 
                     className="w-80 h-80 object-contain" />
+                <ZoomIn className="align-bottom color-wetsoil text-wetsoil/50 hover:text-wetsoil/100 cursor-pointer" onClick={() => setModalOpen(true)} />
             </div>
             <div className="flex justify-center gap-1">
                 <button className="text-wetsoil/50 hover:text-wetsoil p-2" onClick={handlePrevious}>
@@ -69,5 +77,11 @@ export const Carousel = (
                 </button>
             </div>
         </div>
+        <Modal title="" isOpen={isModalOpen} onClose={() => setModalOpen(false)} imageOnly={true}>
+            <img src={images[currentIndex].src} 
+                alt={`Carousel Image ${currentIndex + 1}: ${images[currentIndex].alt}`} 
+                className="w-full max-h-[80vh] object-contain justify-center border-4 border-white" />
+        </Modal>
+        </>
     );
 }
