@@ -91,7 +91,7 @@
             "buttons": [
                 {
                     "type": "link",
-                    "label": "Prototype (User Flows) (TODO)",
+                    "label": "User Flows (TODO)",
                     "href": "#"
                 },
                 {
@@ -107,39 +107,35 @@
             ]
         },
         {
-            "title": "ARoom",
-            "description": "AR‑based furniture preview and shopping  experience across mobile and desktop; conducted competitive analysis and usability testing.",
+            "title": "GetUp!",
+            "description": "A gamified break reminder.",
             "images": [
                 {
-                    "src": "/projects/ARoom/aroom_1.jpg",
-                    "alt": "Description of image 1",
-                    "caption": "ARoom provides an immersive environment for teams to brainstorm and collaborate."
+                    "src": "/projects/GetUp/images/getUp_home.png",
+                    "alt": "Screen shot of an imagined home page for GetUp!",
+                    "caption": "GetUp! helps users step away from their desks and take breaks by tapping into their sense of competition and social network."
                 },
                 {
-                    "src": "/projects/ARoom/aroom_2.jpg",
-                    "alt": "Description of image 2",
-                    "caption": "Users can interact with 3D models and digital whiteboards in real-time."
+                    "src": "/projects/GetUp/images/streak.png",
+                    "alt": "Screen shot of GetUp! showing the break reminder feature",
+                    "caption": "GetUp! reminds users to take breaks with wellness tips."
                 },
                 {
-                    "src": "/projects/ARoom/aroom_3.jpg",
-                    "alt": "Description of image 3",
-                    "caption": "The space is customizable to fit the needs of different teams and projects."
+                    "src": "/projects/GetUp/images/leaderboard.png",
+                    "alt": "Screen shot of GetUp! showing the leaderboard",
+                    "caption": "Users can build up a streak and climb the leaderboards by consistently taking breaks."
                 },
                 {
-                    "src": "/projects/ARoom/aroom_4.jpg",
-                    "alt": "Description of image 4",
-                    "caption": "ARoom aims to enhance remote collaboration and creativity."
+                    "src": "/projects/GetUp/images/avatar.png",
+                    "alt": "Screen shot of GetUp! showing the customizable space",
+                    "caption": "Custom avatars allow users to connect with their teammates virtually."
                 }
             ],
             "buttons": [
                 {
-                    "type": "Link",
-                    "label": "Prototype (TODO)",
-                    "href": "#"
-                },
-                {
-                    "label": "User Testing",
-                    "href": "/projects/ARoom/user_testing.pdf"
+                    "type": "PDF",
+                    "label": "Case Study",
+                    "href": "/projects/GetUp/caseStudy.pdf"
                 }
             ]
         },
@@ -180,6 +176,24 @@
             ]
         },
         {
+            "title": "Turkish Airlines Redesign",
+            "description": "A redesign of the Turkish Airlines website",
+            "images": [
+                {
+                    "src": "/projects/ResearchStudies/TurkishAir/turkishAir.jpg",
+                    "alt": "Turkish Airlines redesign",
+                    "caption": "Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations."
+                }
+            ],
+            "buttons": [
+                {
+                    "type": "PDF",
+                    "label": "Research Paper",
+                    "href": "/projects/ResearchStudies/TurkishAir/turkishAir.pdf"
+                }
+            ]
+        },
+        {
             "title": "NYT Cooking Evaluation",
             "description": "A Heuristic Evaluation and Cognitive Walkthrough of the NYT Cooking website.",
             "images": [
@@ -199,24 +213,6 @@
                     "type": "PDF",
                     "label": "Cognitive Walkthrough",
                     "href": "/projects/ResearchStudies/NYTEvaluation/nytCognitive.pdf"
-                }
-            ]
-        },
-        {
-            "title": "Turkish Airlines Redesign",
-            "description": "A redesign of the Turkish Airlines website",
-            "images": [
-                {
-                    "src": "/projects/ResearchStudies/TurkishAir/turkishAir.jpg",
-                    "alt": "Turkish Airlines redesign",
-                    "caption": "Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations."
-                }
-            ],
-            "buttons": [
-                {
-                    "type": "PDF",
-                    "label": "Research Paper",
-                    "href": "/projects/ResearchStudies/TurkishAir/turkishAir.pdf"
                 }
             ]
         }
