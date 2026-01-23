@@ -39,7 +39,7 @@ export const ProjectCard = (
             <Card className={`project-card ${className}`}>
                 <div className="project-card-header">
                     <Sticker size="extended" className="project-card-header-sticker">
-                        <h3 className="project-card-header-title">{title}</h3>
+                        <h3 className="project-card-header-title text-pretty">{title}</h3>
                     </Sticker>
                     <h4 className="project-card-header-short-desc">{shortDescription}</h4>
                 </div>
@@ -57,14 +57,12 @@ export const ProjectCard = (
                                     // <Button key={index} size="sm" onClick={() => openModal(modalContent.title, modalContent.body)}>
                                     //     {button.label}
                                     // </Button> :
-                                    <LinkButton key={index} size="sm" href={button.href} download={button.type === "PDF" ? `Parker_${title}.pdf` : undefined}>
-                                        <span className="flex items-center gap-2">
+                                    <LinkButton key={index} size="sm" href={button.href} download={button.type === "PDF" ? `Parker_${title}.pdf` : undefined} className="w-full h-12">
                                         {button.label} 
                                         {button.type === "PDF" ? 
-                                            <Download size={16} /> : 
-                                            <ExternalLink size={16} />
+                                            <Download size={16} className="ml-2" /> : 
+                                            <ExternalLink size={16} className="ml-2" />
                                         }
-                                        </span>
                                     </LinkButton>
                                 ))}
                             </div>

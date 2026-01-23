@@ -19,7 +19,7 @@ export const Sticker = ({
     default: "w-24 h-24 border-12 rounded-full text-base",
     lg: "w-32 h-32 border-16 rounded-full text-lg",
     xl: "w-48 h-48 border-20 rounded-full text-xl",
-    extended: "px-8 py-4 border-20 rounded-full text-lg",
+    extended:  "px-4 py-2 border-12 w-[90%] min-w-[200px] rounded-full text-sm sm:px-6 sm:py-3 sm:border-16 sm:min-w-[300px] sm:text-base lg:px-8 lg:py-4 lg:border-20 lg:min-w-[400px] lg:text-lg",
   };
 
   const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;

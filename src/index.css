@@ -99,7 +99,8 @@
   .btn {
     @apply px-4 py-2 rounded-full font-body border-dashed border-2 shadow-lg transition-all border-wetsoil text-white
     hover:border-4 hover:border-white hover:bg-wetsoil/80 hover:cursor-pointer
-    focus:outline-none focus-visible:border-4 focus-visible:border-white focus-visible:bg-wetsoil/80;
+    focus:outline-none focus-visible:border-4 focus-visible:border-white focus-visible:bg-wetsoil/80
+    flex items-center justify-center;
   }
 
   .btn-sky {
@@ -117,7 +118,8 @@
   .link-btn {
     @apply px-4 py-2 rounded-sm font-body border-2 border-dashed border-white text-white underline bg-wetsoil
     hover:border-2 hover:border-wetsoil hover:text-wetsoil hover:bg-white hover:cursor-pointer
-    focus:outline-none focus-visible:border-4 focus-visible:text-wetsoil focus-visible:bg-white;
+    focus:outline-none focus-visible:border-4 focus-visible:text-wetsoil focus-visible:bg-white
+    flex items-center justify-center;
   }
 
   .link-btn-sky {
