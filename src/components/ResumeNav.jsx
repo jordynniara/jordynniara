@@ -22,16 +22,9 @@ export const ResumeNav = ({ headings = {} }) => {
 
     return (
     <>
-        {/* Drawer */}
-        <nav
-        className={`fixed left-0 top-1/2 -translate-y-1/2 bg-wetsoil/80 backdrop-blur-md p-6 shadow-xl z-30 border-4 border-l-0 border-white text-white rounded-r-lg transition-transform duration-300 ${
-            isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-        >
-        {/* Toggle Button - only visible on mobile */}
         <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden absolute -right-12 top-1/2 -translate-y-1/2 bg-wetsoil text-white p-3 rounded-r-lg shadow-xl border-4 border-l-0 border-white hover:bg-wetsoil/90 transition-all"
+            className="fixed left-0 top-1/2 -translate-y-1/2 bg-wetsoil text-white p-3 rounded-r-lg shadow-xl border-4 border-l-0 border-white hover:bg-wetsoil/90 transition-all z-30"
             aria-label="Toggle navigation"
         >
             <ChevronRight 
@@ -39,19 +32,25 @@ export const ResumeNav = ({ headings = {} }) => {
             />
         </button>
 
-        <ul className="flex flex-col gap-4">
-            {headings.map(({ href, label }) => (
-                <li key={href}>
-                    <a
-                    href={href}
-                    className="hover:underline font-accent block text-sm"
-                    onClick={handleLinkClick}
-                    >
-                    {label}
-                    </a>
-                </li>
-            ))}
-        </ul>
+        {/* Drawer */}
+        <nav
+        className={`fixed left-0 top-1/2 -translate-y-1/2 bg-wetsoil/80 backdrop-blur-md p-6 pl-16 shadow-xl z-20 border-4 border-l-0 border-white text-white rounded-r-lg transition-transform duration-300 max-h-[80vh] overflow-y-auto max-w-64 ${
+            isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+        >
+            <ul className="flex flex-col gap-4">
+                {headings.map(({ href, label }) => (
+                    <li key={href}>
+                        <a
+                        href={href}
+                        className="hover:underline font-accent block text-sm"
+                        onClick={handleLinkClick}
+                        >
+                        {label}
+                        </a>
+                    </li>
+                ))}
+            </ul>
         </nav>
 
         {/* Overlay for mobile */}

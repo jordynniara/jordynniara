@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router'
 import { Header } from './layout/header';
 import { Home } from './pages/Home'
@@ -52,9 +53,34 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToAnchor />
       <AppContent />
     </BrowserRouter>
   );
+}
+
+function ScrollToAnchor() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Remove hash
+      const id = location.hash.substring(1);
+      
+      // Wait for page to render
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      // if no hash scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
+  return null;
 }
 
 export default App

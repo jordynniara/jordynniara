@@ -4,10 +4,25 @@ import { TextAlignJustify } from 'lucide-react';
 const quickFacts = [
     { icon: "📚", label: "Favorite Book", value: "100 Years of Solitude by Gabriel Garcia Marquez" },
     { icon: "🎧", label: "Music Tastes", 
-        value: 
-            <a className='text-sky underline' href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" target="_blank" rel="noopener noreferrer">
-                Jordyn's Top 100
-            </a> 
+        value: (
+           <div className="flex flex-col gap-1">
+                <a href="https://www.youtube.com/watch?v=Gl83mI69nX4" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Lupe Fiasco
+                </a>
+                <a href="https://www.youtube.com/watch?v=GYQfWJNWe3I" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Stevie Wonder
+                </a>
+                <a href="https://www.youtube.com/watch?v=e5YmG3jkzxA" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Cleo Soul
+                </a>
+                <a href="https://www.youtube.com/watch?v=bZYbnyupT9I" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    Indie Tribe
+                </a>
+                <a href="https://www.youtube.com/watch?v=sNotIE0mX1w" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    FKJ
+                </a>
+            </div>
+        )
     },
     { icon: "🤝🏾", label: "Volunteer Work", value: "Black Girls Code" },
     { icon: "👩🏾‍🏫", label: "Currently Learning", value: "AI and Ethical Design" },

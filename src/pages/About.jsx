@@ -189,7 +189,7 @@ const ImpactCard = () => {
           </span>
           . Click here to learn more about it:
         </p>
-        <LinkButton to="/creativity-project" variant="inchworm" className="mx-auto flex justify-center text-white w-sm">
+        <LinkButton to="/creativity-project" className="mx-auto flex justify-center text-white hover:text-wetsoil w-sm">
           The Creativity Project
         </LinkButton>
       </Card>

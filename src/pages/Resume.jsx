@@ -16,7 +16,7 @@ export const Resume = () => {
     // Get resume section headings for nav menu
     const resumeSectionHeadings = useMemo(() => {
         const currentResume = resumeType === "ux" ? resumeUX : resumeSWE;
-        const headingRegex = /^## (.+)$/gm;
+        const headingRegex = /^##+ (.+)$/gm;
         const matches = [...currentResume.matchAll(headingRegex)];
         
         return matches.map(match => {
@@ -38,7 +38,7 @@ export const Resume = () => {
 
   return (
     <div className="relative overflow-x-hidden">
-      <StickerPageDecoration sizeVariety="small" stickerCount={30} density="high"/>
+      {/* <StickerPageDecoration sizeVariety="small" stickerCount={30} density="high"/> */}
       
       {/* Main content */}
       <div className="resume-content relative z-10 p-8">

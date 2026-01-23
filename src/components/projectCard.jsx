@@ -16,27 +16,13 @@ export const ProjectCard = (
             { label: "Button one", href: "#" },
             { label: "Button two", href: "#" }
         ],
-        // modalContent = {
-        //     title: "Project Modal Title",
-        //     body: "Project Modal Content"
-        // },
         className = ""
     }
 ) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    // const [isModalOpen, setModalOpen] = useState(false);
-    // const [modalTitle, setModalTitle] = useState("");
-    // const [modalContentBody, setModalContentBody] = useState("");
-
-    // const openModal = (title, body) => {
-    //     setModalTitle(title);
-    //     setModalContentBody(body);
-    //     setModalOpen(true);
-    // };
-
     return (
         <>
-            <Card className={`project-card ${className}`}>
+            <Card id={title.replace(/\s+/g, '').toLowerCase()} className={`project-card ${className}`}>
                 <div className="project-card-header">
                     <Sticker size="extended" className="project-card-header-sticker">
                         <h3 className="project-card-header-title text-pretty">{title}</h3>
@@ -52,12 +38,7 @@ export const ProjectCard = (
                             </div>
                             <div className="project-card-body-actions">
                                 {buttons.length > 0 && buttons.map((button, index) => (
-                                    // TO DO: Bring back once we can keep figma from reloading
-                                    // button.type == "modal" ?
-                                    // <Button key={index} size="sm" onClick={() => openModal(modalContent.title, modalContent.body)}>
-                                    //     {button.label}
-                                    // </Button> :
-                                    <LinkButton key={index} size="sm" href={button.href} download={button.type === "PDF" ? `Parker_${title}.pdf` : undefined} className="w-full h-12">
+                                    <LinkButton key={index} size="sm" href={button.href} download={button.type === "PDF" ? `Parker_${title}-${button.label}.pdf` : undefined} className="w-full h-12">
                                         {button.label} 
                                         {button.type === "PDF" ? 
                                             <Download size={16} className="ml-2" /> : 
@@ -69,12 +50,6 @@ export const ProjectCard = (
                         </div>
                     </div>
                 </Card>
-                {/* <Modal title={modalTitle} isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-                    <div dangerouslySetInnerHTML={{ __html: modalContentBody }} />
-                    <div>
-                        Not loading? Try opening on <a href={modalContent.backupLink} target="_blank" className="text-blue-500 underline hover:cursor-pointer">Figma</a> instead.
-                    </div>
-                </Modal> */}
         </>
     );
 };

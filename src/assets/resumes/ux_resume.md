@@ -32,18 +32,16 @@ Software engineer transitioning to UX Engineering with a passion for creating us
 *September 2021 - November 2025 | Depaul University - Remote*
 
 #### Selected UX & Prototyping Projects
-- **[Pulse](#)**: Mid‑fidelity mobile prototype enabling users to discover POIs based on real‑time “vibe” data; informed by user interviews and contextual inquiry.
-- **[Gilbert](#)**: AI‑powered assistant prototype for team communication platforms designed to accelerate rapport‑building and team synergy.
-- **[ARoom](#)**: AR‑based furniture preview and shopping  experience across mobile and desktop; conducted competitive analysis and usability testing.
+- **[Pulse](/projects#pulse)**: High‑fidelity mobile prototype enabling users to discover POIs based on real‑time “vibe” data; informed by competitive and literary analysis, user interviews and contextual inquiry.
+- **[Gilbert](/projects#gilbert)**: AI‑powered assistant prototype for team communication platforms designed to accelerate rapport‑building and team synergy.
 - **[“Niara” Mini Design System](#)**: Component library and documentation site used to develop a personal portfolio.
-- **[Get Up!](#)**: Gamified desktop prototype encouraging healthy breaks through competition and behavioral nudges.
-- **[DickBlick.com Information Architecture Redesign](#)**: Comprehensive information architecture  evaluation and redesign resulting in improved navigation and findability.
+- **[GetUp!](/projects#getup!)**: Gamified desktop prototype encouraging healthy breaks through competition and behavioral nudges.
 
 #### Research Studies
-- **[The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies](#)**: Essay that explores the negative effects of colonialism on research done in HCI by reviewing three popular research methods in the field.
-- **[Improving the Rideshare Experience of Users Who are Blind or Have Low Vision](#)**: Research study that discusses the rideshare experiences of blind or low vision users and suggests improvements for the end-to-end experience.
-- **NYTCooking.com [Heuristic Evaluation](#) and [Cognitive Walkthrough](#)**: Analysis of the NYTCooking website based on the “10 Usability Heuristics for User Interface Design” determined by the Nielsen Norman Group and an assessment of the site’s learnability
-- **[Turkish Airlines: Usability Evaluation](#)**: Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations.
+- **[The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies](/projects#decolonizinghci)**: Essay that explores the negative effects of colonialism on research done in HCI by reviewing three popular research methods in the field.
+- **[Improving the Rideshare Experience of Users Who are Blind or Have Low Vision](/projects#rideshareforlowvisionusers)**: Research study that discusses the rideshare experiences of blind or low vision users and suggests improvements for the end-to-end experience.
+- **NYTCooking.com [Heuristic Evaluation and Cognitive Walkthrough](/projects#nytcookingevaluation)**: Analysis of the NYTCooking website based on the “10 Usability Heuristics for User Interface Design” determined by the Nielsen Norman Group and an assessment of the site’s learnability
+- **[Turkish Airlines: Usability Evaluation](/projects#turkishairlinesredesign)**: Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations.
 
 #### Various Creative Works
 - **[Animation Portfolio](#)**
@@ -51,7 +49,7 @@ Software engineer transitioning to UX Engineering with a passion for creating us
 - **[Dog Treats](#)**
 
 ### Personal Projects
-- **[Portfolio Website Design](#)**
+- **[Portfolio Website Design](/projects#minidesignsystem)**
 
 ---
 ## Skills

@@ -75,7 +75,7 @@ export const Contact = () => {
                         id="email"
                         name="email"
                         type="email" 
-                        className="notebook h-10 py-2 px-4text-accent" 
+                        className="notebook h-10 py-2 px-4 text-accent" 
                         required
                     />
                 </div>

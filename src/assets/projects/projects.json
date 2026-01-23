@@ -140,6 +140,34 @@
             ]
         },
         {
+            "title": "Mini Design System",
+            "description": "A mini design system for my portfolio website.",
+            "images": [
+                {
+                    "src": "/projects/MiniDesignSystem/cover.png",
+                    "alt": "Screen shot of the mini design system cover photo",
+                    "caption": "This design system inspired the overall design of my portfolio website and features components and their specifications."
+                },
+                {
+                    "src": "/projects/MiniDesignSystem/v1.png",
+                    "alt": "Screen shot of the portfolio v1 ",
+                    "caption": "See how this system was used to design V1 of this portfolio."
+                }
+            ],
+            "buttons": [
+                {
+                    "type": "link",
+                    "label": "Design System Kit",
+                    "href": "https://www.figma.com/community/file/1303532172657853033/jns-design-kit"
+                },
+                {
+                    "type": "link",
+                    "label": "V1 Design in Figma",
+                    "href": "https://www.figma.com/design/2edUFCDTifKMp3XSe2IAjA/UX-Portfolio-V1?node-id=0-1&t=pI956Jp6lbBZuEg1-1"
+                }
+            ]
+        },
+        {
             "title": "Decolonizing HCI",
             "description": "The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies.",
             "images": [
