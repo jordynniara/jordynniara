@@ -20,17 +20,19 @@ export const Resume = () => {
         const matches = [...currentResume.matchAll(headingRegex)];
         
         return matches.map(match => {
-            const text = match[1];
-            // Convert heading text to slug (same way rehype-slug does it)
+            const level = match[0].split(' ')[0].length - 1; // Count '#' characters
+            const text = match[1].replace(/\*/g, '').replace(/\|/g, '-');
+            // Convert heading text to slug
             const slug = text
                 .toLowerCase()
-                .replace(/[^\w\s-]/g, '') // Remove special chars
                 .replace(/\s+/g, '-')      // Replace spaces with hyphens
-                .replace(/-+/g, '-')       // Replace multiple hyphens with single
-                .trim();
+                .replace(/[^\w-]/g, '-')   // Replace non-word chars with hyphens
+                .replace(/---+/g, '--')    // Collapse 3+ dashes to 2 (rehype-slug behavior)
+                .replace(/^-+|-+$/g, '');  // Trim leading/trailing dashes
             
             return {
                 href: `#${slug}`,
+                level: level,
                 label: text,
             };
             });

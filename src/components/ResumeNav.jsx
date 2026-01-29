@@ -5,60 +5,88 @@ import { ChevronRight } from 'lucide-react';
 export const ResumeNav = ({ headings = {} }) => {
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
-    const handleResize = () => {
-        setIsOpen(window.innerWidth >= 768);
-    };
+        const handleResize = () => {
+            setIsOpen(window.innerWidth >= 768);
+        };
 
-    handleResize(); // Set initial state
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+        handleResize(); // Set initial state
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleLinkClick = () => {
-    if (window.innerWidth < 768) {
-        setIsOpen(false);
-    }
+    const handleLinkClick = (e, href) => {
+        e.preventDefault();
+        const id = href.substring(1); // Remove the '#'
+        const element = document.getElementById(id);
+        
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        if (window.innerWidth < 768) {
+            setIsOpen(false);
+        }
+    };
+
+    const getLevelPadding = (level) => {
+        switch(level) {
+            case 4:
+                return "pl-16";
+            case 3:
+                return "pl-12";
+            case 2:
+                return "pl-8";
+            case 1:
+                return "pl-4";
+            default:
+                return "pl-0";
+        }
     };
 
     return (
     <>
-        <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="fixed left-0 top-1/2 -translate-y-1/2 bg-wetsoil text-white p-3 rounded-r-lg shadow-xl border-4 border-l-0 border-white hover:bg-wetsoil/90 transition-all z-30"
-            aria-label="Toggle navigation"
+        {/* Drawer with button inside */}
+        <div
+            className={`fixed left-0 top-1/2 -translate-y-1/2 z-20 transition-transform duration-300 ${
+                isOpen ? 'translate-x-0' : '-translate-x-full'
+            }`}
         >
-            <ChevronRight 
-            className={`w-6 h-6 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-            />
-        </button>
+            <nav className="bg-wetsoil/80 backdrop-blur-md p-6 shadow-xl border-4 border-l-0 border-white text-white rounded-r-lg max-h-[80vh] overflow-y-auto max-w-64">
+                <ol className="flex flex-col gap-4 text-start">
+                    {headings.map(({ href, label, level }) => (
+                        <li key={href}>
+                            <a
+                                href={href}
+                                className={
+                                getLevelPadding(level)
+                                + " hover:underline font-accent block text-sm" }
+                                onClick={(e) => handleLinkClick(e, href)}
+                            >
+                                {label}
+                            </a>
+                        </li>
+                    ))}
+                </ol>
+            </nav>
 
-        {/* Drawer */}
-        <nav
-        className={`fixed left-0 top-1/2 -translate-y-1/2 bg-wetsoil/80 backdrop-blur-md p-6 pl-16 shadow-xl z-20 border-4 border-l-0 border-white text-white rounded-r-lg transition-transform duration-300 max-h-[80vh] overflow-y-auto max-w-64 ${
-            isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-        >
-            <ul className="flex flex-col gap-4">
-                {headings.map(({ href, label }) => (
-                    <li key={href}>
-                        <a
-                        href={href}
-                        className="hover:underline font-accent block text-sm"
-                        onClick={handleLinkClick}
-                        >
-                        {label}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+            {/* Toggle Button - positioned relative to drawer */}
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="absolute left-full top-[50%] bg-wetsoil text-white p-3 rounded-r-lg shadow-xl border-4 border-l-0 border-white hover:bg-wetsoil/90 transition-all"
+                aria-label="Toggle navigation"
+            >
+                <ChevronRight 
+                    className={`w-6 h-6 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                />
+            </button>
+        </div>
 
         {/* Overlay for mobile */}
         {isOpen && (
-        <div
-            className="fixed inset-0 bg-black/20 z-10 md:hidden"
-            onClick={() => setIsOpen(false)}
-        />
+            <div
+                className="fixed inset-0 bg-black/20 z-10 md:hidden"
+                onClick={() => setIsOpen(false)}
+            />
         )}
     </>
     );
