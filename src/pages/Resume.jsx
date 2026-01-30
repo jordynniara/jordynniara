@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown"
 import resumeUX from '../assets/resumes/UX_Resume.md?raw'
 import resumeSWE from '../assets/resumes/SWE_Resume.md?raw'
 import { StickerPageDecoration } from "../components/stickerPageDeco"
-import { ResumeNav } from "../components/ResumeNav";
+import { NavDrawer } from "../components/navDrawer";
 import { LinkButton } from "../components/button";
 import { Download } from "lucide-react"
 
@@ -26,12 +26,13 @@ export const Resume = () => {
             const slug = text
                 .toLowerCase()
                 .replace(/\s+/g, '-')      // Replace spaces with hyphens
+                .replace(/\//g, '-')       // Replace forward slashes with hyphens
                 .replace(/[^\w-]/g, '-')   // Replace non-word chars with hyphens
                 .replace(/---+/g, '--')    // Collapse 3+ dashes to 2 (rehype-slug behavior)
                 .replace(/^-+|-+$/g, '');  // Trim leading/trailing dashes
             
             return {
-                href: `#${slug}`,
+                href: `#resume-${slug}`,
                 level: level,
                 label: text,
             };
@@ -76,7 +77,7 @@ export const Resume = () => {
           <div className="prose prose-h1:font-accent prose-h2:font-accent prose-h3:font-accent prose-h4:font-accent font-accent text-body text-left">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeSlug]}
+              rehypePlugins={[rehypeSlug, [rehypeSlug, {prefix: 'resume-'}]]}
             >
               {resumeType === "ux" ? resumeUX : resumeSWE}
             </ReactMarkdown>
@@ -90,7 +91,7 @@ export const Resume = () => {
         </div>
       </div>
       
-      {<ResumeNav headings={resumeSectionHeadings} />}
+      {<NavDrawer index={resumeSectionHeadings} />}
     </div>
   );
 }

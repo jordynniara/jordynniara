@@ -1,4 +1,3 @@
-import { Card } from "../components/card";
 import { Sticker } from "../components/sticker";
 import { LinkButton } from "../components/button";
 import skyMascot from '../assets/images/mascot_sky.png'
@@ -6,6 +5,7 @@ import strawberryMascot from '../assets/images/mascot_strawberry.png'
 import inchwormMascot from '../assets/images/mascot_inchworm.png'
 import { ProjectCard } from "../components/projectCard";
 import projectsObj from "../assets/projects/projects.json";
+import { NavDrawer } from "../components/navDrawer";
 
 const stickerSrc= [inchwormMascot, skyMascot, strawberryMascot]
 export const Projects = () => {
@@ -39,6 +39,14 @@ export const Projects = () => {
                     </div>
                 </>
             ))}
+            <div className="flex justify-center gap-4" >
+                <LinkButton to="#top" size="small" >Back to Top</LinkButton>
+            </div>
+            {<NavDrawer index={projects.map((project) => ({
+                href: `#projects-${project.title.toLowerCase().replace(/\s+/g, '-')}`,
+                label: project.title,
+                level: 1,
+            }))} />}
         </div>
     );
 };

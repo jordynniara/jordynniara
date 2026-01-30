@@ -22,7 +22,7 @@ export const ProjectCard = (
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
         <>
-            <Card id={title.replace(/\s+/g, '').toLowerCase()} className={`project-card ${className}`}>
+            <Card id={`projects-${title.replace(/\s+/g, '-').toLowerCase()}`} className={`project-card ${className}`}>
                 <div className="project-card-header">
                     <Sticker size="extended" className="project-card-header-sticker">
                         <h3 className="project-card-header-title text-pretty">{title}</h3>

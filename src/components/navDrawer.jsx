@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
 
 
-export const ResumeNav = ({ headings = {} }) => {
+export const NavDrawer = ({ 
+    index = [{href:"#", label:"", level:1}]
+}) => {
     const [isOpen, setIsOpen] = useState(false);
     useEffect(() => {
         const handleResize = () => {
@@ -14,15 +16,7 @@ export const ResumeNav = ({ headings = {} }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleLinkClick = (e, href) => {
-        e.preventDefault();
-        const id = href.substring(1); // Remove the '#'
-        const element = document.getElementById(id);
-        
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        
+    const handleLinkClick = () => {
         if (window.innerWidth < 768) {
             setIsOpen(false);
         }
@@ -31,13 +25,13 @@ export const ResumeNav = ({ headings = {} }) => {
     const getLevelPadding = (level) => {
         switch(level) {
             case 4:
-                return "pl-16";
+                return "pl-16 text-white";
             case 3:
-                return "pl-12";
+                return "pl-12 text-sky";
             case 2:
-                return "pl-8";
+                return "pl-8 text-inchworm";
             case 1:
-                return "pl-4";
+                return "pl-4 text-strawberry";
             default:
                 return "pl-0";
         }
@@ -53,14 +47,12 @@ export const ResumeNav = ({ headings = {} }) => {
         >
             <nav className="bg-wetsoil/80 backdrop-blur-md p-6 shadow-xl border-4 border-l-0 border-white text-white rounded-r-lg max-h-[80vh] overflow-y-auto max-w-64">
                 <ol className="flex flex-col gap-4 text-start">
-                    {headings.map(({ href, label, level }) => (
+                    {index.map(({ href, label, level }) => (
                         <li key={href}>
                             <a
                                 href={href}
-                                className={
-                                getLevelPadding(level)
-                                + " hover:underline font-accent block text-sm" }
-                                onClick={(e) => handleLinkClick(e, href)}
+                                className={ getLevelPadding(level) + " hover:underline font-accent block text-sm" }
+                                onClick={(e) => handleLinkClick(e)}
                             >
                                 {label}
                             </a>

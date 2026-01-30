@@ -363,6 +363,9 @@
   @apply border-none bg-transparent p-0 m-0 cursor-pointer translate-y-[15%] hover:bg-transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 #root {
   max-width: 100%;
