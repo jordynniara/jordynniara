@@ -280,7 +280,7 @@
   }
 
   .project-card-header-sticker {
-     @apply  w-full h-full -rotate-15 -translate-x-15;
+     @apply  w-full h-full -rotate-15 -translate-x-15 z-1;
   }
 
   .project-card-header-title {

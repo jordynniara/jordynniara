@@ -17,8 +17,8 @@ export const Header = (
     return (
         <header className="bg-wetsoil p-4 shadow-lg top-0 left-0 w-[100%] relative">
             <div className="flex items-center justify-between max-h-15">
-                <LinkButton to="/" className="header-home-btn -translate-x-[10%]">
-                    <Sticker className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28">
+                <LinkButton to="/" className="header-home-btn -translate-x-[10%] translate-y-[30%]">
+                    <Sticker fidget={true} className="w-16 h-16 sm:w-20 sm:h-20 md:w-30 md:h-30 lg:w-50 lg:h-50">
                         <img 
                             src={HomeLogo} 
                             alt="Home Logo" 

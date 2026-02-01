@@ -13,21 +13,21 @@ export const Home = () => {
         <div className="flex gap-8 w-full">
             {/* Left side: mascot stack spanning full height */}
             <div className="hidden md:flex flex-col justify-between items-center gap-4 w-52 md:w-60 lg:w-72">
-                <Sticker size="xl">
+                <Sticker fidget={true} size="xl">
                     <img 
                         src={inchwormMascot} 
                         alt="Inchworm colored Mascot" 
                         className="w-full h-auto max-h-48 md:max-h-64 object-contain"
                     />
                 </Sticker>
-                <Sticker size="xl">
+                <Sticker fidget={true} size="xl">
                     <img 
                         src={skyMascot} 
                         alt="Sky colored Mascot"
                         className="w-full h-auto max-h-48 md:max-h-64 object-contain"
                     />
                 </Sticker>
-                <Sticker size="xl">
+                <Sticker fidget={true} size="xl">
                     <img 
                         src={strawberryMascot} 
                         alt="Strawberry colored Mascot"
