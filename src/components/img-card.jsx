@@ -12,7 +12,8 @@ export const ImgCard = ({
         </h2>
         <img 
             src={src} 
-            alt={alt} 
+            alt={alt}
+            loading="lazy"
             className="rounded-t-none border-t-0 mt-0 m-auto rounded-lg shadow-lg border-15 border-white object-cover h-100 w-200"/>
     </div>
   );

@@ -62,7 +62,8 @@ export const Projects = () => {
                                 <Sticker size="lg" className="mx-4">
                                     <img 
                                         src={mascots[typeIndex % mascots.length]}
-                                        alt={`${mascots[typeIndex % mascots.length]} mascot`} 
+                                        alt={`${mascots[typeIndex % mascots.length]} mascot`}
+                                        loading="lazy"
                                         className="w-full h-auto max-h-48 md:max-h-64 object-contain"
                                     />
                                 </Sticker>

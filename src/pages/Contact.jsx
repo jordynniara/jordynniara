@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import { LinkButton, Button } from "../components/button"
 import {Github, Linkedin, Mail} from "lucide-react"
 import emailjs from '@emailjs/browser';
-import { StickerPageDecoration } from '../components/stickerPageDeco';
 
 export const Contact = () => {
     const emailForm = useRef();

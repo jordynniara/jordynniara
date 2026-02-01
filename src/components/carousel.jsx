@@ -43,6 +43,7 @@ export const Carousel = (
             <div className="relative flex justify-center items-center border-4 border-dashed border-wetsoil inset-shadow-md bg-wetsoil/10 p-4 sm:p-6 lg:p-8 h-64 lg:h-80 overflow-hidden">
                 <img src={images[currentIndex].src} 
                     alt={`Carousel Image ${currentIndex + 1}: ${images[currentIndex].alt}`} 
+                    loading="lazy"
                     className="w-full h-full object-contain" />
                 <ZoomIn className="absolute bottom-2 right-2 color-wetsoil text-wetsoil/50 hover:text-wetsoil/100 cursor-pointer" onClick={() => setModalOpen(true)} />
             </div>
@@ -80,6 +81,7 @@ export const Carousel = (
         <Modal title="" isOpen={isModalOpen} onClose={() => setModalOpen(false)} imageOnly={true}>
             <img src={images[currentIndex].src} 
                 alt={`Carousel Image ${currentIndex + 1}: ${images[currentIndex].alt}`} 
+                loading="lazy"
                 className="w-full max-h-[80vh] object-contain justify-center border-4 border-white" />
         </Modal>
         </>

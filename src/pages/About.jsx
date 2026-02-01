@@ -120,7 +120,8 @@ const ExploreCard = () => {
       <Sticker size="xl">
         <img 
           src={inchwormMascot} 
-          alt="Inchworm colored Mascot" 
+          alt="Inchworm colored Mascot"
+          loading="lazy"
         />
       </Sticker>
       <Card className="about-card">
@@ -140,7 +141,8 @@ const BuildCard = () => {
       <Sticker size="xl">
         <img 
           src={skyMascot} 
-          alt="Sky colored Mascot" 
+          alt="Sky colored Mascot"
+          loading="lazy"
         />
       </Sticker>
       <Card className="about-card">
@@ -156,7 +158,8 @@ const ImpactCard = () => {
       <Sticker size="xl">
         <img 
           src={strawberryMascot} 
-          alt="Strawberry colored Mascot" 
+          alt="Strawberry colored Mascot"
+          loading="lazy"
         />
       </Sticker>
       <Card className="about-card flex flex-col gap-2 justify-center">
