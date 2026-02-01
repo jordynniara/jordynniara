@@ -12,7 +12,7 @@
   --font-body: "Playfair Display", serif;
   --font-accent: "Cutive Mono", monospace;
 
-  --text-title: 96px;
+  --text-title: 108px;
   --text-h1: 52px;
   --text-h2: 42px;
   --text-h3: 33px;
@@ -268,7 +268,7 @@
   }
 
   .project-card {
-    @apply flex flex-col mx-auto max-w-6xl;
+    @apply flex flex-col mx-auto w-full max-w-6xl min-h-[500px];
   }
 
   .card.project-card:hover {
@@ -292,7 +292,7 @@
   }
 
   .project-card-body {
-    @apply flex flex-col lg:flex-row gap-8 mt-6 lg:mt-8 mx-4 sm:mx-6 lg:mx-10;
+    @apply flex flex-col lg:flex-row gap-8 mt-6 lg:mt-8 mx-4 sm:mx-6 lg:mx-10 flex-1;
   }
 
   .project-card-body-rightSide {
@@ -304,7 +304,7 @@
   }
 
   .project-card-body-actions {
-     @apply flex flex-row sm:flex-row justify-center items-center gap-3 sm:gap-4;
+     @apply flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mt-auto;
   }
 
   .divider::before{

@@ -1,6 +1,7 @@
 {
     "projects": [
         {
+            "type": "prototype",
             "title": "Pulse",
             "description": "Real time crowd info for your next move",
             "images": [
@@ -64,6 +65,7 @@
             }
         },
         {
+            "type": "prototype",
             "title": "Gilbert",
             "description": "A collaborative platform AI assistant to help teams get to synergy sooner.",
             "images": [
@@ -107,6 +109,7 @@
             ]
         },
         {
+            "type": "prototype",
             "title": "GetUp!",
             "description": "A gamified break reminder.",
             "images": [
@@ -140,6 +143,7 @@
             ]
         },
         {
+            "type": "prototype",
             "title": "Mini Design System",
             "description": "A mini design system for my portfolio website.",
             "images": [
@@ -168,6 +172,7 @@
             ]
         },
         {
+            "type": "research",
             "title": "Decolonizing HCI",
             "description": "The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies.",
             "images": [
@@ -186,6 +191,7 @@
             ]
         },
         {
+            "type": "research",
             "title": "Rideshare for Low Vision Users",
             "description": "Improving the Rideshare Experience of Users Who are Blind or Have Low Vision.",
             "images": [
@@ -204,6 +210,7 @@
             ]
         },
         {
+            "type": "research",
             "title": "Turkish Airlines Redesign",
             "description": "A redesign of the Turkish Airlines website",
             "images": [
@@ -222,6 +229,7 @@
             ]
         },
         {
+            "type": "analysis",
             "title": "NYT Cooking Evaluation",
             "description": "A Heuristic Evaluation and Cognitive Walkthrough of the NYT Cooking website.",
             "images": [

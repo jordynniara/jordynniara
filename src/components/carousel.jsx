@@ -40,11 +40,11 @@ export const Carousel = (
     return (
         <>
         <div className="flex flex-col gap-2 flex-1">
-            <div className="flex justify-center border-4 border-dashed border-wetsoil inset-shadow-md bg-wetsoil/10 p-4 sm:p-6 lg:p-8">
+            <div className="relative flex justify-center items-center border-4 border-dashed border-wetsoil inset-shadow-md bg-wetsoil/10 p-4 sm:p-6 lg:p-8 h-64 lg:h-80 overflow-hidden">
                 <img src={images[currentIndex].src} 
                     alt={`Carousel Image ${currentIndex + 1}: ${images[currentIndex].alt}`} 
-                    className="w-80 h-80 object-contain" />
-                <ZoomIn className="align-bottom color-wetsoil text-wetsoil/50 hover:text-wetsoil/100 cursor-pointer" onClick={() => setModalOpen(true)} />
+                    className="w-full h-full object-contain" />
+                <ZoomIn className="absolute bottom-2 right-2 color-wetsoil text-wetsoil/50 hover:text-wetsoil/100 cursor-pointer" onClick={() => setModalOpen(true)} />
             </div>
             <div className="flex justify-center gap-1">
                 <button className="text-wetsoil/50 hover:text-wetsoil p-2" onClick={handlePrevious}>

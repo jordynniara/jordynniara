@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { ChevronRight } from 'lucide-react';
 
 
@@ -6,16 +6,6 @@ export const NavDrawer = ({
     index = [{href:"#", label:"", level:1}]
 }) => {
     const [isOpen, setIsOpen] = useState(false);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsOpen(window.innerWidth >= 768);
-        };
-
-        handleResize(); // Set initial state
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
     const handleLinkClick = () => {
         if (window.innerWidth < 768) {
             setIsOpen(false);
