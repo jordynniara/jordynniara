@@ -4,6 +4,8 @@ import { Card } from "../components/card";
 import FamilyPhoto from "../assets/images/familyPhoto.jpg";
 import Working from "../assets/images/working.jpg";
 import Avatar from "../assets/images/avatar.jpg";
+import Speaking from "../assets/images/bamshirt.jpg";
+import Stemsation from "../assets/images/stemsations.jpg";
 import { LinkButton } from "../components/button";
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm';
@@ -102,7 +104,7 @@ export const About = () => {
           />
           <ImgCard
             title="Impact"
-            src={Avatar}
+            src={Speaking}
             alt="Picture of me working"
             onClick={() => openModal("Impact is the Purpose", <ImpactCard />)}
           />
