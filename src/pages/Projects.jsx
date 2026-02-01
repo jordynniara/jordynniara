@@ -40,7 +40,7 @@ export const Projects = () => {
                         </p>
                     </div>
                     <div className="flex flex-col gap-y-20">
-                        {projects.filter(project => project.type === obj.type).map((project, projIndex) => (
+                        {projects.filter(project => project.type.toLowerCase() === obj.type.toLowerCase()).map((project, projIndex) => (
                             navDrawerIndex.push({
                                 href: `#projects-${project.title.toLowerCase().replace(/\s+/g, '-')}`,
                                 label: project.title,

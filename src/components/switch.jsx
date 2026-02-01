@@ -34,7 +34,7 @@ export const Switch = ({
         onClick={() => handleToggle('left')} 
         className={`
           px-6 py-3 rounded-full font-body text-base transition-all
-          ${active === 'left' 
+          ${active.toLowerCase() === 'left' 
             ? 'switch-toggled switch-option-left' 
             : 'hover:bg-white/10'
           }
@@ -46,7 +46,7 @@ export const Switch = ({
         onClick={() => handleToggle('right')} 
         className={`
           px-6 py-3 rounded-full font-body text-base transition-all
-          ${active === 'right' 
+          ${active.toLowerCase() === 'right' 
             ? 'switch-toggled switch-option-right' 
             : 'hover:bg-white/10'
           }

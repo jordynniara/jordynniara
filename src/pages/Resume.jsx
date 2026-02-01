@@ -15,7 +15,7 @@ export const Resume = () => {
 
     // Get resume section headings for nav menu
     const resumeSectionHeadings = useMemo(() => {
-        const currentResume = resumeType === "ux" ? resumeUX : resumeSWE;
+        const currentResume = resumeType.toLowerCase() === "ux" ? resumeUX : resumeSWE;
         const headingRegex = /^##+ (.+)$/gm;
         const matches = [...currentResume.matchAll(headingRegex)];
         
@@ -56,12 +56,12 @@ export const Resume = () => {
               right={"SWE"}
               defaultOption={"left"}
               onChange={(option) => {
-                setResumeType(option === "left" ? "ux" : "swe");
+                setResumeType(option.toLowerCase() === "left" ? "ux" : "swe");
               }}
               className="mb-0"
             />
             <a
-              href={resumeType === "ux" ? "/resumes/ux_resume.pdf" : "/resumes/swe_resume.pdf"} 
+              href={resumeType.toLowerCase() === "ux" ? "/resumes/ux_resume.pdf" : "/resumes/swe_resume.pdf"} 
               download="JordynParker_Resume.pdf"
               className="mx-auto w-9 h-7 flex items-center justify-center py-2 bg-white text-wetsoil rounded-sm font-accent hover:cursor-pointer
                   rounded-t-none border-t-0 mt-0"
@@ -85,7 +85,7 @@ export const Resume = () => {
         </div>
         <div className="flex justify-center gap-4" >
           <LinkButton to="#top" size="small" >Back to Top</LinkButton>
-          <LinkButton href={resumeType === "ux" ? "/resumes/ux_resume.pdf" : "/resumes/swe_resume.pdf"} size="small" download="JordynParker_Resume.pdf">
+          <LinkButton href={resumeType.toLowerCase() === "ux" ? "/resumes/ux_resume.pdf" : "/resumes/swe_resume.pdf"} size="small" download="JordynParker_Resume.pdf">
             Download resume as PDF
           </LinkButton>
         </div>

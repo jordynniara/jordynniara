@@ -251,6 +251,127 @@
                     "href": "/projects/ResearchStudies/NYTEvaluation/nytCognitive.pdf"
                 }
             ]
+        },
+        {
+            "type": "art",
+            "title":"Engineer to Animator",
+            "description": "A demo reel of my first set of animation projects",
+            "images": [
+                {
+                    "src": "/projects/art/animation/ironMan.png",
+                    "alt": "A demo reel showcasing my animation projects",
+                    "caption": "I explore the 12 principles of animation in this project that served as my introduction to animation. More projects are coming soon!"
+                }
+            ],
+            "buttons": [
+                {
+                    "type": "link",
+                    "label": "Watch the Reel",
+                    "href": "https://vimeo.com/1160866061?share=copy&fl=sv&fe=ci"
+                }
+            ]
+        },
+        {
+            "type": "art",
+            "title":"Dragon Bellies",
+            "description": "A vibrant exploration of the elements that create unity within a single composition.",
+            "images": [
+                {
+                    "src": "/projects/art/dragonBellies/dragon_bellies_labelled.jpg",
+                    "alt": "A series colorful dragon skin",
+                    "caption": "The composition presents a retro‑futuristic, dragon‑themed visual piece that demonstrates emphasis, balance, scale, and movement while unifying all elements through consistent color, form, and Gestalt principles."
+                }
+            ],
+            "buttons": [
+                {
+                    "type": "link",
+                    "label": "Watch full Analysis",
+                    "href": "https://vimeo.com/674679586?fl=tl&fe=ec"
+                }
+            ]
+        },
+        {
+            "type": "art",
+            "title": "Jada Data",
+            "description": "A data visualization project exploring the relationship between my dog Jada's play toy and play buddy.",
+            "images": [
+                {
+                    "src": "/projects/art/infographics/jadaData/jada_infographic.png",
+                    "alt": "A picture of infographic",
+                    "caption": "Jada Blu is an extremely playful pitbull-husky mix with a full and diverse toy box. Her play preferences were collected over a four week period, tracking her toys, her play person, and the time of day she played."
+                },
+                {
+                    "src": "/projects/art/infographics/jadaData/fave_toy.png",
+                    "alt": "A graph showing the number of times Jada plays with each toy",
+                    "caption": "This graph shows the percentage of times Jada played with each toy. The lamb chop and wubba are two of her favorite toys, taking up nearly two-thirds of all her play time."
+                },
+                {
+                    "src": "/projects/art/infographics/jadaData/playPerson.png",
+                    "alt": "A graph showing the number of times Jada plays with each person.",
+                    "caption": "This graph shows the percentage of times Jada played with each person by bringing them her toy. We see that Jordyn is her favorite person to play with. Jada brought her a toy 50% of the time out of all the time she spent playing."
+                },
+                {
+                    "src": "/projects/art/infographics/jadaData/playTime.png",
+                    "alt": "A graph showing which person Jada chooses to play with at what time.",
+                    "caption": "These scatter plots illustrate Jada's favorite time to play, both overall and with each play person. Jada's preferences for evening and late-night play can be explained by her owner's typical work hours. However, within those hours, Jada has different patterns for each person."
+                },
+                {
+                    "src": "/projects/art/infographics/jadaData/person_per_hour_per_toy.png",
+                    "alt": "A graph relating all of the above variables: playtime, person, and toy.",
+                    "caption": "This Sankey Diagram brings everything together in a simulated decision tree. It shows the flow relating the toy and play person Jada played with in a given hour. Jada typically chose to play with Jordyn with either the triangle pull toy or the wubba starting at 5pm. If left to her own devices, she'll choose lamb chop regardless of the hour."
+                }
+            ],
+            "buttons": [
+                {
+                    "type": "pdf",
+                    "label": "View Project",
+                    "href": "/projects/art/infographics/jadaData/JadaData.pdf"
+                }
+            ]
+        },
+        {
+            "type": "art",
+            "title": "NBA Betting and Game Quality",
+            "description": "A data visualization project exploring the relationship between NBA betting odds and game quality.",
+            "images": [
+                {
+                    "src": "/projects/art/infographics/nba/attendance.png",
+                    "alt": "A picture of infographic",
+                    "caption": "In 2018,the United States Supreme court Legalized Sports betting, allowing states to regulate it as they see fit. Since then, NBA fans have speculated that the game has been ruined as referees prioritize financial gains over quality games. But what does the data say?"
+                },
+                {
+                    "src": "/projects/art/infographics/nba/attendance.png",
+                    "alt": "A graph showing NBA game attendance over time",
+                    "caption": "Game attendance across the league initially saw a slight dip the first couple of years after legalization."
+                },
+                {
+                    "src": "/projects/art/infographics/nba/pfRate.png",
+                    "alt": "A graph showing the average game personal foul rate in NBA games over time.",
+                    "caption": "generally, a game with a lot of stoppages is boring to watch because it disrupts game play. Stoppages caused by personal foul (PF) calls we’re on the decline prior to 2018. after an initial sharp Increase they contintued their declining trend."
+                },
+                {
+                    "src": "/projects/art/infographics/nba/ftRate.png",
+                    "alt": "A graph showing the average game free throw rate in NBA games over time.",
+                    "caption": "Stoppages caused by free throw attempts have been steady in the league overall with a slight decline the past couple of years. Free throw merchants have also seen a recent decline."
+                },
+                {
+                    "src": "/projects/art/infographics/nba/closeGames.png",
+                    "alt": "A graph showing the average number of close games in the NBA over time.",
+                    "caption": "point spreads level the playing field in sports betting by indicating how much a team must win by in order for the bet to payout. In 2012 and 2018 games finished “CLOSE TO THE SPREAD” WITH MORE COMPETITIVE GAMES, while GAMES IN 2024 HAD HIGHER POINT DIFFERENTIALS ACROSS ALL SPREADS."
+                },
+                {
+                    "src": "/projects/art/infographics/nba/implications.png",
+                    "alt": "A graph relating all of the above variables: playtime, person, and toy.",
+                    "caption": "This graph relates all of the above variables: playtime, person, and toy, providing a comprehensive view of Jada's play behavior."
+                }
+            ],
+            "buttons": [
+                {
+                    "type": "pdf",
+                    "label": "View Project",
+                    "href": "/projects/art/infographics/nba/nba_infographic.pdf"
+                }
+            ]
         }
     ]
 }

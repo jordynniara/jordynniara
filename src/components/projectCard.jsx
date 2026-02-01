@@ -38,9 +38,9 @@ export const ProjectCard = (
                             </div>
                             <div className="project-card-body-actions">
                                 {buttons.length > 0 && buttons.map((button, index) => (
-                                    <LinkButton key={index} size="sm" href={button.href} download={button.type === "PDF" ? `Parker_${title}-${button.label}.pdf` : undefined} className="w-full h-12">
+                                    <LinkButton key={index} size="sm" href={button.href} download={button.type.toLowerCase() === "pdf" ? `Parker_${title}-${button.label}.pdf` : undefined} className="w-full h-12">
                                         {button.label} 
-                                        {button.type === "PDF" ? 
+                                        {button.type.toLowerCase() == "pdf" ? 
                                             <Download size={16} className="ml-2" /> : 
                                             <ExternalLink size={16} className="ml-2" />
                                         }
