@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Sticker } from "../components/sticker";
 import { Card } from "../components/card";
-import FamilyPhoto from "../assets/images/familyPhoto.jpg";
 import Working from "../assets/images/working.jpg";
-import Avatar from "../assets/images/avatar.jpg";
+import Drawing from "../assets/images/drawing.jpg";
 import Speaking from "../assets/images/bamshirt.jpg";
-import Stemsation from "../assets/images/stemsations.jpg";
 import { LinkButton } from "../components/button";
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm';
@@ -92,7 +90,7 @@ export const About = () => {
         <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center text-wetsoil font-body my-4 w-full">
           <ImgCard
             title="Explore"
-            src={FamilyPhoto}
+            src={Drawing}
             alt="Picture of me and my family"
             onClick={() => openModal("Explore with Purpose", <ExploreCard />)}
           />
