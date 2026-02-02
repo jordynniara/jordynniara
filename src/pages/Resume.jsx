@@ -3,8 +3,8 @@ import { Switch } from "../components/switch"
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import ReactMarkdown from "react-markdown"
-import resumeUX from '../assets/resumes/UX_Resume.md?raw'
-import resumeSWE from '../assets/resumes/SWE_Resume.md?raw'
+import resumeUX from '../assets/resumes/ux_resume.md?raw'
+import resumeSWE from '../assets/resumes/swe_resume.md?raw'
 // import { StickerPageDecoration } from "../components/stickerPageDeco"
 import { NavDrawer } from "../components/navDrawer";
 import { LinkButton } from "../components/button";
