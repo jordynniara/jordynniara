@@ -57,9 +57,12 @@ export const NavDrawer = ({
                 className="absolute left-full top-[50%] bg-wetsoil text-white p-3 rounded-r-lg shadow-xl border-4 border-l-0 border-white hover:bg-wetsoil/90 transition-all"
                 aria-label="Toggle navigation"
             >
+                <div className='flex items-center'>
+                    TOC
                 <ChevronRight 
                     className={`w-6 h-6 transition-transform ${isOpen ? 'rotate-180' : ''}`}
                 />
+                </div>
             </button>
         </div>
 
