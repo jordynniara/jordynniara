@@ -17,7 +17,7 @@ import strawberryMascot from '../assets/images/mascot_strawberry.png'
 import inchwormMascot from '../assets/images/mascot_inchworm.png'
 import { ImgCard } from "../components/img-card";
 import { QuickFactsDrawer } from "../components/quickFactsDrawer";
-import { StickerPageDecoration } from "../components/stickerPageDeco";
+// import { StickerPageDecoration } from "../components/stickerPageDeco";
 
 const verbs = [
   "create",

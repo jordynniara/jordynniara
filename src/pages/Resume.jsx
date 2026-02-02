@@ -5,7 +5,7 @@ import rehypeSlug from 'rehype-slug';
 import ReactMarkdown from "react-markdown"
 import resumeUX from '../assets/resumes/UX_Resume.md?raw'
 import resumeSWE from '../assets/resumes/SWE_Resume.md?raw'
-import { StickerPageDecoration } from "../components/stickerPageDeco"
+// import { StickerPageDecoration } from "../components/stickerPageDeco"
 import { NavDrawer } from "../components/navDrawer";
 import { LinkButton } from "../components/button";
 import { Download } from "lucide-react"

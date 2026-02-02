@@ -1,4 +1,3 @@
-import { is } from "@babel/types";
 import { Link } from "react-router";
 
 const variantClasses = {

@@ -92,11 +92,6 @@
             ],
             "buttons": [
                 {
-                    "type": "link",
-                    "label": "User Flows (TODO)",
-                    "href": "#"
-                },
-                {
                     "type": "PDF",
                     "label": "Presentation",
                     "href": "/projects/Gilbert/gilbert_presentation.pdf"

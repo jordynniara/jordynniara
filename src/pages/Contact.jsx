@@ -30,10 +30,6 @@ export const Contact = () => {
 
     return (
         <div className="flex-col justify-center p-4">
-            <StickerPageDecoration 
-                stickerCount={10}
-                sizeVariety='medium'
-            />
             <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">Contact Me</h1>
             <h2 className="font-body text-body text-wetsoil text-center">
                 If you're interested in collaborating or just want to say hi, feel free to reach out!

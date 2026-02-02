@@ -47,8 +47,8 @@ export const QuickFactsDrawer = () => {
 
       {/* Drawer */}
       <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`md:overflow-y-scroll transition-all duration-300 ${
+          isOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="bg-white border-4 border-wetsoil border-dashed inset-shadow-sm rounded-lg p-6 mt-2">
