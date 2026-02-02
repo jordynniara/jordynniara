@@ -6,7 +6,7 @@ import { NotFound } from './pages/NotFound'
 import { Resume } from './pages/Resume'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
-import { Projects } from './pages/projects';
+import { Projects } from './pages/projects-page';
 import { CreativityProject } from './pages/CreativityProject'
 import { Footer } from './layout/footer';
 
