@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TextAlignJustify } from 'lucide-react';
 
 const quickFacts = [
-    { icon: "📚", label: "Favorite Book", value: "100 Years of Solitude by Gabriel Garcia Marquez" },
+    { icon: "📚", label: "Favorite Book", value: (<p className="font-body text-sm text-wetsoil">"100 Years of Solitude by Gabriel Garcia Marquez"</p>) },
     { icon: "🎧", label: "Music Tastes", 
         value: (
            <div className="flex flex-col gap-1">
@@ -24,10 +24,10 @@ const quickFacts = [
             </div>
         )
     },
-    { icon: "🤝🏾", label: "Volunteer Work", value: "Black Girls Code" },
-    { icon: "👩🏾‍🏫", label: "Currently Learning", value: "AI and Ethical Design" },
-    { icon: "🎮", label: "Favorite Video Game", value: "Kingdom Hearts II" },
-    { icon: "⚡️", label: "Superpower", value: "I'm great at giving gifts because I pay attention to details." },
+    { icon: "🤝🏾", label: "Volunteer Work", value:(<p className="font-body text-sm text-wetsoil">"Black Girls Code"</p>) },
+    { icon: "👩🏾‍🏫", label: "Currently Learning", value:(<p className="font-body text-sm text-wetsoil">"AI and Ethical Design"</p>) },
+    { icon: "🎮", label: "Favorite Video Game", value:(<p className="font-body text-sm text-wetsoil">"Kingdom Hearts II"</p>) },
+    { icon: "⚡️", label: "Superpower", value:(<p className="font-body text-sm text-wetsoil">"I'm great at giving gifts because I pay attention to details."</p>) },
 ];
 
 export const QuickFactsDrawer = () => {
@@ -60,8 +60,10 @@ export const QuickFactsDrawer = () => {
               >
                 <span className="text-2xl flex-shrink-0">{fact.icon}</span>
                 <div className="flex-1">
-                  <p className="font-accent text-sm text-wetsoil/70">{fact.label}</p>
-                  <p className="font-body text-sm text-wetsoil">{fact.value}</p>
+                  <p className="font-accent text-sm text-wetsoil/70"> 
+                    {fact.label}
+                  </p>
+                  {fact.value}
                 </div>
               </div>
             ))}

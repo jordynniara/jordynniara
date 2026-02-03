@@ -1,4 +1,4 @@
-export const ImgCard = ({
+export const ImageCard = ({
     title = '',
     src = '', 
     alt = '', 

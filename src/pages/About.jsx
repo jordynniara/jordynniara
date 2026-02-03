@@ -15,7 +15,7 @@ import { Modal } from "../components/modal";
 import skyMascot from '../assets/images/mascot_sky.png'
 import strawberryMascot from '../assets/images/mascot_strawberry.png'
 import inchwormMascot from '../assets/images/mascot_inchworm.png'
-import { ImgCard } from "../components/img-card";
+import { ImageCard } from "../components/imageCard";
 import { QuickFactsDrawer } from "../components/quickFactsDrawer";
 // import { StickerPageDecoration } from "../components/stickerPageDeco";
 
@@ -70,10 +70,10 @@ export const About = () => {
   return (
       <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
         <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">About Me</h1>
-        <h2 className="font-body text-body text-wetsoil text-center">
-          Jordyn Niara Parker
+        <h2 className="font-body text-wetsoil text-center">
+          Jordyn Niara Smith
         </h2>
-        <p className="flex items-center text-sm text-center font-accent text-wetsoil/80 gap-2 sm:gap-4 w-full divider">
+        <p className="flex items-center text-md text-center font-accent text-wetsoil/80 gap-2 sm:gap-4 w-full divider">
           <span>Niara /nee ⋅ air ⋅ uh/ - (<i>noun</i>) In Swahili, woman with purpose</span>
         </p>
 
@@ -88,19 +88,19 @@ export const About = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-3 sm:gap-4 justify-center text-wetsoil font-body my-4 w-full">
-          <ImgCard
+          <ImageCard
             title="Explore"
             src={Drawing}
             alt="Picture of me and my family"
             onClick={() => openModal("Explore with Purpose", <ExploreCard />)}
           />
-          <ImgCard
+          <ImageCard
             title="Build"
             src={Working}
             alt="Professional headshot"
             onClick={() => openModal("Build with Purpose", <BuildCard />)}
           />
-          <ImgCard
+          <ImageCard
             title="Impact"
             src={Speaking}
             alt="Picture of me working"
