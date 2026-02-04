@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router'
 import { Header } from './layout/header';
 import { Home } from './pages/Home'
@@ -7,7 +7,8 @@ import { Resume } from './pages/Resume'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
 import { Projects } from './pages/projects';
-import { CreativityProject } from './pages/CreativityProject'
+// import { CreativityProject } from './pages/CreativityProject'
+import { Error } from './pages/Error';
 import { Footer } from './layout/footer';
 
 function AppContent() {
@@ -27,12 +28,14 @@ function AppContent() {
         return "Resume";
       case "/creativity-project":
         return "Creativity Project";
+      case "/error":
+        return "Error";
       default:
         return "";
     }
   };
   return (
-    <>
+    <Fragment>
       {!isHomePage && <Header pageName={pageName()} />}  {/* Navbar only on non-home pages */}
       <div className="body">
         <Routes>
@@ -41,12 +44,13 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact/>} /> 
           <Route path="/resume" element={<Resume/>} />
-          <Route path="/creativity-project" element={<CreativityProject />} />
+          {/* <Route path="/creativity-project" element={<CreativityProject />} /> */}
+          <Route path="/error" element={<Error />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer pageName={pageName()} />
-      </>
+    </Fragment>
   )
 }
 

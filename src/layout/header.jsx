@@ -32,16 +32,7 @@ export const Header = (
                     <LinkButton to="/projects" className="link-btn-sky" size="sm">Projects</LinkButton>
                     <LinkButton to="/resume" className="link-btn-strawberry" size="sm">Resume</LinkButton>
                     <LinkButton to="/contact" className="link-btn-inchworm" size="sm">Contact</LinkButton>
-                    <LinkButton to="/creativity-project" className="link-btn-sky" size="sm">The Creativity Project</LinkButton>
-                    {/* <LinkButton 
-                        to="/" 
-                        size="sm" 
-                        className="border-2 border-white border-solid hover:gradient-bg hover:border-2 hover:border-white hover:border-solid hover:rounded-sm relative overflow-hidden group"
-                    >
-                        <div className="group-hover:shimmer-wrapper relative">
-                            <img src={HomeLogo} alt="Home Logo" className="border-0 max-h-6 hover:max-h-6 object-contain relative z-10" />
-                        </div>
-                    </LinkButton> */}
+                    {/* <LinkButton to="/creativity-project" className="link-btn-sky" size="sm">The Creativity Project</LinkButton> */}
                 </nav>
                 <button className="md:hidden" onClick={toggleMenu}>
                     {isMenuOpen ? <CircleX className="h-10 w-10 text-white" /> :

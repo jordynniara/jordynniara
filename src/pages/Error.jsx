@@ -1,6 +1,7 @@
+import { Sticker } from "../components/sticker"
 
 
-export const ErrorFallback = ({ error, resetErrorBoundary }) => {
+export const Error = ({ error, resetErrorBoundary }) => {
   return (
     <div role="alert" className="flex flex-col items-center justify-center min-h-screen p-8 bg-pebble/20">
       <div className="max-w-2xl bg-white border-4 border-wetsoil rounded-lg p-8 shadow-lg">
