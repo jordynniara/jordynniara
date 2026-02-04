@@ -1,4 +1,4 @@
-# Jordyn N. Parker
+# Jordyn Niara Parker
 **Software, Cloud Infrastructure, Distributed Systems, Full‑Stack Development**
 ---
 Software engineer with expertise in cloud infrastructure, distributed systems, and frontend development. Passionate about building scalable, accessible, and user-centered solutions. Experienced in leading feature development, incident response, and cross-functional collaboration in large-scale production environments. Strong advocate for diversity in tech and committed to mentoring underrepresented communities.

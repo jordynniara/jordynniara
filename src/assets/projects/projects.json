@@ -6,37 +6,37 @@
             "description": "Real time crowd info for your next move",
             "images": [
                 {
-                    "src": "/projects/Pulse/images/pulse_1.png",
+                    "src": "Pulse/images/pulse_1.png",
                     "alt": "Dinner table with glasses with Pulse logo overlayed",
                     "caption": "Pulse is a real-time crowd and vibe checker to help beat decision paralysis and empower people to move through their city with confidence."
                 },
                 {
-                    "src": "/projects/Pulse/images/pulse_2.png",
+                    "src": "Pulse/images/pulse_2.png",
                     "alt": "Screen shot of interface displaying real-time crowd data",
                     "caption": "Leverages real-time user data to provide information about crowd density and user sentiment for any location."
                 },
                 {
-                    "src": "/projects/Pulse/images/pulse_3.png",
+                    "src": "Pulse/images/pulse_3.png",
                     "alt": "Screen shot of interface displaying user feedback survey",
                     "caption": "Users contribute to the data pool via short in-app feedback surveys."
                 },
                 {
-                    "src": "/projects/Pulse/images/pulse_4.png",
+                    "src": "Pulse/images/pulse_4.png",
                     "alt": "Screen shot of interface displaying personalized recommendations",
                     "caption": "Data is used to provide machine backed recommendations for personalized points of interest for their next move."
                 },
                 {
-                    "src": "/projects/Pulse/images/pulse_5.png",
+                    "src": "Pulse/images/pulse_5.png",
                     "alt": "Screen shot of interface displaying map with vibe indicators",
                     "caption": "Pulse uses geolocation and user-provided data to provide users with real-time information about their surroundings."
                 },
                 {
-                    "src": "/projects/Pulse/images/pulse_7.png",
+                    "src": "Pulse/images/pulse_7.png",
                     "alt": "Screen shot of interface displaying POI reviews",
                     "caption": "Pulse is designed to mimic popular map interfaces while adding the recommendations users love from their favorite social platforms, making it easy for anyone to access without needing extensive training."
                 },
                 {
-                    "src": "/projects/Pulse/images/pulse_8.png",
+                    "src": "Pulse/images/pulse_8.png",
                     "alt": "Screen shot of interface displaying POI information",
                     "caption": "Pulse is designed to mimic popular map interfaces while adding the recommendations users love from their favorite social platforms, making it easy for anyone to access without needing extensive training."
                 }
@@ -50,12 +50,12 @@
                 {
                     "type": "PDF",
                     "label": "Presentation",
-                    "href": "/projects/Pulse/pulse_presentation.pdf"
+                    "href": "Pulse/pulse_presentation.pdf"
                 },
                 {
                     "type": "PDF",
                     "label": "Research and Findings",
-                    "href": "/projects/Pulse/pulse_research.pdf"
+                    "href": "Pulse/pulse_research.pdf"
                 }
             ],
             "modalContent" : {
@@ -70,22 +70,22 @@
             "description": "A collaborative platform AI assistant to help teams get to synergy sooner.",
             "images": [
                 {
-                    "src": "/projects/Gilbert/images/gilbert.png",
+                    "src": "Gilbert/images/gilbert.png",
                     "alt": "Title screen for Gilbert",
                     "caption": "Gilbert is a collaborative platform AI assistant designed to help teams achieve synergy more quickly."
                 },
                 {
-                    "src": "/projects/Gilbert/images/inMeeting.png",
+                    "src": "Gilbert/images/inMeeting.png",
                     "alt": "Screen shot of Gilbert providing in-meeting insights",
                     "caption": "Intended for integration with existing team meeting and collaboration platforms, Gilbert utilizes AI algorithms to analyze team dynamics and provide actionable insights."
                 },
                 {
-                    "src": "/projects/Gilbert/images/icebreaker.png",
+                    "src": "Gilbert/images/icebreaker.png",
                     "alt": "Screen shot of Gilbert facilitating an icebreaker activity",
                     "caption": "From breaking the ice to post-meeting reflections, Gilbert enhances every stage of collaboration."
                 },
                 {
-                    "src": "/projects/Gilbert/images/postMeeting.png",
+                    "src": "Gilbert/images/postMeeting.png",
                     "alt": "Screen shot of Gilbert providing post-meeting insights",
                     "caption": "From breaking the ice to post-meeting reflections, Gilbert enhances every stage of collaboration."
                 }
@@ -94,12 +94,12 @@
                 {
                     "type": "PDF",
                     "label": "Presentation",
-                    "href": "/projects/Gilbert/gilbert_presentation.pdf"
+                    "href": "Gilbert/gilbert_presentation.pdf"
                 },
                 {
                     "type": "PDF",
                     "label": "Research and Findings",
-                    "href": "/projects/Gilbert/gilbert_research.pdf"
+                    "href": "Gilbert/gilbert_research.pdf"
                 }
             ]
         },
@@ -109,22 +109,22 @@
             "description": "A gamified break reminder.",
             "images": [
                 {
-                    "src": "/projects/GetUp/images/getUp_home.png",
+                    "src": "GetUp/images/getUp_home.png",
                     "alt": "Screen shot of an imagined home page for GetUp!",
                     "caption": "GetUp! helps users step away from their desks and take breaks by tapping into their sense of competition and social network."
                 },
                 {
-                    "src": "/projects/GetUp/images/streak.png",
+                    "src": "GetUp/images/streak.png",
                     "alt": "Screen shot of GetUp! showing the break reminder feature",
                     "caption": "GetUp! reminds users to take breaks with wellness tips."
                 },
                 {
-                    "src": "/projects/GetUp/images/leaderboard.png",
+                    "src": "GetUp/images/leaderboard.png",
                     "alt": "Screen shot of GetUp! showing the leaderboard",
                     "caption": "Users can build up a streak and climb the leaderboards by consistently taking breaks."
                 },
                 {
-                    "src": "/projects/GetUp/images/avatar.png",
+                    "src": "GetUp/images/avatar.png",
                     "alt": "Screen shot of GetUp! showing the customizable space",
                     "caption": "Custom avatars allow users to connect with their teammates virtually."
                 }
@@ -133,7 +133,7 @@
                 {
                     "type": "PDF",
                     "label": "Case Study",
-                    "href": "/projects/GetUp/caseStudy.pdf"
+                    "href": "GetUp/caseStudy.pdf"
                 }
             ]
         },
@@ -143,12 +143,12 @@
             "description": "A mini design system for my portfolio website.",
             "images": [
                 {
-                    "src": "/projects/MiniDesignSystem/cover.png",
+                    "src": "MiniDesignSystem/cover.png",
                     "alt": "Screen shot of the mini design system cover photo",
                     "caption": "This design system inspired the overall design of my portfolio website and features components and their specifications."
                 },
                 {
-                    "src": "/projects/MiniDesignSystem/v1.png",
+                    "src": "MiniDesignSystem/v1.png",
                     "alt": "Screen shot of the portfolio v1 ",
                     "caption": "See how this system was used to design V1 of this portfolio."
                 }
@@ -172,7 +172,7 @@
             "description": "The dominance of western culture in Human Computer Interaction and methods to elevate non-western ideologies.",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/GlobalHCI/global_hci.jpg",
+                    "src": "ResearchStudies/GlobalHCI/global_hci.jpg",
                     "alt": "Global HCI research study",
                     "caption": "Essay that explores the negative effects of colonialism on research done in HCI by reviewing three popular research methods in the field."
                 }
@@ -191,7 +191,7 @@
             "description": "Improving the Rideshare Experience of Users Who are Blind or Have Low Vision.",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/BlindRideshare/blind_rideshare.jpg",
+                    "src": "ResearchStudies/BlindRideshare/blind_rideshare.jpg",
                     "alt": "Blind rideshare research study",
                     "caption": "Research study that discusses the rideshare experiences of blind or low vision users and suggests improvements for the end-to-end experience."
                 }
@@ -200,7 +200,7 @@
                 {
                     "type": "PDF",
                     "label": "Research Paper",
-                    "href": "/projects/ResearchStudies/BlindRideshare/blindRideshare.pdf"
+                    "href": "ResearchStudies/BlindRideshare/blindRideshare.pdf"
                 }
             ]
         },
@@ -210,7 +210,7 @@
             "description": "A redesign of the Turkish Airlines website",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/TurkishAir/turkishAir.jpg",
+                    "src": "ResearchStudies/TurkishAir/turkishAir.jpg",
                     "alt": "Turkish Airlines redesign",
                     "caption": "Study that investigates and summarizes the findings of an in depth evaluation of the useability of the TurkishAirlines websites. It includes summaries of evaluations done with real participants, notable findings and recommendations."
                 }
@@ -219,7 +219,7 @@
                 {
                     "type": "PDF",
                     "label": "Research Paper",
-                    "href": "/projects/ResearchStudies/TurkishAir/turkishAir.pdf"
+                    "href": "ResearchStudies/TurkishAir/turkishAir.pdf"
                 }
             ]
         },
@@ -229,7 +229,7 @@
             "description": "A Heuristic Evaluation and Cognitive Walkthrough of the NYT Cooking website.",
             "images": [
                 {
-                    "src": "/projects/ResearchStudies/NYTEval/nyt_evaluation.jpg",
+                    "src": "ResearchStudies/NYTEval/nyt_evaluation.jpg",
                     "alt": "NYT Cooking evaluation",
                     "caption": "Analysis of the NYTCooking website based on the “10 Usability Heuristics for User Interface Design” determined by the Nielsen Norman Group and an assessment of the site’s learnability."
                 }
@@ -238,12 +238,12 @@
                 {
                     "type": "PDF",
                     "label": "Heuristic Evaluation",
-                    "href": "/projects/ResearchStudies/NYTEvaluation/nytHeuristic.pdf"
+                    "href": "ResearchStudies/NYTEvaluation/nytHeuristic.pdf"
                 },
                 {
                     "type": "PDF",
                     "label": "Cognitive Walkthrough",
-                    "href": "/projects/ResearchStudies/NYTEvaluation/nytCognitive.pdf"
+                    "href": "ResearchStudies/NYTEvaluation/nytCognitive.pdf"
                 }
             ]
         },
@@ -253,7 +253,7 @@
             "description": "A demo reel of my first set of animation projects",
             "images": [
                 {
-                    "src": "/projects/art/animation/ironMan.png",
+                    "src": "art/animation/ironMan.png",
                     "alt": "A demo reel showcasing my animation projects",
                     "caption": "I explore the 12 principles of animation in this project that served as my introduction to animation. More projects are coming soon!"
                 }
@@ -272,7 +272,7 @@
             "description": "A vibrant exploration of the elements that create unity within a single composition.",
             "images": [
                 {
-                    "src": "/projects/art/dragonBellies/dragon_bellies_labelled.jpg",
+                    "src": "art/dragonBellies/dragon_bellies_labelled.jpg",
                     "alt": "A series colorful dragon skin",
                     "caption": "The composition presents a retro‑futuristic, dragon‑themed visual piece that demonstrates emphasis, balance, scale, and movement while unifying all elements through consistent color, form, and Gestalt principles."
                 }
@@ -291,27 +291,27 @@
             "description": "A data visualization project exploring the relationship between my dog Jada's play toy and play buddy.",
             "images": [
                 {
-                    "src": "/projects/art/infographics/jadaData/jada_infographic.png",
+                    "src": "art/infographics/jadaData/jada_infographic.png",
                     "alt": "A picture of infographic",
                     "caption": "Jada Blu is an extremely playful pitbull-husky mix with a full and diverse toy box. Her play preferences were collected over a four week period, tracking her toys, her play person, and the time of day she played."
                 },
                 {
-                    "src": "/projects/art/infographics/jadaData/fave_toy.png",
+                    "src": "art/infographics/jadaData/fave_toy.png",
                     "alt": "A graph showing the number of times Jada plays with each toy",
                     "caption": "This graph shows the percentage of times Jada played with each toy. The lamb chop and wubba are two of her favorite toys, taking up nearly two-thirds of all her play time."
                 },
                 {
-                    "src": "/projects/art/infographics/jadaData/playPerson.png",
+                    "src": "art/infographics/jadaData/playPerson.png",
                     "alt": "A graph showing the number of times Jada plays with each person.",
                     "caption": "This graph shows the percentage of times Jada played with each person by bringing them her toy. We see that Jordyn is her favorite person to play with. Jada brought her a toy 50% of the time out of all the time she spent playing."
                 },
                 {
-                    "src": "/projects/art/infographics/jadaData/playTime.png",
+                    "src": "art/infographics/jadaData/playTime.png",
                     "alt": "A graph showing which person Jada chooses to play with at what time.",
                     "caption": "These scatter plots illustrate Jada's favorite time to play, both overall and with each play person. Jada's preferences for evening and late-night play can be explained by her owner's typical work hours. However, within those hours, Jada has different patterns for each person."
                 },
                 {
-                    "src": "/projects/art/infographics/jadaData/person_per_hour_per_toy.png",
+                    "src": "art/infographics/jadaData/person_per_hour_per_toy.png",
                     "alt": "A graph relating all of the above variables: playtime, person, and toy.",
                     "caption": "This Sankey Diagram brings everything together in a simulated decision tree. It shows the flow relating the toy and play person Jada played with in a given hour. Jada typically chose to play with Jordyn with either the triangle pull toy or the wubba starting at 5pm. If left to her own devices, she'll choose lamb chop regardless of the hour."
                 }
@@ -320,7 +320,7 @@
                 {
                     "type": "pdf",
                     "label": "View Project",
-                    "href": "/projects/art/infographics/jadaData/JadaData.pdf"
+                    "href": "art/infographics/jadaData/JadaData.pdf"
                 }
             ]
         },
@@ -330,32 +330,32 @@
             "description": "A data visualization project exploring the relationship between NBA betting odds and game quality.",
             "images": [
                 {
-                    "src": "/projects/art/infographics/nba/attendance.png",
+                    "src": "art/infographics/nba/attendance.png",
                     "alt": "A picture of infographic",
                     "caption": "In 2018,the United States Supreme court Legalized Sports betting, allowing states to regulate it as they see fit. Since then, NBA fans have speculated that the game has been ruined as referees prioritize financial gains over quality games. But what does the data say?"
                 },
                 {
-                    "src": "/projects/art/infographics/nba/attendance.png",
+                    "src": "art/infographics/nba/attendance.png",
                     "alt": "A graph showing NBA game attendance over time",
                     "caption": "Game attendance across the league initially saw a slight dip the first couple of years after legalization."
                 },
                 {
-                    "src": "/projects/art/infographics/nba/pfRate.png",
+                    "src": "art/infographics/nba/pfRate.png",
                     "alt": "A graph showing the average game personal foul rate in NBA games over time.",
                     "caption": "generally, a game with a lot of stoppages is boring to watch because it disrupts game play. Stoppages caused by personal foul (PF) calls we’re on the decline prior to 2018. after an initial sharp Increase they contintued their declining trend."
                 },
                 {
-                    "src": "/projects/art/infographics/nba/ftRate.png",
+                    "src": "art/infographics/nba/ftRate.png",
                     "alt": "A graph showing the average game free throw rate in NBA games over time.",
                     "caption": "Stoppages caused by free throw attempts have been steady in the league overall with a slight decline the past couple of years. Free throw merchants have also seen a recent decline."
                 },
                 {
-                    "src": "/projects/art/infographics/nba/closeGames.png",
+                    "src": "art/infographics/nba/closeGames.png",
                     "alt": "A graph showing the average number of close games in the NBA over time.",
                     "caption": "point spreads level the playing field in sports betting by indicating how much a team must win by in order for the bet to payout. In 2012 and 2018 games finished “CLOSE TO THE SPREAD” WITH MORE COMPETITIVE GAMES, while GAMES IN 2024 HAD HIGHER POINT DIFFERENTIALS ACROSS ALL SPREADS."
                 },
                 {
-                    "src": "/projects/art/infographics/nba/implications.png",
+                    "src": "art/infographics/nba/implications.png",
                     "alt": "A graph relating all of the above variables: playtime, person, and toy.",
                     "caption": "This graph relates all of the above variables: playtime, person, and toy, providing a comprehensive view of Jada's play behavior."
                 }
@@ -364,7 +364,7 @@
                 {
                     "type": "pdf",
                     "label": "View Project",
-                    "href": "/projects/art/infographics/nba/nba_infographic.pdf"
+                    "href": "art/infographics/nba/nba_infographic.pdf"
                 }
             ]
         }

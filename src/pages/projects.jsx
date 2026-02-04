@@ -8,8 +8,36 @@ import { ProjectCard } from "../components/projectCard";
 import projectsObj from "../assets/projects/projects.json";
 import { NavDrawer } from "../components/navDrawer";
 
+// Dynamically import all project images
+const projectImages = import.meta.glob('../assets/projects/**/*.{png,jpg,jpeg,svg,gif}', { 
+    eager: true, 
+    import: 'default' 
+});
+
+// Helper function to get the image URL from the imported modules
+const getProjectImageUrl = (imagePath) => {
+    // Convert the JSON path to match the glob pattern
+    const fullPath = `../assets/projects/${imagePath}`;
+    const resolvedImage = projectImages[fullPath];
+    
+    // Debug logging in development
+    if (import.meta.env.DEV && !resolvedImage) {
+        console.warn(`Image not found: ${fullPath}`);
+        console.log('Available paths:', Object.keys(projectImages).slice(0, 5));
+    }
+    
+    return resolvedImage || imagePath;
+};
+
 export const Projects = () => {
-    const projects = projectsObj.projects;
+    // Transform projects to use resolved image URLs
+    const projects = projectsObj.projects.map(project => ({
+        ...project,
+        images: project.images.map(img => ({
+            ...img,
+            src: getProjectImageUrl(img.src)
+        }))
+    }));
     const projectTypeMap = [
         { type: "prototype", label: "Prototypes & Case Studies", description: "Explore innovative prototypes and in-depth case studies." },
         { type: "research", label: "Research & Design", description: "Delve into research findings and design processes." },
