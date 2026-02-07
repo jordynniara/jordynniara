@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from "lucide-react";
 
@@ -32,7 +32,7 @@ export const Modal = ({
 
     // Always render modal at document root using portal
     return createPortal(
-        <>
+        <Fragment>
             {/* Backdrop */}
             <div
                 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
@@ -75,7 +75,7 @@ export const Modal = ({
                     </div>
                 </div>
             </div>
-        </>,
+        </Fragment>,
         document.body
     );
 };

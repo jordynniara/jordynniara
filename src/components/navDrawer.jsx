@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState, Fragment } from 'react';
 import { ChevronRight } from 'lucide-react';
 
 
@@ -28,7 +28,7 @@ export const NavDrawer = ({
     };
 
     return (
-    <>
+    <Fragment>
         {/* Drawer with button inside */}
         <div
             className={`fixed left-0 top-1/2 -translate-y-1/2 z-20 transition-transform duration-300 ${
@@ -73,6 +73,6 @@ export const NavDrawer = ({
                 onClick={() => setIsOpen(false)}
             />
         )}
-    </>
+    </Fragment>
     );
 };

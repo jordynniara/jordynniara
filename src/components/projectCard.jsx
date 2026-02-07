@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, Fragment } from "react";
 import { Card } from "../components/card";
 import { Sticker } from "../components/sticker";
 import testImg1 from "../assets/images/excuseMe.png";
@@ -21,7 +21,7 @@ export const ProjectCard = (
 ) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
-        <>
+        <Fragment>
             <Card id={`projects-${title.replace(/\s+/g, '-').toLowerCase()}`} className={`project-card ${className}`}>
                 <div className="project-card-header">
                     <Sticker size="extended" className="project-card-header-sticker">
@@ -56,7 +56,7 @@ export const ProjectCard = (
                         </div>
                     </div>
                 </Card>
-        </>
+        </Fragment>
     );
 };
 

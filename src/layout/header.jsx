@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import { LinkButton } from "../components/button";
 import { SquareMenu, CircleX } from "lucide-react"; 
 import HomeLogo from "../assets/images/logo_transparent.png";
@@ -42,7 +42,7 @@ export const Header = (
             </div>
 
             {isMenuOpen && (
-                <>
+                <Fragment>
                     <div
                         className="fixed inset-0 bg-black/50 z-40 md:hidden"
                         onClick={toggleMenu}
@@ -94,7 +94,7 @@ export const Header = (
                             </LinkButton>
                         </nav>
                     </div>
-                </>
+                </Fragment>
             )}
         </header>
     );

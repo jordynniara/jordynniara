@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState, Fragment } from "react";
 import { ChevronRight, ChevronLeft, ZoomIn } from "lucide-react";
 import { Modal } from "./modal";
 
@@ -38,7 +38,7 @@ export const Carousel = (
     }, [currentIndex, numberOfImages, setCurrentIndex, isModalOpen]);
 
     return (
-        <>
+        <Fragment>
         <div className="flex flex-col gap-2 flex-1">
             <div className="relative flex justify-center items-center border-4 border-dashed border-wetsoil inset-shadow-md bg-wetsoil/10 p-4 sm:p-6 lg:p-8 h-64 lg:h-80 overflow-hidden">
                 <img src={images[currentIndex].src} 
@@ -84,6 +84,6 @@ export const Carousel = (
                 loading="lazy"
                 className="w-full max-h-[80vh] object-contain justify-center border-4 border-white" />
         </Modal>
-        </>
+        </Fragment>
     );
 }
