@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 export const Card = ({
     size = "default",
@@ -19,3 +19,9 @@ export const Card = ({
         </div>
     );
 }
+
+Card.propTypes = {
+  size: PropTypes.oneOf(['default', 'extended']),
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};

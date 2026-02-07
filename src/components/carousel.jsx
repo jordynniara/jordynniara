@@ -1,6 +1,7 @@
 import { useEffect, useState, Fragment } from "react";
 import { ChevronRight, ChevronLeft, ZoomIn } from "lucide-react";
 import { Modal } from "./modal";
+import PropTypes from 'prop-types';
 
 export const Carousel = (
     {
@@ -81,3 +82,13 @@ export const Carousel = (
         </Fragment>
     );
 }
+
+Carousel.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+        caption: PropTypes.string
+    })).isRequired,
+    currentIndex: PropTypes.number.isRequired,
+    setCurrentIndex: PropTypes.func.isRequired
+};

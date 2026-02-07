@@ -1,6 +1,7 @@
 import { useEffect, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from "lucide-react";
+import PropTypes from 'prop-types';
 
 export const Modal = ({ 
     isOpen, 
@@ -78,4 +79,13 @@ export const Modal = ({
         </Fragment>,
         document.body
     );
+};
+
+Modal.propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    title: PropTypes.string,
+    children: PropTypes.node.isRequired,
+    titleClassName: PropTypes.string,
+    imageOnly: PropTypes.bool,
 };

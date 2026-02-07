@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const Sticker = ({
 //   variant = "strawberry", // default color
@@ -63,4 +64,11 @@ export const Sticker = ({
       {children}
     </div>
   );
+};
+
+Sticker.propTypes = {
+  size: PropTypes.oneOf(['xs', 'sm', 'default', 'lg', 'xl', 'extended']),
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  fidget: PropTypes.bool,
 };

@@ -5,7 +5,7 @@ import testImg1 from "../assets/images/excuseMe.png";
 import { Button, LinkButton } from "../components/button";
 import { Carousel } from "../components/carousel";
 import { Download, ExternalLink } from "lucide-react";
-
+import PropTypes from 'prop-types';
 
 export const ProjectCard = (
     {
@@ -58,6 +58,23 @@ export const ProjectCard = (
                 </Card>
         </Fragment>
     );
+};
+
+ProjectCard.propTypes = {
+    title: PropTypes.string,
+    shortDescription: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.shape({
+        src: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+        caption: PropTypes.string
+    })),
+    buttons: PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        href: PropTypes.string.isRequired,
+        type: PropTypes.oneOf(['link', 'PDF', 'download']),
+        disabled: PropTypes.bool
+    })),
+    className: PropTypes.string
 };
 
 

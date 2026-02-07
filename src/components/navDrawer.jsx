@@ -1,6 +1,6 @@
 import { useState, Fragment } from 'react';
 import { ChevronRight } from 'lucide-react';
-
+import PropTypes from 'prop-types';
 
 export const NavDrawer = ({ 
     index = [{href:"#", label:"", level:1}]
@@ -75,4 +75,12 @@ export const NavDrawer = ({
         )}
     </Fragment>
     );
+};
+
+NavDrawer.propTypes = {
+    index: PropTypes.arrayOf(PropTypes.shape({
+        href: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        level: PropTypes.number.isRequired
+    }))
 };

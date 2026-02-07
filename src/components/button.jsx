@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import PropTypes from 'prop-types';
 
 const variantClasses = {
     sky: "btn-sky",
@@ -87,4 +88,24 @@ export const LinkButton = ({
       {children}
     </Link>
   );
+};
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(['default', 'inchworm', 'sky', 'strawberry']),
+  size: PropTypes.oneOf(['xs', 'sm', 'default', 'lg']),
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+};
+
+LinkButton.propTypes = {
+  variant: PropTypes.oneOf(['default', 'inchworm', 'sky', 'strawberry']),
+  size: PropTypes.oneOf(['xs', 'sm', 'default', 'lg']),
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string,
+  href: PropTypes.string,
+  download: PropTypes.string,
+  onClick: PropTypes.func,
 };

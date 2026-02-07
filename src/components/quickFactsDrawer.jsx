@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { TextAlignJustify } from 'lucide-react';
+import PropTypes from 'prop-types';
 
 const quickFacts = [
     { icon: "📚", label: "Favorite Book", value: (<p className="font-body text-sm text-wetsoil">"100 Years of Solitude by Gabriel Garcia Marquez"</p>) },

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 export const Switch = ({
   size = "default",
@@ -56,4 +57,13 @@ export const Switch = ({
       </button>
     </div>
   );
+};
+
+Switch.propTypes = {
+  size: PropTypes.oneOf(['sm', 'default', 'lg']),
+  left: PropTypes.string,
+  right: PropTypes.string,
+  defaultOption: PropTypes.oneOf(['left', 'right']),
+  onChange: PropTypes.func,
+  className: PropTypes.string,
 };

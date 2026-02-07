@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const ImageCard = ({
     title = '',
     src = '', 
@@ -17,4 +19,12 @@ export const ImageCard = ({
             className="rounded-t-none border-t-0 mt-0 m-auto rounded-lg shadow-lg border-15 border-white object-cover h-100 w-200"/>
     </div>
   );
+};
+
+ImageCard.propTypes = {
+  title: PropTypes.string,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
 };
