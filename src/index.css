@@ -238,7 +238,7 @@
   }
 
   .modal {
-    @apply relative bg-pebble rounded-lg shadow-2xl border-4 border-white max-w-4xl w-full max-h-[90vh] flex flex-col;
+    @apply relative bg-pebble rounded-lg shadow-2xl border-4 border-white w-full max-h-[90vh] flex flex-col;
   }
   .modal-header{
     @apply sticky top-0 shadow-sm bg-pebble p-6 flex items-center justify-between z-10 flex-shrink-0;
@@ -346,7 +346,7 @@
 }
 
 @utility about-card {
-  @apply flex-1 prose font-accent text-body hover:!scale-100 hover:!border-2 hover:inset-shadow-md;
+  @apply flex-1 w-full prose prose max-w-none font-accent text-body hover:!scale-100 hover:!border-2 hover:inset-shadow-md;
 }
 
 @utility gradient-bg {
