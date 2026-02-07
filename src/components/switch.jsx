@@ -33,11 +33,10 @@ export const Switch = ({
     <div className={classes} {...props}>
       <button 
         onClick={() => handleToggle('left')} 
-        className={`
-          px-6 py-3 rounded-full font-body text-base transition-all
+        className={`switch-option
           ${active.toLowerCase() === 'left' 
             ? 'switch-toggled switch-option-left' 
-            : 'hover:bg-white/10'
+            : ''
           }
         `}
       >
@@ -45,11 +44,10 @@ export const Switch = ({
       </button>
       <button 
         onClick={() => handleToggle('right')} 
-        className={`
-          px-6 py-3 rounded-full font-body text-base transition-all
+        className={`switch-option
           ${active.toLowerCase() === 'right' 
-            ? 'switch-toggled switch-option-right' 
-            : 'hover:bg-white/10'
+            ? ' switch-toggled switch-option-right' 
+            : ''
           }
         `}
       >

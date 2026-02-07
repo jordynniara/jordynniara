@@ -43,11 +43,12 @@ export const Resume = () => {
       {/* Main content */}
       <div className="resume-content relative z-10 p-8">
         <div className="max-w-4xl mx-auto mb-8">
-          <h1 className="text-h1 font-title md:text-title text-wetsoil mb-1 sm:mb-2">Resume</h1>
+          <h1 className="text-h1 font-title md:text-title text-wetsoil">Resume</h1>
+          <div className="flex mb-5 justify-center items-center divider"/>
           <h2 className="font-body text-body text-wetsoil text-center">
             Switch between my experiences in UX and Software Engineering and download the pdf.
           </h2>
-          <div id="top" className="flex flex-col justify-center items-center mb-8"> 
+          <div id="top" className="flex flex-col justify-center items-center my-8"> 
             <Switch
               left={"UXE"}
               right={"SWE"}

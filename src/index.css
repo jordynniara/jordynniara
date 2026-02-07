@@ -184,16 +184,22 @@
     @apply bg-wetsoil relative inline-flex items-center font-body text-white items-center justify-center flex rounded-full border-6 border-white mx-auto my-4;
   }
 
+  .switch-option {
+    @apply cursor-pointer px-6 py-3 rounded-full font-body text-base transition-all
+    hover:bg-white/10;
+  }
+
   .switch-option-left {
-    @apply border-r-4 border-white;
+    @apply border-r-4 border-white cursor-pointer;
   }
 
   .switch-option-right {
-    @apply border-l-4 border-white;
+    @apply border-l-4 border-white cursor-pointer;
   }
 
   .switch-toggled {
-    @apply bg-pebble text-wetsoil inset-shadow-sm;
+    @apply bg-pebble text-wetsoil inset-shadow-sm
+    hover:bg-pebble;
   }
 
   .notebook {
