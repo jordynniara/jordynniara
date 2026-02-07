@@ -36,14 +36,15 @@ export const ProjectCard = (
                             <div key={currentIndex} className={"project-card-body-desc animate-fade-in"}>
                                 {images[currentIndex].caption}
                             </div>
-                            <div className="project-card-body-actions">
+                            <div className="project-card-body-actions flex-col lg:flex-row">
                                 {buttons.length > 0 && buttons.map((button, index) => (
                                     <LinkButton 
                                         key={index} 
                                         disabled={button.disabled}
                                         size="sm" 
                                         href={button.href} 
-                                        download={button.type.toLowerCase() === "pdf" ? `Parker_${title}-${button.label}.pdf` : undefined} className="w-full h-12">
+                                        download={button.type.toLowerCase() === "pdf" ? `Parker_${title}-${button.label}.pdf` : undefined} 
+                                        className="w-full lg:w-auto whitespace-nowrap">
                                         {button.label} 
                                         {button.type.toLowerCase() == "pdf" ? 
                                             <Download size={16} className="ml-2" /> : 

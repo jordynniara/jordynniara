@@ -15,7 +15,7 @@ const quickFacts = [
                 <a href="https://www.youtube.com/watch?v=e5YmG3jkzxA" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     Cleo Soul
                 </a>
-                <a href="https://www.youtube.com/watch?v=bZYbnyupT9I" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                <a href="https://www.youtube.com/watch?v=aFdDuo0LmZk" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     Indie Tribe
                 </a>
                 <a href="https://www.youtube.com/watch?v=sNotIE0mX1w" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
@@ -47,8 +47,8 @@ export const QuickFactsDrawer = () => {
 
       {/* Drawer */}
       <div
-        className={`md:overflow-y-scroll transition-all duration-300 ${
-          isOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'
+        className={`transition-all duration-300 ${
+          isOpen ? 'h-full opacity-100' : 'hidden max-h-0 opacity-0'
         }`}
       >
         <div className="bg-white border-4 border-wetsoil border-dashed inset-shadow-sm rounded-lg p-6 mt-2">

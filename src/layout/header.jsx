@@ -15,7 +15,7 @@ export const Header = (
     };
 
     return (
-        <header className="bg-wetsoil p-4 shadow-lg top-0 left-0 w-[100%] relative">
+        <header className="bg-wetsoil p-4 shadow-lg top-0 left-0 w-[100%] relative sticky z-30">
             <div className="flex items-center justify-between max-h-15">
                 <LinkButton to="/" className="header-home-btn -translate-x-[10%] translate-y-[30%]">
                     <Sticker fidget={true} className="w-16 h-16 sm:w-20 sm:h-20 md:w-30 md:h-30 lg:w-50 lg:h-50">

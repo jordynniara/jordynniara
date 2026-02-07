@@ -1,4 +1,4 @@
-import { Button } from "../components/button"
+import { Button, LinkButton } from "../components/button"
 import { Sticker } from "../components/sticker"
 import skyMascot from '../assets/images/mascot_sky.png'
 import strawberryMascot from '../assets/images/mascot_strawberry.png'
@@ -52,11 +52,11 @@ export const Home = () => {
                     </div>
                 </div>
                 {/* Buttons row */}
-                <div className="flex gap-4 flex-wrap justify-center">
-                    <Link to="/about"><Button variant="inchworm">About</Button></Link>
-                    <Link to="/projects"><Button variant="sky">Projects</Button></Link>
-                    <Link to="/resume"><Button variant="strawberry">Resume</Button></Link>
-                    <Link to="/contact"><Button variant="inchworm">Contact</Button></Link>
+                <div className="flex gap-4 flex-col w-full justify-center lg:flex-row lg:flex-wrap lg:w-auto">
+                    <LinkButton to="/about" className="link-btn-inchworm">About</LinkButton>
+                    <LinkButton to="/projects" className="link-btn-sky">Projects</LinkButton>
+                    <LinkButton to="/resume" className="link-btn-strawberry">Resume</LinkButton>
+                    <LinkButton to="/contact" className="link-btn-inchworm">Contact</LinkButton>
                     {/* <Link to="/creativity-project"><Button variant="sky">The Creativity Project</Button></Link> */}
                 </div>
             </div>

@@ -100,7 +100,7 @@ export const Projects = () => {
                         }
                 </Fragment>
             ))}
-            <div className="flex justify-center gap-4" >
+            <div className="flex justify-center gap-4 mt-8" >
                 <LinkButton to="#top" size="small" >Back to Top</LinkButton>
             </div>
             {<NavDrawer index={navDrawerIndex} />}

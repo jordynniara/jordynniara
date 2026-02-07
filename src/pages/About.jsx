@@ -91,19 +91,23 @@ export const About = () => {
           <ImageCard
             title="Explore"
             src={Drawing}
-            alt="Picture of me and my family"
+            alt="Picture of me drawing on a sunny day"
+            className="cursor-pointer"
             onClick={() => openModal("Explore with Purpose", <ExploreCard />)}
           />
           <ImageCard
             title="Build"
             src={Working}
-            alt="Professional headshot"
-            onClick={() => openModal("Build with Purpose", <BuildCard />)}
+            alt="Picture of me working on a computer"
+            className="cursor-pointer"
+            onClick={() => openModal("Build with Purpose",
+              <BuildCard />)}
           />
           <ImageCard
             title="Impact"
             src={Speaking}
-            alt="Picture of me working"
+            alt="Picture of me presenting"
+            className="cursor-pointer"
             onClick={() => openModal("Impact is the Purpose", <ImpactCard />)}
           />
         </div>
@@ -164,7 +168,7 @@ const ImpactCard = () => {
       </Sticker>
       <Card className="about-card flex flex-col gap-2 justify-center">
         <ReactMarkdown>{ImpactContent}</ReactMarkdown>
-        <p> 
+        {/* <p> 
           These questions also inspired{' '}
           <span className="bg-wetsoil p-1">
           <span className="text-inchworm">T</span>
@@ -194,7 +198,7 @@ const ImpactCard = () => {
         </p>
         <LinkButton to="/creativity-project" className="mx-auto flex justify-center text-white hover:text-wetsoil w-sm">
           The Creativity Project
-        </LinkButton>
+        </LinkButton> */}
       </Card>
     </div>
   );
