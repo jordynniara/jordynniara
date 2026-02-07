@@ -2,10 +2,6 @@ import { useEffect, useState, Fragment } from "react";
 import { ChevronRight, ChevronLeft, ZoomIn } from "lucide-react";
 import { Modal } from "./modal";
 
-// const images = [
-//     { src: "", alt: "Project Screenshot" },
-// ];
-
 export const Carousel = (
     {
         images = [], 
@@ -15,8 +11,6 @@ export const Carousel = (
 ) => {
     const numberOfImages = images.length;
     const [isModalOpen, setModalOpen] = useState(false);
-    // const [modalTitle, setModalTitle] = useState("");
-    // const [modalContent, setModalContent] = useState("");
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % numberOfImages);

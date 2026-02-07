@@ -57,7 +57,6 @@ export const Home = () => {
                     <LinkButton to="/projects" className="link-btn-sky">Projects</LinkButton>
                     <LinkButton to="/resume" className="link-btn-strawberry">Resume</LinkButton>
                     <LinkButton to="/contact" className="link-btn-inchworm">Contact</LinkButton>
-                    {/* <Link to="/creativity-project"><Button variant="sky">The Creativity Project</Button></Link> */}
                 </div>
             </div>
         </div>

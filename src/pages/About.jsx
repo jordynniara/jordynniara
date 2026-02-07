@@ -17,7 +17,6 @@ import strawberryMascot from '../assets/images/mascot_strawberry.png'
 import inchwormMascot from '../assets/images/mascot_inchworm.png'
 import { ImageCard } from "../components/imageCard";
 import { QuickFactsDrawer } from "../components/quickFactsDrawer";
-// import { StickerPageDecoration } from "../components/stickerPageDeco";
 
 const verbs = [
   "create",
@@ -168,37 +167,6 @@ const ImpactCard = () => {
       </Sticker>
       <Card className="about-card flex flex-col gap-2 justify-center">
         <ReactMarkdown>{ImpactContent}</ReactMarkdown>
-        {/* <p> 
-          These questions also inspired{' '}
-          <span className="bg-wetsoil p-1">
-          <span className="text-inchworm">T</span>
-          <span className="text-sky">h</span>
-          <span className="text-strawberry">e</span>
-          <span className="text-inchworm"> </span>
-          <span className="text-sky">C</span>
-          <span className="text-strawberry">r</span>
-          <span className="text-inchworm">e</span>
-          <span className="text-sky">a</span>
-          <span className="text-strawberry">t</span>
-          <span className="text-inchworm">i</span>
-          <span className="text-sky">v</span>
-          <span className="text-strawberry">i</span>
-          <span className="text-inchworm">t</span>
-          <span className="text-sky">y</span>
-          <span className="text-strawberry"> </span>
-          <span className="text-inchworm">P</span>
-          <span className="text-sky">r</span>
-          <span className="text-strawberry">o</span>
-          <span className="text-inchworm">j</span>
-          <span className="text-sky">e</span>
-          <span className="text-strawberry">c</span>
-          <span className="text-inchworm">t</span>
-          </span>
-          . Click here to learn more about it:
-        </p>
-        <LinkButton to="/creativity-project" className="mx-auto flex justify-center text-white hover:text-wetsoil w-sm">
-          The Creativity Project
-        </LinkButton> */}
       </Card>
     </div>
   );

@@ -4,11 +4,7 @@ import { SquareMenu, CircleX } from "lucide-react";
 import HomeLogo from "../assets/images/logo_transparent.png";
 import { Sticker } from "../components/sticker";
 
-export const Header = (
-    // {
-        // pageName = "Title"
-    // }
-) => {
+export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -32,7 +28,6 @@ export const Header = (
                     <LinkButton to="/projects" className="link-btn-sky" size="sm">Projects</LinkButton>
                     <LinkButton to="/resume" className="link-btn-strawberry" size="sm">Resume</LinkButton>
                     <LinkButton to="/contact" className="link-btn-inchworm" size="sm">Contact</LinkButton>
-                    {/* <LinkButton to="/creativity-project" className="link-btn-sky" size="sm">The Creativity Project</LinkButton> */}
                 </nav>
                 <button className="md:hidden" onClick={toggleMenu}>
                     {isMenuOpen ? <CircleX className="h-10 w-10 text-white" /> :
@@ -83,14 +78,6 @@ export const Header = (
                                 onClick={toggleMenu}
                             >
                                 Contact
-                            </LinkButton>
-                            <LinkButton 
-                                to="/creativity-project" 
-                                className="mobile-menu-nav-link bg-strawberry" 
-                                onClick={toggleMenu}
-                                disabled
-                            >
-                                The Creativity Project
                             </LinkButton>
                         </nav>
                     </div>

@@ -233,8 +233,6 @@
   
   .card:hover {
       @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg hover:border-4;
-       /* @apply transition-transform duration-300 scale-[1.02] shadow-lg border-4; */
-
   }
 
   .modal {
